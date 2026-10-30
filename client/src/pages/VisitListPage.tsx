@@ -53,7 +53,7 @@ export function VisitListPage() {
     );
   }
 
-  return <VisitListView guestName={guest.name} matches={state.data.matches} />;
+  return <VisitListView guestName={guest.name} matches={state.data.results} />;
 }
 
 interface VisitListViewProps {
@@ -67,7 +67,7 @@ function VisitListView({ guestName, matches }: VisitListViewProps) {
   const handleRemove = useBookmarkToggle();
   const [isConfirmingClear, setIsConfirmingClear] = useState(false);
 
-  // Sorted by booth so the list reads as a walking route through the halls.
+  // Sorted by booth so the list reads as a walking route through the hall.
   const saved = useMemo(
     () =>
       matches
@@ -103,7 +103,7 @@ function VisitListView({ guestName, matches }: VisitListViewProps) {
             </Link>
           }
         >
-          Save stalls from your matches and they appear here, grouped by hall in walking order.
+          Save stalls from your matches and they appear here, grouped by row in walking order.
         </EmptyState>
       </div>
     );
@@ -118,7 +118,7 @@ function VisitListView({ guestName, matches }: VisitListViewProps) {
           <h1>Your visit list</h1>
           <p className="muted">
             {saved.length} {saved.length === 1 ? 'stall' : 'stalls'} across {hallsInUse.length}{' '}
-            {hallsInUse.length === 1 ? 'hall' : 'halls'}, saved on this device.
+            {hallsInUse.length === 1 ? 'row' : 'rows'}, saved on this device.
           </p>
         </div>
         <div className="visit-page__actions no-print">
@@ -135,7 +135,7 @@ function VisitListView({ guestName, matches }: VisitListViewProps) {
 
       {hallsInUse.map((hall) => (
         <section key={hall} className="hall-group" aria-labelledby={`hall-${hall}`}>
-          <h2 id={`hall-${hall}`}>Hall {hall}</h2>
+          <h2 id={`hall-${hall}`}>Row {hall}</h2>
           <ul className="visit-list">
             {saved
               .filter((m) => m.exhibitor.hall === hall)
@@ -144,7 +144,7 @@ function VisitListView({ guestName, matches }: VisitListViewProps) {
                   <p className="visit-row__booth">{m.exhibitor.booth}</p>
                   <div className="visit-row__body">
                     <h3>{m.exhibitor.name}</h3>
-                    <p>{segmentLabel(m.factors[0]?.label ?? m.exhibitor.city)}</p>
+                    <p>{segmentLabel(m.insights[0]?.label ?? m.exhibitor.city)}</p>
                   </div>
                   <p className="visit-row__score">
                     {m.score}%<span className="visually-hidden"> match</span>

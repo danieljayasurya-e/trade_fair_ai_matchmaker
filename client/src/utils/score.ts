@@ -7,7 +7,7 @@ export function bandFor(score: number): { label: string; tone: ScoreTone } {
   return { label: 'Partial fit', tone: 'partial' };
 }
 
-export const formatSeconds = (ms: number) => `${(ms / 1000).toFixed(2)} s`;
+export const formatSeconds = (ms: number) => (ms < 1000 ? `${Math.max(1, Math.round(ms))} ms` : `${(ms / 1000).toFixed(2)} s`);
 
 export const initialsOf = (name: string) =>
   name

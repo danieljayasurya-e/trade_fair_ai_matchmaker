@@ -21,19 +21,19 @@ export function HowItWorksPage() {
           <h3>
             Semantic similarity <span className="how-list__weight">{percent(G2E_WEIGHTS.semantic)} of this direction</span>
           </h3>
-          <p>How closely the words in your profile and your free text read like the stall's name and segments.</p>
+          <p>How closely the words in your profile and your free text read like the stall's name, description and products.</p>
         </li>
         <li>
           <h3>
             Interest overlap <span className="how-list__weight">{percent(G2E_WEIGHTS.interest)} of this direction</span>
           </h3>
-          <p>How many of the segments you picked the stall is listed under.</p>
+          <p>How many of the product areas you picked the stall offers.</p>
         </li>
         <li>
           <h3>
             Intent match <span className="how-list__weight">{percent(G2E_WEIGHTS.intent)} of this direction</span>
           </h3>
-          <p>Whether your own description mentions the stall's segments, plus a bonus when businesses in your sector buy them.</p>
+          <p>Whether your own description mentions the stall's products, plus a bonus when the stall sells to your sector.</p>
         </li>
       </ul>
 
@@ -42,9 +42,9 @@ export function HowItWorksPage() {
         <li>
           <h3>Buyer fit</h3>
           <p>
-            Half is whether businesses in your sector buy what the stall sells, and half is whether the stall is based
-            in your region. Even a poor fit keeps {percent(BUYER_FIT_FLOOR)} so a strong segment match stays visible.
-            Seniority and company size are collected but not scored yet, because the exhibitor list has no buyer criteria.
+            Whether the stall sells to businesses in your sector. The sector lists are inferred, so a gap still keeps {percent(BUYER_FIT_FLOOR)} and a
+            strong product match stays visible. Region, seniority and company size are collected but not scored: the
+            exhibitor data has no buyer criteria, and favouring nearby stalls would push down overseas exhibitors.
           </p>
         </li>
       </ul>

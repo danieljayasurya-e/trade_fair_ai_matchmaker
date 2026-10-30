@@ -1,0 +1,262 @@
+{
+  "industries": [
+    "Metal Fabrication & Manufacturing",
+    "Automotive & EV",
+    "Aerospace & Defence",
+    "Electronics & Semiconductors",
+    "Medical & Life Sciences",
+    "Research & Academia",
+    "Telecom & Data Communications",
+    "Energy & Solar",
+    "Trading & Distribution"
+  ],
+  "seniorities": [
+    "Individual Contributor",
+    "Manager",
+    "Senior Manager",
+    "Director",
+    "C-level / Owner"
+  ],
+  "companySizes": [
+    "1-10",
+    "11-50",
+    "51-200",
+    "201-1000",
+    "1000+"
+  ],
+  "regions": [
+    "North India",
+    "South India",
+    "East India",
+    "West India",
+    "Middle East",
+    "Europe",
+    "Southeast Asia"
+  ],
+  "halls": [
+    "LA",
+    "LB",
+    "LC",
+    "LD",
+    "LE",
+    "LF"
+  ],
+  "taxonomy": [
+    "Laser Sources",
+    "Laser Cutting & Welding",
+    "Laser Marking & Engraving",
+    "Laser Cleaning",
+    "Additive Manufacturing",
+    "Scanners & Beam Delivery",
+    "Controllers & Software",
+    "Optical Components",
+    "Optical Coatings & Thin Film",
+    "Optical Materials & Crystals",
+    "Fibre Optics",
+    "Metrology & Test",
+    "Beam Profiling & Power Meters",
+    "Spectroscopy & Analytical",
+    "Imaging & Machine Vision",
+    "Sensors & Detectors",
+    "Motion & Positioning",
+    "Opto-Mechanics",
+    "Vacuum & Semiconductor Equipment",
+    "Quantum Technologies",
+    "Laser Safety",
+    "Cooling & Chillers",
+    "Media & Associations"
+  ],
+  "sampleProfiles": [
+    {
+      "id": "sample-fabrication-owner",
+      "label": "Sheet-metal shop owner, fibre laser cutting",
+      "profile": {
+        "name": "Rajesh Kumar",
+        "industry": "Metal Fabrication & Manufacturing",
+        "jobRole": "Owner & Managing Director",
+        "seniority": "C-level / Owner",
+        "companySize": "51-200",
+        "region": "West India",
+        "interests": [
+          "Laser Cutting & Welding",
+          "Laser Sources",
+          "Controllers & Software"
+        ],
+        "freeText": "Replacing our old CO2 cutter with a high-power fiber laser cutting machine and a CNC controller for thick steel.",
+        "optIn": true
+      }
+    },
+    {
+      "id": "sample-ev-procurement",
+      "label": "EV battery plant procurement head, laser welding",
+      "profile": {
+        "name": "Priya Nair",
+        "industry": "Automotive & EV",
+        "jobRole": "Head of Procurement",
+        "seniority": "Director",
+        "companySize": "1000+",
+        "region": "South India",
+        "interests": [
+          "Laser Cutting & Welding",
+          "Scanners & Beam Delivery",
+          "Metrology & Test"
+        ],
+        "freeText": "Sourcing laser welding systems for EV battery cells, with galvo scanners and weld inspection.",
+        "optIn": true
+      }
+    },
+    {
+      "id": "sample-research-lab",
+      "label": "University lab lead, quantum optics",
+      "profile": {
+        "name": "Arjun Mehta",
+        "industry": "Research & Academia",
+        "jobRole": "Principal Investigator",
+        "seniority": "Senior Manager",
+        "companySize": "201-1000",
+        "region": "South India",
+        "interests": [
+          "Quantum Technologies",
+          "Optical Components",
+          "Opto-Mechanics",
+          "Spectroscopy & Analytical"
+        ],
+        "freeText": "Setting up a quantum optics lab. Need narrow-linewidth lasers, optical tables, mounts, mirrors and spectrometers.",
+        "optIn": false
+      }
+    },
+    {
+      "id": "sample-defence-engineer",
+      "label": "Defence electronics engineer, infrared optics",
+      "profile": {
+        "name": "Neha Verma",
+        "industry": "Aerospace & Defence",
+        "jobRole": "Senior Optical Engineer",
+        "seniority": "Manager",
+        "companySize": "1000+",
+        "region": "North India",
+        "interests": [
+          "Optical Components",
+          "Sensors & Detectors",
+          "Optical Coatings & Thin Film"
+        ],
+        "freeText": "Looking for germanium infrared lenses, coated windows and thermal detectors for an airborne sensor programme.",
+        "optIn": false
+      }
+    },
+    {
+      "id": "sample-medical-devices",
+      "label": "Medical device founder, ultrafast micromachining",
+      "profile": {
+        "name": "Kavya Reddy",
+        "industry": "Medical & Life Sciences",
+        "jobRole": "Co-founder & CTO",
+        "seniority": "C-level / Owner",
+        "companySize": "11-50",
+        "region": "South India",
+        "interests": [
+          "Laser Sources",
+          "Laser Marking & Engraving",
+          "Motion & Positioning"
+        ],
+        "freeText": "Micromachining stents and marking implants. Need a femtosecond laser and precision motion stages.",
+        "optIn": true
+      }
+    },
+    {
+      "id": "sample-semiconductor-process",
+      "label": "Semiconductor process manager, vacuum and thin film",
+      "profile": {
+        "name": "Vikram Singh",
+        "industry": "Electronics & Semiconductors",
+        "jobRole": "Process Engineering Manager",
+        "seniority": "Manager",
+        "companySize": "201-1000",
+        "region": "West India",
+        "interests": [
+          "Vacuum & Semiconductor Equipment",
+          "Optical Coatings & Thin Film",
+          "Metrology & Test"
+        ],
+        "freeText": "Evaluating sputtering and thin film deposition equipment, plus wafer inspection and metrology tools.",
+        "optIn": false
+      }
+    },
+    {
+      "id": "sample-telecom-buyer",
+      "label": "Telecom purchase manager, fibre optics",
+      "profile": {
+        "name": "Sanjay Iyer",
+        "industry": "Telecom & Data Communications",
+        "jobRole": "Purchase Manager",
+        "seniority": "Manager",
+        "companySize": "201-1000",
+        "region": "East India",
+        "interests": [
+          "Fibre Optics",
+          "Optical Components",
+          "Metrology & Test"
+        ],
+        "freeText": "Buying optical fiber, couplers and connectors for data centre links, and test equipment to qualify them.",
+        "optIn": true
+      }
+    },
+    {
+      "id": "sample-solar-rnd",
+      "label": "Solar R&D lead, laser scribing",
+      "profile": {
+        "name": "Ananya Das",
+        "industry": "Energy & Solar",
+        "jobRole": "R&D Lead",
+        "seniority": "Senior Manager",
+        "companySize": "1000+",
+        "region": "North India",
+        "interests": [
+          "Laser Sources",
+          "Scanners & Beam Delivery",
+          "Beam Profiling & Power Meters"
+        ],
+        "freeText": "Developing laser scribing for solar cells. Need pulsed lasers, scan heads and beam profilers.",
+        "optIn": false
+      }
+    },
+    {
+      "id": "sample-distributor",
+      "label": "Photonics distributor from the Middle East",
+      "profile": {
+        "name": "Omar Haddad",
+        "industry": "Trading & Distribution",
+        "jobRole": "Business Development Director",
+        "seniority": "Director",
+        "companySize": "11-50",
+        "region": "Middle East",
+        "interests": [
+          "Laser Marking & Engraving",
+          "Laser Safety",
+          "Optical Components"
+        ],
+        "freeText": "Looking for laser marking machines and safety products to represent as a regional distributor.",
+        "optIn": true
+      }
+    },
+    {
+      "id": "sample-additive-engineer",
+      "label": "Aerospace additive manufacturing engineer",
+      "profile": {
+        "name": "Meera Joshi",
+        "industry": "Aerospace & Defence",
+        "jobRole": "Additive Manufacturing Engineer",
+        "seniority": "Individual Contributor",
+        "companySize": "51-200",
+        "region": "Europe",
+        "interests": [
+          "Additive Manufacturing",
+          "Laser Sources",
+          "Imaging & Machine Vision"
+        ],
+        "freeText": "Qualifying metal 3D printing for flight parts, with melt pool monitoring and laser cladding.",
+        "optIn": false
+      }
+    }
+  ]
+}

@@ -62,7 +62,7 @@ export function MatchesPage() {
     );
   }
 
-  if (state.data.matches.length === 0) {
+  if (state.data.results.length === 0) {
     return (
       <div className="container">
         <EmptyState
@@ -89,7 +89,7 @@ interface MatchesViewProps {
 }
 
 function MatchesView({ guest, response }: MatchesViewProps) {
-  const { matches, meta } = response;
+  const { results: matches } = response;
   const { bookmarkIds } = useSession();
   const hasSidebar = useMediaQuery(SIDEBAR_QUERY);
   const hasInlineDrawer = useMediaQuery(INLINE_DRAWER_QUERY);
@@ -145,7 +145,7 @@ function MatchesView({ guest, response }: MatchesViewProps) {
           <span className="meta-pill">
             <Icon name="gauge" size={18} />
             <span className="meta-pill__count">{matches.length} matches · </span>
-            {formatSeconds(meta.latencyMs)} · Local model
+            {formatSeconds(response.latencyMs)} · {response.source === 'offline' ? 'Offline demo' : 'Embedding model'}
           </span>
           <Link to="/matching" className="btn btn--outline btn--sm">
             <Icon name="refresh" size={16} strokeWidth={2} />
@@ -189,7 +189,7 @@ function MatchesView({ guest, response }: MatchesViewProps) {
           {filtered.length === 0 ? (
             <section className="state-panel">
               <h2>No matches with these filters</h2>
-              <p>Showing 0 of {matches.length}. Try a lower score or another hall.</p>
+              <p>Showing 0 of {matches.length}. Try a lower score or another row.</p>
               <button type="button" className="btn btn--primary" onClick={handleClear}>
                 Clear filters
               </button>
@@ -228,7 +228,7 @@ function MatchesView({ guest, response }: MatchesViewProps) {
         <MatchDrawer
           mode={hasInlineDrawer ? 'inline' : 'modal'}
           match={selected}
-          totalExhibitors={meta.scanned}
+          totalExhibitors={response.total}
           isSaved={selected ? savedSet.has(selected.exhibitor.id) : false}
           onToggleSave={handleToggleSave}
           onClose={handleCloseDetail}

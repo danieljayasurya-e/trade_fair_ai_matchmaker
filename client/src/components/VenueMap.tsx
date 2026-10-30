@@ -1,25 +1,7 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import type { KeyboardEvent, PointerEvent } from 'react';
-import {
-  AISLE_YS,
-  AMENITIES,
-  BOOTH,
-  BOOTH_SPOTS,
-  CONCOURSE,
-  HALL_H,
-  HALL_W,
-  MAIN_ENTRANCE,
-  SPOT_BY_ID,
-  TILE,
-  VENUE_H,
-  VENUE_W,
-  hallDoor,
-  hallWallPath,
-  hallX,
-} from '../data/venue';
+import { AMENITIES, BOOTH_SPOTS, MAIN_ENTRANCE, SPOT_BY_ID, VENUE_H, VENUE_W } from '../data/venue';
 import type { BoothSpot, Point } from '../data/venue';
-import { HALLS } from '../data/taxonomy';
-import type { Hall } from '../data/taxonomy';
 import type { Match } from '../types';
 import { bandFor } from '../utils/score';
 import { describeStart, encodeStart } from '../services/wayfinding';
@@ -42,13 +24,13 @@ interface VenueMapProps {
   onSelect: (exhibitorId: string) => void;
 }
 
-const WHOLE: View = { x: -3, y: -3, w: VENUE_W + 6, h: VENUE_H + 6 };
-const MIN_W = 36;
+const WHOLE: View = { x: -3, y: -3, w: VENUE_W + 6, h: VENUE_H + 8 };
+const MIN_W = 16;
+const GROUT = 0.15;
 /** Booth numbers are printed once a metre is at least this many screen pixels, i.e. readable. */
-const LABEL_PX_PER_M = 5.5;
+const LABEL_PX_PER_M = 9;
 
 function startPoint(start: StartPlace): Point {
-  if (start.kind === 'door') return hallDoor(start.hall);
   if (start.kind === 'stall') return SPOT_BY_ID.get(start.id)?.front ?? MAIN_ENTRANCE;
   return MAIN_ENTRANCE;
 }
@@ -78,53 +60,25 @@ export function VenueMap({ matches, savedIds, targetId, start, route, onSelect }
   const suppressClick = useRef(false);
   const startKey = encodeStart(start);
 
-  // Frame the whole walk plus the target's hall when a route appears (the route's first point is where
-  // the visitor stands). With nothing to guide to, show every hall; on a narrow screen, where four halls
-  // side by side would be too small to read, open on the hall holding most of the visitor's matches.
-  // The page memoises `route` and `matches`.
-  const hallFrame = (hall: Hall): View => {
-    const x = hallX(hall);
-    return fit([{ x, y: 0 }, { x: x + HALL_W, y: CONCOURSE.y + CONCOURSE.h }]);
-  };
+  // Frame the whole walk when a route appears; otherwise show the whole hall.
   const routeFrame = (): View => {
-    const spot = targetId ? SPOT_BY_ID.get(targetId) : undefined;
-    if (route && spot) {
-      const atEntrance = route.points[0] === MAIN_ENTRANCE;
-      // Leave room for the "Main entrance" label when the walk starts there.
-      const label = atEntrance ? [{ x: MAIN_ENTRANCE.x - 8, y: MAIN_ENTRANCE.y + 5 }, { x: MAIN_ENTRANCE.x + 8, y: MAIN_ENTRANCE.y + 5 }] : [];
-      return fit([...route.points, ...label, { x: hallX(spot.exhibitor.hall), y: 0 }, { x: hallX(spot.exhibitor.hall) + HALL_W, y: HALL_H }]);
-    }
-    const rect = svgRef.current?.getBoundingClientRect();
-    if (!rect || rect.width / rect.height > 1.3) return WHOLE;
-    const busiest = [...HALLS].sort(
-      (a, b) =>
-        BOOTH_SPOTS.filter((s) => s.exhibitor.hall === b && matches.has(s.exhibitor.id)).length -
-        BOOTH_SPOTS.filter((s) => s.exhibitor.hall === a && matches.has(s.exhibitor.id)).length,
-    )[0];
-    return busiest ? hallFrame(busiest) : WHOLE;
+    if (route && route.points.length > 1) return fit(route.points);
+    return WHOLE;
   };
-  /**
-   * Match a frame to the map's own shape. When the box is taller than the frame (phones), fill the height
-   * and trim the sides, but never cut into the route; there is no floor above the halls to show instead.
-   */
+  /** Match a frame to the map's own shape, so the whole frame stays visible. */
   const fillBox = (v: View): View => {
     const rect = svgRef.current?.getBoundingClientRect();
     if (!rect || rect.width === 0 || rect.height === 0) return v;
     const aspect = rect.width / rect.height;
     if (v.w / v.h > aspect) {
-      const xs = route && targetId ? route.points.map((p) => p.x) : [];
-      const keepW = xs.length > 0 ? Math.max(...xs) - Math.min(...xs) + 28 : 0; // room for labels and the zoom buttons
-      const w = Math.max(v.h * aspect, keepW);
-      const centre = xs.length > 0 ? (Math.max(...xs) + Math.min(...xs)) / 2 : v.x + v.w / 2;
-      const h = w / aspect;
-      return { x: centre - w / 2, y: v.y - (h - v.h) / 2, w, h };
+      const h = v.w / aspect;
+      return { ...v, y: v.y - (h - v.h) / 2, h };
     }
     const w = v.h * aspect;
     return { ...v, x: v.x - (w - v.w) / 2, w };
   };
   useEffect(() => {
     setView(fillBox(routeFrame()));
-    // routeFrame reads only `route`, `targetId` and `matches`.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [route, targetId, matches]);
 
@@ -179,46 +133,28 @@ export function VenueMap({ matches, savedIds, targetId, start, route, onSelect }
         viewBox={`${view.x} ${view.y} ${view.w} ${view.h}`}
         preserveAspectRatio="xMidYMid meet"
         role="group"
-        aria-label="Venue map, sample layout. Use the stall finder beside the map to pick any stall."
+        aria-label="Hall 1 floor plan. Use the stall finder beside the map to pick any stall."
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={endDrag}
         onPointerLeave={endDrag}
       >
-        <rect className="venue-map__concourse" x={0} y={CONCOURSE.y} width={VENUE_W} height={CONCOURSE.h} />
+        <rect className="venue-map__floor" x={0} y={0} width={VENUE_W} height={VENUE_H} />
+        <path
+          className="venue-map__wall"
+          d={`M${MAIN_ENTRANCE.x - 4} ${VENUE_H} H0 V0 H${VENUE_W} V${VENUE_H} H${MAIN_ENTRANCE.x + 4}`}
+        />
+        <text className="venue-map__hall" x={VENUE_W / 2} y={18} textAnchor="middle">
+          Hall 1
+        </text>
         {AMENITIES.map((a) => (
           <g key={`${a.label}-${a.x}`} className="venue-map__amenity">
-            <rect x={a.x} y={CONCOURSE.y + 6.4} width={a.w} height={3.2} rx={0.8} />
-            <text x={a.x + a.w / 2} y={CONCOURSE.y + 8.7}>
+            <rect x={a.x} y={a.y} width={a.w} height={a.h} rx={0.3} />
+            <text x={a.x + a.w / 2} y={a.y + a.h / 2 + 0.4} style={{ fontSize: Math.min(1.5, (a.w / a.label.length) * 1.6) }}>
               {a.label}
             </text>
           </g>
         ))}
-
-        {HALLS.map((hall) => {
-          const x = hallX(hall);
-          const matchCount = BOOTH_SPOTS.filter((s) => s.exhibitor.hall === hall && matches.has(s.exhibitor.id)).length;
-          return (
-            <g key={hall}>
-              <rect className="venue-map__floor" x={x} y={0} width={HALL_W} height={HALL_H} />
-              <path className="venue-map__wall" d={hallWallPath(hall)} />
-              <text className="venue-map__hall" x={x + 3} y={4.6}>
-                Hall {hall}
-              </text>
-              {matchCount > 0 && (
-                <text className="venue-map__count" x={x + HALL_W - 3} y={4.4}>
-                  {matchCount} {matchCount === 1 ? 'match' : 'matches'}
-                </text>
-              )}
-              {showLabels &&
-                AISLE_YS.map((y, i) => (
-                  <text key={y} className="venue-map__aisle" x={x + 2} y={y + 0.5}>
-                    {i + 1}
-                  </text>
-                ))}
-            </g>
-          );
-        })}
 
         {BOOTH_SPOTS.map((spot) => (
           <Tile
@@ -247,7 +183,7 @@ export function VenueMap({ matches, savedIds, targetId, start, route, onSelect }
         </g>
 
         {target && (
-          <g className="venue-map__callout" transform={`translate(${target.x + BOOTH / 2} ${target.y - 0.6})`}>
+          <g className="venue-map__callout" transform={`translate(${target.rect.x + target.rect.w / 2} ${target.rect.y - 0.4})`}>
             <rect x={-6.5} y={-4.6} width={13} height={3.8} rx={1.9} />
             <text y={-2.05}>{target.exhibitor.booth}</text>
           </g>
@@ -270,7 +206,7 @@ export function VenueMap({ matches, savedIds, targetId, start, route, onSelect }
         <button
           type="button"
           className="icon-btn icon-btn--map"
-          aria-label={route ? 'Fit the route' : 'Show the whole venue'}
+          aria-label={route ? 'Fit the route' : 'Show the whole hall'}
           onClick={() => setView(fillBox(routeFrame()))}
         >
           <Icon name="fit" size={18} strokeWidth={2} />
@@ -293,12 +229,13 @@ interface TileProps {
   onSelect: (id: string) => void;
 }
 
-/** One booth. Matches are glazed and keyboard reachable; the rest are matte and reached via the stall finder. */
+/** One booth. Matches are coloured and keyboard reachable; the rest are matte and reached via the stall finder. */
 const Tile = memo(function Tile({ spot, match, isSaved, isTarget, showLabel, onSelect }: TileProps) {
-  const inset = (BOOTH - TILE) / 2;
-  const { exhibitor } = spot;
+  const { exhibitor, rect } = spot;
   const band = match ? bandFor(match.score) : null;
-  const number = exhibitor.booth.split('-')[1];
+  const w = rect.w - 2 * GROUT;
+  const h = rect.h - 2 * GROUT;
+  const fontSize = Math.min(1.1, (w / exhibitor.booth.length) * 1.6, h * 0.6);
 
   const handleKey = (event: KeyboardEvent<SVGGElement>) => {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -310,7 +247,7 @@ const Tile = memo(function Tile({ spot, match, isSaved, isTarget, showLabel, onS
   return (
     <g
       className={`tile${band ? ` tile--glazed tone-${band.tone}` : ''}${isTarget ? ' is-target' : ''}`}
-      transform={`translate(${spot.x + inset} ${spot.y + inset})`}
+      transform={`translate(${rect.x + GROUT} ${rect.y + GROUT})`}
       onClick={() => onSelect(exhibitor.id)}
       {...(match
         ? {
@@ -325,14 +262,13 @@ const Tile = memo(function Tile({ spot, match, isSaved, isTarget, showLabel, onS
         {exhibitor.name} · {exhibitor.booth}
         {match ? ` · ${match.score}%` : ''}
       </title>
-      <rect className="tile__body" width={TILE} height={TILE} rx={0.45} />
-      {band && <path className="tile__gloss" d={`M0.35 0.35 H${TILE * 0.62} L0.35 ${TILE * 0.62} Z`} />}
+      <rect className="tile__body" width={w} height={h} rx={0.25} />
       {showLabel && (
-        <text className="tile__label" x={TILE / 2} y={TILE / 2 + 0.42}>
-          {number}
+        <text className="tile__label" x={w / 2} y={h / 2 + fontSize * 0.35} style={{ fontSize }}>
+          {exhibitor.booth}
         </text>
       )}
-      {isSaved && <circle className="tile__saved" cx={TILE - 0.6} cy={0.6} r={0.42} />}
+      {isSaved && <circle className="tile__saved" cx={w - 0.5} cy={0.5} r={0.35} />}
     </g>
   );
 });

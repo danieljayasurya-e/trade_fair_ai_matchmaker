@@ -14,7 +14,7 @@ interface MatchCardProps {
 }
 
 export const MatchCard = memo(function MatchCard({ match, isSelected, isSaved, onOpen, onToggleSave }: MatchCardProps) {
-  const { exhibitor, rank, score, factors } = match;
+  const { exhibitor, rank, score, insights } = match;
   const band = bandFor(score);
 
   return (
@@ -23,7 +23,7 @@ export const MatchCard = memo(function MatchCard({ match, isSelected, isSaved, o
         type="button"
         className="mcard__main"
         aria-current={isSelected || undefined}
-        aria-label={`${exhibitor.name}, rank ${rank}, ${score} percent match, ${band.label}, Hall ${exhibitor.hall} booth ${exhibitor.booth}. View details`}
+        aria-label={`${exhibitor.name}, rank ${rank}, ${score} percent match, ${band.label}, Hall 1 booth ${exhibitor.booth}. View details`}
         onClick={() => onOpen(exhibitor.id)}
       >
         <span className="mcard__rank">#{rank}</span>
@@ -34,12 +34,12 @@ export const MatchCard = memo(function MatchCard({ match, isSelected, isSaved, o
         <span className="mcard__body">
           <span className="mcard__name">{exhibitor.name}</span>
           <span className="mcard__where-short">
-            #{rank} · Hall {exhibitor.hall} · {exhibitor.booth}
+            #{rank} · Booth {exhibitor.booth}
           </span>
           <span className="mcard__desc">{exhibitor.description}</span>
           <span className="mcard__chips">
             <span className="mcard__chips-label">Matched on</span>
-            {factors.slice(0, 3).map((factor) => (
+            {insights.slice(0, 3).map((factor) => (
               <span key={factor.label} className="chip chip--teal">
                 {segmentLabel(factor.label)}
               </span>
@@ -48,7 +48,7 @@ export const MatchCard = memo(function MatchCard({ match, isSelected, isSaved, o
           <span className="mcard__facts">
             <span>
               <Icon name="pin" size={16} />
-              Hall {exhibitor.hall} · {exhibitor.booth}
+              Hall 1 · Booth {exhibitor.booth}
             </span>
             <span className="mcard__category">
               <Icon name="layers" size={16} />

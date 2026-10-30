@@ -1,38 +1,48 @@
-// Controlled vocabularies shared by guests, exhibitors, filters and the scorer.
+// Controlled vocabularies shared by guests, exhibitors, filters and the scorer. These are the values
+// served by GET /api/meta (docs/api-contract.md, section 8); keep the two in step.
 // `as const` tuples let TypeScript catch typos in the data.
 
-// The exhibitor segments are exactly the "Segment / Business Category" values in the Indian
-// Ceramics Asia company list. Visitors pick the ones they want to buy, so one vocabulary
-// serves both sides and every "Matched on" reason is a real segment.
+// Product areas at LASER World of PHOTONICS INDIA. Visitors pick what they want to buy; exhibitors
+// are tagged from their own product lists (data/retag_exhibitors.py), so one vocabulary serves
+// both sides and every "Matched on" reason is a real product area.
 export const INTERESTS = [
-  'Ceramic Glazing / Decorating / Surface Treatment',
-  'Heat treatment / Refractories',
-  'Raw materials and additives',
-  'Materials and aids',
-  'Form/Shaping',
-  'Technical ceramics, components / services',
-  'Plant construction engineering',
-  'Digital Inks',
-  'Handling / Packaging / Automation',
-  'Gasifiers/alternative fuel solutions',
-  'Digital Printing & Technology',
-  'Ceramic machine Tools / Spares / Replacement Parts',
-  'Crushing/Grinding/Milling',
-  'Lubricants',
-  'Dryers',
+  'Laser Sources',
+  'Laser Cutting & Welding',
+  'Laser Marking & Engraving',
+  'Laser Cleaning',
+  'Additive Manufacturing',
+  'Scanners & Beam Delivery',
+  'Controllers & Software',
+  'Optical Components',
+  'Optical Coatings & Thin Film',
+  'Optical Materials & Crystals',
+  'Fibre Optics',
+  'Metrology & Test',
+  'Beam Profiling & Power Meters',
+  'Spectroscopy & Analytical',
+  'Imaging & Machine Vision',
+  'Sensors & Detectors',
+  'Motion & Positioning',
+  'Opto-Mechanics',
+  'Vacuum & Semiconductor Equipment',
+  'Quantum Technologies',
+  'Laser Safety',
+  'Cooling & Chillers',
+  'Media & Associations',
 ] as const;
 export type Interest = (typeof INTERESTS)[number];
 
-// What kind of ceramics business the visitor runs.
-// TODO: confirm this list with the organiser; the company list does not define visitor sectors.
+// The visitor's sector. Exhibitors list the same sectors as the ones they sell to.
 export const INDUSTRIES = [
-  'Wall & floor tiles',
-  'Sanitaryware',
-  'Tableware & giftware',
-  'Technical ceramics',
-  'Refractories',
-  'Bricks & roofing',
-  'Trading & distribution',
+  'Metal Fabrication & Manufacturing',
+  'Automotive & EV',
+  'Aerospace & Defence',
+  'Electronics & Semiconductors',
+  'Medical & Life Sciences',
+  'Research & Academia',
+  'Telecom & Data Communications',
+  'Energy & Solar',
+  'Trading & Distribution',
 ] as const;
 export type Industry = (typeof INDUSTRIES)[number];
 
@@ -53,72 +63,10 @@ export const REGIONS = [
 ] as const;
 export type Region = (typeof REGIONS)[number];
 
-export const HALLS = ['1', '2', '3', '4'] as const;
+// The whole show is in Hall 1. The contract's `hall` field carries the booth row: booth codes start
+// with one of these (LA is the west wall, LF the east wall).
+export const HALLS = ['LA', 'LB', 'LC', 'LD', 'LE', 'LF'] as const;
 export type Hall = (typeof HALLS)[number];
 
-/** Which region of India an exhibitor's state falls in, for the location half of "buyer fit". */
-export const REGION_OF_STATE: Readonly<Record<string, Region>> = {
-  Gujarat: 'West India',
-  Maharashtra: 'West India',
-  Rajasthan: 'North India',
-  Delhi: 'North India',
-  'Uttar Pradesh': 'North India',
-  Telangana: 'South India',
-  'Tamil Nadu': 'South India',
-  Karnataka: 'South India',
-  'West Bengal': 'East India',
-};
-
-/**
- * Which visitor sectors buy each segment. One rule per segment, applied to every exhibitor in it
- * alike, so no company is favoured. It stands in for the "target buyer" data the company list lacks.
- * TODO: replace with the organiser's buyer criteria when available.
- */
-const MAKERS: readonly Industry[] = ['Wall & floor tiles', 'Sanitaryware', 'Tableware & giftware'];
-const HEAVY_CLAY: readonly Industry[] = [...MAKERS, 'Bricks & roofing'];
-const ALL_MAKERS: readonly Industry[] = [...MAKERS, 'Technical ceramics', 'Refractories', 'Bricks & roofing'];
-
-export const INDUSTRIES_BUYING: Readonly<Record<Interest, readonly Industry[]>> = {
-  'Ceramic Glazing / Decorating / Surface Treatment': MAKERS,
-  'Heat treatment / Refractories': ALL_MAKERS,
-  'Raw materials and additives': [...ALL_MAKERS, 'Trading & distribution'],
-  'Materials and aids': [...ALL_MAKERS, 'Trading & distribution'],
-  'Form/Shaping': [...HEAVY_CLAY, 'Technical ceramics'],
-  'Technical ceramics, components / services': ['Technical ceramics', 'Refractories'],
-  'Plant construction engineering': [...HEAVY_CLAY, 'Refractories'],
-  'Digital Inks': MAKERS,
-  'Handling / Packaging / Automation': [...HEAVY_CLAY, 'Trading & distribution'],
-  'Gasifiers/alternative fuel solutions': [...HEAVY_CLAY, 'Refractories'],
-  'Digital Printing & Technology': MAKERS,
-  'Ceramic machine Tools / Spares / Replacement Parts': [...HEAVY_CLAY, 'Technical ceramics'],
-  'Crushing/Grinding/Milling': [...HEAVY_CLAY, 'Technical ceramics', 'Refractories'],
-  Lubricants: ALL_MAKERS,
-  Dryers: [...HEAVY_CLAY, 'Technical ceramics'],
-};
-
-/**
- * Short display names for the segments. The full names from the company list are long ("Ceramic
- * Glazing / Decorating / Surface Treatment") and crowd cards, chips and filters; the full name is
- * still shown where there is room (the match detail) and used in exports.
- */
-export const SEGMENT_SHORT: Readonly<Record<Interest, string>> = {
-  'Ceramic Glazing / Decorating / Surface Treatment': 'Glazing & decoration',
-  'Heat treatment / Refractories': 'Kilns & refractories',
-  'Raw materials and additives': 'Raw materials',
-  'Materials and aids': 'Materials & aids',
-  'Form/Shaping': 'Forming & shaping',
-  'Technical ceramics, components / services': 'Technical ceramics',
-  'Plant construction engineering': 'Plant engineering',
-  'Digital Inks': 'Digital inks',
-  'Handling / Packaging / Automation': 'Handling & automation',
-  'Gasifiers/alternative fuel solutions': 'Alternative fuels',
-  'Digital Printing & Technology': 'Digital printing',
-  'Ceramic machine Tools / Spares / Replacement Parts': 'Machine tools & spares',
-  'Crushing/Grinding/Milling': 'Grinding & milling',
-  Lubricants: 'Lubricants',
-  Dryers: 'Dryers',
-};
-
-/** Short name for a segment; any other label (e.g. "In your region") comes back unchanged. */
-export const segmentLabel = (label: string): string =>
-  (SEGMENT_SHORT as Readonly<Record<string, string>>)[label] ?? label;
+/** Product areas read in full everywhere, so this only keeps call sites simple. */
+export const segmentLabel = (label: string): string => label;

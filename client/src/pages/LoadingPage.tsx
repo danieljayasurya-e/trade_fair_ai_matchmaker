@@ -9,7 +9,6 @@ import { HALLS } from '../data/taxonomy';
 import { SHOW_MAP } from '../features';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { useMatches } from '../hooks/useMatches';
-import { useMediaQuery } from '../hooks/useMediaQuery';
 import { TOP_N } from '../services';
 import type { Match } from '../types';
 import { formatSeconds } from '../utils/score';
@@ -20,11 +19,11 @@ const STEP_ONE_MS = 200;
 const STEP_TWO_MS = 650;
 const EXPECTED_MS = 1000;
 
-/** "26 in Hall 1 and 4 in Hall 2", leaving out halls with no matches. */
+/** "26 in row LC and 4 in row LD", leaving out rows with no matches. */
 function hallSummary(matches: readonly Match[]): string {
   const parts = HALLS.map((hall) => [hall, matches.filter((m) => m.exhibitor.hall === hall).length] as const)
     .filter(([, count]) => count > 0)
-    .map(([hall, count]) => `${count} in Hall ${hall}`);
+    .map(([hall, count]) => `${count} in row ${hall}`);
   return parts.length > 1 ? `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : (parts[0] ?? 'none yet');
 }
 
@@ -36,11 +35,10 @@ export function LoadingPage() {
   const isLoading = state.status === 'loading' || state.status === 'idle';
   const isDone = state.status === 'success';
   const viewLinkRef = useRef<HTMLAnchorElement>(null);
-  const isPhone = useMediaQuery('(max-width: 47.99rem)');
   const matchMap = useMemo(
     () =>
       state.status === 'success'
-        ? new Map(state.data.matches.map((m): [string, Match] => [m.exhibitor.id, m]))
+        ? new Map(state.data.results.map((m): [string, Match] => [m.exhibitor.id, m]))
         : null,
     [state],
   );
@@ -85,17 +83,17 @@ export function LoadingPage() {
 
   const stepIndex = isDone ? 3 : elapsed < STEP_ONE_MS ? 0 : elapsed < STEP_TWO_MS ? 1 : 2;
   const percent = isDone ? 100 : Math.min(95, Math.round((elapsed / EXPECTED_MS) * 100));
-  const shownMs = isDone ? state.data.meta.latencyMs : elapsed;
+  const shownMs = isDone ? state.data.latencyMs : elapsed;
   const steps = ['Reading profile', `Comparing with ${EXHIBITORS.length} exhibitors`, `Ranking your top ${TOP_N}`];
 
   return (
     <div className="container loading-page" aria-busy={isLoading}>
       <figure className="loading-page__floor">
-        <MatchingFloor scanned={Math.round((percent / 100) * EXHIBITORS.length)} matches={matchMap} compact={isPhone} />
+        <MatchingFloor scanned={Math.round((percent / 100) * EXHIBITORS.length)} matches={matchMap} />
         <figcaption>
           {isDone ? (
             <>
-              Your matches are glazed: {hallSummary(state.data.matches)}.
+              Your matches are coloured: {hallSummary(state.data.results)}.
               {SHOW_MAP && (
                 <>
                   {' '}
@@ -140,7 +138,7 @@ export function LoadingPage() {
         {isDone ? (
           <div className="progress-card__done">
             <p>
-              {state.data.matches.length} matches found in <strong>{formatSeconds(shownMs)}</strong> using the local
+              {state.data.results.length} matches found in <strong>{formatSeconds(shownMs)}</strong> using the embedding
               model.
             </p>
             <div className="progress-card__actions">
