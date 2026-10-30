@@ -2,7 +2,7 @@
 
 Context for AI coding assistants working in this repository.
 
-> **Repository status (29 Oct 2026):** The repo was freshly initialised (`.git` only: no commits, no source files, no docs). Everything below comes from the hackathon challenge brief and briefing deck. Items marked `TODO:` are undecided or unknown. Do not invent them; ask the team or record the decision here once made.
+> **Repository status (30 Oct 2026):** Core app built and deployed. See [client/README.md](client/README.md), [backend/README.md](backend/README.md) and [docs/api-contract.md](docs/api-contract.md). Keep the contract, web app and backend in step. Any scoring change goes in both `backend/engine.py` and `client/src/services/scoring.ts`. `TODO:` items below predate the build; those files take precedence.
 
 ## 1. Project overview
 

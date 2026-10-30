@@ -1,6 +1,6 @@
 # Architecture
 
-> **Status (29 Oct 2026):** No code exists yet. This document records the **required** architecture from the challenge brief and the **open decisions**. It does not describe an implemented system. Items marked `TODO:` are undecided.
+> **Status (30 Oct 2026):** The core is built, using FastAPI, a local `bge-small` embedding model, and React with Vite. Details are in [client/README.md](../client/README.md) and [backend/README.md](../backend/README.md). The exhibitor portal is not built, and the mobile app is not connected. `TODO:` items below are from the original brief and may be out of date; those READMEs take precedence.
 
 ## 1. System overview
 
