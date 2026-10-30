@@ -1,5 +1,8 @@
 /* ---------- Header ---------- */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
   background: var(--surface);
   border-bottom: 1px solid var(--line);
 }
@@ -126,7 +129,8 @@
   inset: auto 0 0;
   z-index: 30;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
   padding: 0.375rem 0.5rem 0.875rem;
   background: var(--surface);
   border-top: 1px solid var(--line);
@@ -579,8 +583,8 @@
   flex-direction: column;
   flex: 0 0 24rem;
   position: sticky;
-  top: 1rem;
-  max-height: calc(100dvh - 2rem);
+  top: calc(var(--header-h) + 1rem);
+  max-height: calc(100dvh - var(--header-h) - 2rem);
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-dialog);
@@ -1322,5 +1326,278 @@ dialog::backdrop {
   from {
     opacity: 0;
     transform: translateY(0.5rem);
+  }
+}
+
+/* ---------- Venue map (phase 2) ----------
+   The floor is drawn as tiles: other stalls are matte, your matches are glazed in their score
+   colour (via the shared tone-* classes) with a small highlight. All sizes inside the SVG are metres. */
+.venue-map {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  overflow: hidden;
+}
+.venue-map__svg {
+  display: block;
+  width: 100%;
+  height: max(32rem, calc(100dvh - var(--header-h) - 10rem));
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+  font-family: var(--font);
+  font-variant-numeric: tabular-nums;
+}
+.venue-map__svg:active {
+  cursor: grabbing;
+}
+.venue-map__floor {
+  fill: var(--bg);
+}
+.venue-map__wall {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 0.5;
+}
+.venue-map__concourse {
+  fill: var(--soft);
+}
+.venue-map__amenity rect {
+  fill: var(--surface);
+  stroke: #cbd5e1;
+  stroke-width: 0.2;
+}
+.venue-map__amenity text,
+.venue-map__aisle {
+  fill: var(--muted);
+  font-size: 1.3px;
+  text-anchor: middle;
+}
+.venue-map__amenity text {
+  font-size: 1.9px;
+}
+.venue-map__hall {
+  fill: var(--ink);
+  font-size: 3.4px;
+  font-weight: 700;
+}
+.venue-map__count {
+  fill: var(--teal-ink);
+  font-size: 2.2px;
+  font-weight: 600;
+  text-anchor: end;
+}
+.venue-map__entrance path {
+  stroke: var(--ink);
+  stroke-width: 0.8;
+  stroke-linecap: round;
+}
+.venue-map__entrance text {
+  fill: var(--ink);
+  font-size: 2.2px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.tile {
+  cursor: pointer;
+}
+.tile__body {
+  fill: var(--line);
+  transition: fill 120ms ease;
+}
+.tile:hover .tile__body {
+  fill: #cbd5e1;
+}
+.tile--glazed .tile__body,
+.tile--glazed:hover .tile__body {
+  fill: var(--tone);
+}
+.tile__gloss {
+  fill: #fff;
+  opacity: 0.32;
+  pointer-events: none;
+}
+.tile__label {
+  fill: var(--muted);
+  font-size: 1.3px;
+  text-anchor: middle;
+  pointer-events: none;
+}
+.tile--glazed .tile__label {
+  fill: #fff;
+  font-weight: 700;
+}
+.tile__saved {
+  fill: #fff;
+  stroke: var(--primary-ink);
+  stroke-width: 0.25;
+}
+.tile:focus {
+  outline: none;
+}
+.tile:focus-visible .tile__body,
+.tile.is-target .tile__body {
+  stroke: var(--ink);
+  stroke-width: 0.55;
+}
+.tile:focus-visible .tile__body {
+  stroke: var(--primary);
+}
+
+.venue-map__route polyline {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.venue-map__route-casing {
+  stroke: #fff;
+  stroke-width: 2.2;
+}
+.venue-map__route-line {
+  stroke: var(--primary);
+  stroke-width: 1.1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: route-draw 900ms ease-out;
+}
+@keyframes route-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .venue-map__route-line {
+    animation: none;
+  }
+}
+
+.venue-map__callout rect {
+  fill: var(--ink);
+}
+.venue-map__callout text {
+  fill: #fff;
+  font-size: 2px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+.venue-map__here-halo {
+  fill: rgb(29 78 216 / 0.2);
+}
+.venue-map__here-dot {
+  fill: var(--primary);
+  stroke: #fff;
+  stroke-width: 0.45;
+}
+.venue-map__here text {
+  fill: var(--primary-ink);
+  font-size: 1.6px;
+  font-weight: 700;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 0.5;
+}
+
+.venue-map__controls {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.icon-btn--map {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 0.75rem;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+.map-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.map-legend__route {
+  stroke: var(--primary);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.detail__route {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ---------- Matching floor: the venue as tiles, compared then glazed ---------- */
+.matching-floor {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font);
+}
+.matching-floor__hall {
+  fill: var(--surface);
+}
+.matching-floor__wall {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 0.5;
+}
+.matching-floor__label {
+  fill: var(--ink);
+  font-size: 3.2px;
+  font-weight: 700;
+}
+.floor-tile rect {
+  fill: var(--line);
+  transition: fill 160ms ease;
+}
+.floor-tile--scanned rect {
+  fill: var(--primary-tint);
+}
+.floor-tile--done rect {
+  fill: var(--line);
+}
+/* The group is positioned by its transform attribute, so the pop-in animates the shapes inside it. */
+.floor-tile--glazed > * {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: glaze 420ms ease-out both;
+  animation-delay: var(--glaze-delay, 0ms);
+}
+.floor-tile--glazed rect {
+  fill: var(--tone);
+}
+.floor-tile__gloss {
+  fill: #fff;
+  opacity: 0.32;
+}
+@keyframes glaze {
+  from {
+    opacity: 0;
+    scale: 0.4;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floor-tile--glazed > * {
+    animation: none;
+  }
+  .floor-tile rect {
+    transition: none;
   }
 }

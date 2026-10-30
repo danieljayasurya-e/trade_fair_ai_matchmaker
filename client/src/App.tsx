@@ -2,10 +2,12 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { SessionProvider } from './context/SessionContext';
 import { ToastProvider } from './context/ToastContext';
+import { SHOW_MAP } from './features';
 import { DetailsPage } from './pages/DetailsPage';
 import { HowItWorksPage } from './pages/HowItWorksPage';
 import { LandingPage } from './pages/LandingPage';
 import { LoadingPage } from './pages/LoadingPage';
+import { MapPage } from './pages/MapPage';
 import { MatchesPage } from './pages/MatchesPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { VisitListPage } from './pages/VisitListPage';
@@ -22,6 +24,7 @@ export function App() {
               <Route path="details" element={<DetailsPage />} />
               <Route path="matching" element={<LoadingPage />} />
               <Route path="matches" element={<MatchesPage />} />
+              {SHOW_MAP && <Route path="map" element={<MapPage />} />}
               <Route path="visit-list" element={<VisitListPage />} />
               <Route path="how-it-works" element={<HowItWorksPage />} />
               <Route path="*" element={<NotFoundPage />} />

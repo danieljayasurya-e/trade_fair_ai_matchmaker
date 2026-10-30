@@ -1,5 +1,6 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useSession } from '../context/SessionContext';
+import { SHOW_MAP } from '../features';
 import { LogoMark } from './Logo';
 import { initialsOf } from '../utils/score';
 
@@ -21,6 +22,7 @@ export function Header() {
           {!isStart && (
             <>
               <NavLink to="/matches">Matches</NavLink>
+              {SHOW_MAP && <NavLink to="/map">Map</NavLink>}
               <NavLink to="/visit-list">
                 Visit list
                 <span className="count-badge" aria-label={`${bookmarkIds.length} saved`}>

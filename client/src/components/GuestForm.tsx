@@ -1,6 +1,6 @@
 import { useId, useMemo, useRef, useState } from 'react';
 import type { FormEvent, ReactNode, RefObject } from 'react';
-import { COMPANY_SIZES, INDUSTRIES, INTERESTS, REGIONS, SENIORITIES } from '../data/taxonomy';
+import { COMPANY_SIZES, INDUSTRIES, INTERESTS, REGIONS, SENIORITIES, segmentLabel } from '../data/taxonomy';
 import type { GuestInput } from '../types';
 import { FIELD_ORDER, FREE_TEXT_MAX, NAME_MAX, validateGuestForm } from '../utils/guestForm';
 import type { FieldErrors, FieldName, GuestFormValues } from '../utils/guestForm';
@@ -160,7 +160,7 @@ export function GuestForm({ values, onChange, onSubmit, submitLabel, submitRef }
                     checked={values.interests.includes(interest)}
                     onChange={() => onChange({ interests: toggleIn(values.interests, interest) })}
                   />
-                  <span>{interest}</span>
+                  <span title={interest}>{segmentLabel(interest)}</span>
                 </label>
               ))}
             </div>

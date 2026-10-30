@@ -41,6 +41,14 @@ export function DetailsPage() {
     submitRef.current?.focus({ preventScroll: true });
   }, []);
 
+  const handleMatchSample = useCallback(
+    (sample: SampleProfile) => {
+      selectGuest(toGuest({ ...sample.profile, interests: [...sample.profile.interests] }));
+      navigate('/matching');
+    },
+    [navigate, selectGuest],
+  );
+
   const handleUpload = useCallback((loaded: Partial<GuestFormValues>, fileName: string) => {
     setValues((current) => ({ ...current, ...loaded }));
     setFilledFrom({ id: null, message: `Filled in what we could read from ${fileName}. Check the rest, then continue.` });
@@ -112,6 +120,7 @@ export function DetailsPage() {
                   sample={sample}
                   isFilled={filledFrom?.id === sample.id}
                   onUse={handleSample}
+                  onMatch={handleMatchSample}
                 />
               ))}
             </div>

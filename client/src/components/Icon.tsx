@@ -28,6 +28,10 @@ const PATHS = {
   trash: ['M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13'],
   alert: ['M12 4 3 20h18zM12 10v4m0 3v.01'],
   inbox: ['M4 13l2-8h12l2 8M4 13v6h16v-6M4 13h5l1 2h4l1-2h5'],
+  map: ['M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z', 'M9 3v15', 'M15 6v15'],
+  plus: ['M12 5v14', 'M5 12h14'],
+  minus: ['M5 12h14'],
+  fit: ['M4 9V4h5', 'M20 9V4h-5', 'M4 15v5h5', 'M20 15v5h-5'],
 } as const;
 
 export type IconName = keyof typeof PATHS;

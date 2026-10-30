@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { HALLS, INTERESTS } from '../data/taxonomy';
+import { HALLS, INTERESTS, segmentLabel } from '../data/taxonomy';
 import type { Match } from '../types';
 import { DEFAULT_FILTERS } from '../utils/filters';
 import type { Filters, MinScore } from '../utils/filters';
@@ -28,7 +28,7 @@ export function FilterPanel({ matches, filters, onChange, onClear }: FilterPanel
       halls: HALLS.map((hall) => ({ value: hall, label: `Hall ${hall}`, count: matches.filter((m) => m.exhibitor.hall === hall).length })),
       categories: INTERESTS.map((category) => ({
         value: category,
-        label: category,
+        label: segmentLabel(category),
         count: matches.filter((m) => m.exhibitor.tags.includes(category)).length,
       })).filter((option) => option.count > 0),
     }),
@@ -126,7 +126,7 @@ export function AppliedFilters({ filters, onChange }: AppliedFiltersProps) {
     ...(filters.minScore ? [{ label: `${filters.minScore}%+ score`, remove: () => onChange({ minScore: DEFAULT_FILTERS.minScore }) }] : []),
     ...filters.halls.map((hall) => ({ label: `Hall ${hall}`, remove: () => onChange({ halls: toggleIn(filters.halls, hall) }) })),
     ...filters.categories.map((category) => ({
-      label: category,
+      label: segmentLabel(category),
       remove: () => onChange({ categories: toggleIn(filters.categories, category) }),
     })),
     ...(filters.savedOnly ? [{ label: 'Saved only', remove: () => onChange({ savedOnly: false }) }] : []),

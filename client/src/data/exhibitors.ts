@@ -8,6 +8,7 @@
 //    demo can show where a stall is; do not present them as event data.
 //  - Contact-person names are generated and are deliberately not imported.
 // The file has no descriptions, product lists or target-buyer criteria, so none are invented here.
+import { SEGMENT_SHORT } from './taxonomy';
 import type { Hall, Interest } from './taxonomy';
 import type { Exhibitor } from '../types';
 
@@ -225,5 +226,5 @@ export const EXHIBITORS: readonly Exhibitor[] = ROWS.map(([name, hall, booth, ci
   state,
   tags,
   // Built only from the record's own fields.
-  description: `${tags.join(', ')}. Based in ${city}, ${state}.`,
+  description: `${tags.map((tag) => SEGMENT_SHORT[tag]).join(', ')}. Based in ${city}, ${state}.`,
 }));
