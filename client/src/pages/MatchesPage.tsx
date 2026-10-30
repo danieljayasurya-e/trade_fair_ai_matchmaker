@@ -5,6 +5,7 @@ import { FilterSheet } from '../components/FilterSheet';
 import { Icon } from '../components/Icon';
 import { MatchCard } from '../components/MatchCard';
 import { MatchDrawer } from '../components/MatchDrawer';
+import { Select } from '../components/Select';
 import { EmptyState, ErrorState, MatchSkeleton } from '../components/StatePanels';
 import { useSession } from '../context/SessionContext';
 import { useBookmarkToggle } from '../hooks/useBookmarkToggle';
@@ -17,6 +18,8 @@ import type { Filters, SortKey } from '../utils/filters';
 import { formatSeconds } from '../utils/score';
 
 const PAGE_SIZE = 10;
+
+const SORT_OPTIONS = (Object.keys(SORT_LABEL) as SortKey[]).map((key) => ({ value: key, label: SORT_LABEL[key] }));
 // Below these widths the sidebar and the inline drawer give way to sheets.
 const SIDEBAR_QUERY = '(min-width: 48rem)';
 const INLINE_DRAWER_QUERY = '(min-width: 75rem)';
@@ -172,16 +175,16 @@ function MatchesView({ guest, response }: MatchesViewProps) {
                 Filters{activeCount > 0 && ` (${activeCount})`}
               </button>
             )}
-            <label className="sort">
-              <span>Sort by</span>
-              <select value={filters.sort} onChange={(e) => handleChange({ sort: e.target.value as SortKey })}>
-                {(Object.keys(SORT_LABEL) as SortKey[]).map((key) => (
-                  <option key={key} value={key}>
-                    {SORT_LABEL[key]}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <div className="sort">
+              <span id="sort-label">Sort by</span>
+              <Select
+                aria-labelledby="sort-label"
+                size="sm"
+                value={filters.sort}
+                options={SORT_OPTIONS}
+                onChange={(sort) => handleChange({ sort })}
+              />
+            </div>
           </div>
 
           <AppliedFilters filters={filters} onChange={handleChange} />

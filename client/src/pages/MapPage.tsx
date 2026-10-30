@@ -1,41 +1,101 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Icon } from '../components/Icon';
+import { Select } from '../components/Select';
 import { VenueMap } from '../components/VenueMap';
 import { useSession } from '../context/SessionContext';
 import { HALLS } from '../data/taxonomy';
 import { BOOTH_SPOTS, SPOT_BY_ID } from '../data/venue';
+import type { BoothSpot } from '../data/venue';
 import { useBookmarkToggle } from '../hooks/useBookmarkToggle';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { useMatches } from '../hooks/useMatches';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 import { decodeStart, describeStart, encodeStart, routeTo } from '../services/wayfinding';
+import type { Route, StartPlace } from '../services/wayfinding';
 import type { Match } from '../types';
 import { bandFor } from '../utils/score';
 
 /** "Main entrance" → "the main entrance", "Booth LC 24" → "booth LC 24". */
 const fromPhrase = (place: string) =>
-  place === 'Main entrance'
-    ? 'the main entrance'
-    : place.startsWith('Booth')
-      ? `b${place.slice(1)}`
-      : `the ${place}`;
+  place === 'Main entrance' ? 'the main entrance' : place.startsWith('Booth') ? `b${place.slice(1)}` : `the ${place}`;
 
-const byBooth =(a: { exhibitor: { booth: string } }, b: { exhibitor: { booth: string } }) =>
-  a.exhibitor.booth.localeCompare(b.exhibitor.booth, undefined, { numeric: true });
+/** The phone's directions sheet: just its handle, a summary, or everything. */
+type SheetState = 'min' | 'peek' | 'open';
+const SHEET_ORDER: readonly SheetState[] = ['min', 'peek', 'open'];
+/** How much of the map each sheet state covers, in pixels, so routes are framed above it. */
+const SHEET_COVER_PX: Record<SheetState, number> = { min: 44, peek: 168, open: 168 };
+/** How far a drag on the handle must go to count as a swipe. */
+const SWIPE_PX = 24;
+const SEARCH_LIMIT = 40;
+
+/** "Starting from" choices: the entrance, then every booth grouped by row. */
+const START_OPTIONS = [
+  { value: 'entrance', label: 'Main entrance' },
+  ...HALLS.map((hall) => ({
+    label: `Booths in row ${hall}`,
+    options: BOOTH_SPOTS.filter((s) => s.exhibitor.hall === hall).map((s) => ({
+      value: s.exhibitor.id,
+      label: `${s.exhibitor.booth} · ${s.exhibitor.name}`,
+    })),
+  })),
+];
+
+type SortOrder = 'nearest' | 'best';
+
+/** "lc16", "LC 16" and "monoline" all find MONOLINE LASER at LC 16. */
+const normalise = (text: string) => text.toLowerCase().replace(/\s+/g, '');
+
+/** Walking distance from a start to any stall, worked out once per stall and start. Infinity if there's no way through. */
+function useWalkingDistance(start: StartPlace) {
+  const startKey = encodeStart(start);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const cache = useMemo(() => new Map<string, number>(), [startKey]);
+  return useCallback(
+    (id: string) => {
+      let metres = cache.get(id);
+      if (metres === undefined) {
+        metres = routeTo(start, id)?.metres ?? Number.POSITIVE_INFINITY;
+        cache.set(id, metres);
+      }
+      return metres;
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [cache],
+  );
+}
 
 // Every stall on the Hall 1 plan from the visitor guide, and walking directions to any one of them.
+// Laptops: directions panel beside a full-height map. Phones: full-screen map with a directions sheet.
 export function MapPage() {
   useDocumentTitle('Find your way');
   const { guest, bookmarkIds } = useSession();
   const { state } = useMatches(guest);
   const [params, setParams] = useSearchParams();
   const handleToggleSave = useBookmarkToggle();
+  const isPhone = useMediaQuery('(max-width: 47.99rem)');
+  const [sheet, setSheet] = useState<SheetState>('peek');
+  const swipeFrom = useRef<number | null>(null);
+  const didSwipe = useRef(false);
+  const stepSheet = (direction: 1 | -1) =>
+    setSheet((current) => {
+      const index = SHEET_ORDER.indexOf(current) + direction;
+      return SHEET_ORDER[Math.min(Math.max(index, 0), SHEET_ORDER.length - 1)] ?? current;
+    });
+  const [query, setQuery] = useState('');
+  const [sort, setSort] = useState<SortOrder>('best');
 
   const requested = params.get('stall');
   const targetId = requested && SPOT_BY_ID.has(requested) ? requested : null;
   const startKey = encodeStart(decodeStart(params.get('from')));
   const start = useMemo(() => decodeStart(startKey), [startKey]);
   const route = useMemo(() => (targetId ? routeTo(start, targetId) : null), [start, targetId]);
+  const distanceTo = useWalkingDistance(start);
+  // The step being pointed at, tied to its route so a new route starts with none.
+  const [pointed, setPointed] = useState<{ route: Route; step: number } | null>(null);
+  const activeStep = pointed && pointed.route === route ? pointed.step : null;
+  const [stepFocus, setStepFocus] = useState(0);
+  const pointAt = (step: number | null) => setPointed(step === null || !route ? null : { route, step });
 
   const matchList = state.status === 'success' ? state.data.results : null;
   const matches = useMemo(
@@ -59,220 +119,338 @@ export function MapPage() {
       ),
     [setParams],
   );
-  const selectStall = useCallback((id: string) => setParam({ stall: id }), [setParam]);
+  const selectStall = useCallback(
+    (id: string) => {
+      setParam({ stall: id });
+      // On a phone, fold the sheet so the route on the map is what you see.
+      setSheet('peek');
+    },
+    [setParam],
+  );
+  const arriveHere = (id: string) => {
+    setParam({ from: id, stall: null });
+    setSort('nearest');
+    setQuery('');
+    setSheet('open');
+  };
 
   const target = targetId ? SPOT_BY_ID.get(targetId) : undefined;
   const targetMatch = targetId ? matches.get(targetId) : undefined;
   const band = targetMatch ? bandFor(targetMatch.score) : null;
+  const isSaved = target ? saved.has(target.exhibitor.id) : false;
 
   return (
-    <div className="container map-page">
-      <header className="map-page__head">
-        <h1>Find your way</h1>
-        <p className="muted">
-          Every stall in Hall 1, from the visitor guide's floor plan. Your matches are coloured; pick one to get
-          walking directions.
-        </p>
-      </header>
+    <div className="map-page" data-sheet={sheet}>
+      <section className="map-page__map" aria-label="Hall 1 map">
+        <VenueMap
+          matches={matches}
+          savedIds={saved}
+          targetId={targetId}
+          start={start}
+          route={route}
+          onSelect={selectStall}
+          insetBottom={isPhone ? SHEET_COVER_PX[sheet] : 0}
+          activeStep={activeStep}
+          stepFocus={stepFocus}
+        />
+        <MapLegend className="map-legend--overlay" />
+      </section>
 
-      <div className="map-page__body">
-        <section className="map-page__map" aria-label="Venue map">
-          <VenueMap
-            matches={matches}
-            savedIds={saved}
-            targetId={targetId}
-            start={start}
-            route={route}
-            onSelect={selectStall}
-          />
-          <MapLegend />
-        </section>
+      <aside className="map-panel" aria-label="Directions">
+        {/* Tap to open or fold; swipe up or down to step between handle only, summary and everything. */}
+        <button
+          type="button"
+          className="map-panel__handle"
+          aria-expanded={sheet === 'open'}
+          onPointerDown={(e) => {
+            swipeFrom.current = e.clientY;
+          }}
+          onPointerUp={(e) => {
+            const from = swipeFrom.current;
+            swipeFrom.current = null;
+            if (from === null) return;
+            const dy = e.clientY - from;
+            didSwipe.current = Math.abs(dy) >= SWIPE_PX;
+            if (didSwipe.current) stepSheet(dy < 0 ? 1 : -1);
+          }}
+          onClick={() => {
+            // A swipe already moved the sheet; a tap opens it, or folds it back to the summary.
+            if (didSwipe.current) {
+              didSwipe.current = false;
+              return;
+            }
+            setSheet((current) => (current === 'open' ? 'peek' : current === 'min' ? 'peek' : 'open'));
+          }}
+        >
+          <span className="map-panel__grip" aria-hidden="true" />
+          <span className="visually-hidden">{sheet === 'open' ? 'Fold the directions' : 'Open the directions'}</span>
+        </button>
+        {sheet !== 'min' && (
+          <button type="button" className="map-panel__hide" onClick={() => setSheet('min')}>
+            <Icon name="chevronDown" size={18} strokeWidth={2} />
+            <span className="visually-hidden">Hide the directions to see more map</span>
+          </button>
+        )}
 
-        <aside className="map-panel" aria-label="Directions">
-          <div className="map-panel__pickers">
-            <label className="field">
-              <span>Take me to</span>
-              <select value={targetId ?? ''} onChange={(e) => setParam({ stall: e.target.value || null })}>
-                <option value="">Choose a stall</option>
-                {HALLS.map((hall) => (
-                  <optgroup key={hall} label={`Row ${hall}`}>
-                    {BOOTH_SPOTS.filter((s) => s.exhibitor.hall === hall).map((s) => (
-                      <option key={s.exhibitor.id} value={s.exhibitor.id}>
-                        {s.exhibitor.booth} · {s.exhibitor.name}
-                        {matches.has(s.exhibitor.id) ? ` · ${matches.get(s.exhibitor.id)?.score}%` : ''}
-                      </option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
-            </label>
-            <label className="field">
-              <span>I'm at</span>
-              <select value={startKey} onChange={(e) => setParam({ from: e.target.value === 'entrance' ? null : e.target.value })}>
-                <optgroup label="Entrances">
-                  <option value="entrance">Main entrance</option>
-                </optgroup>
-                {HALLS.map((hall) => (
-                  <optgroup key={hall} label={`Booths in row ${hall}`}>
-                    {BOOTH_SPOTS.filter((s) => s.exhibitor.hall === hall).map((s) => (
-                      <option key={s.exhibitor.id} value={s.exhibitor.id}>
-                        {s.exhibitor.booth} · {s.exhibitor.name}
-                      </option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
-            </label>
-          </div>
+        <h1 className="map-panel__heading">Find your way</h1>
 
-          {target && route ? (
-            <section className="map-panel__route" aria-labelledby="route-title">
-              <div className="map-panel__stall">
+        {target && route ? (
+          <section className="route-card" aria-labelledby="route-title">
+            <button type="button" className="route-card__back" onClick={() => setParam({ stall: null })}>
+              <Icon name="chevronLeft" size={18} strokeWidth={2} />
+              All stalls
+            </button>
+
+            <div className="route-card__summary">
+              <span className={`route-card__booth${band ? ` tone-${band.tone}` : ''}`}>{target.exhibitor.booth}</span>
+              <div className="route-card__title">
                 <h2 id="route-title">{target.exhibitor.name}</h2>
-                <p className="muted">
-                  Hall 1 · Booth {target.exhibitor.booth}
-                </p>
                 {targetMatch && band ? (
-                  <p className={`map-panel__score tone-${band.tone}`}>
-                    <strong>{targetMatch.score}%</strong> {band.label} · rank #{targetMatch.rank} for you
+                  <p className={`route-card__score tone-${band.tone}`}>
+                    <strong>{targetMatch.score}%</strong> {band.label}, #{targetMatch.rank} for you
                   </p>
                 ) : (
-                  <p className="map-panel__score map-panel__score--none">
+                  <p className="route-card__score route-card__score--none">
                     {guest ? 'Not in your top 30' : 'Add your details to see how well this stall fits you'}
                   </p>
                 )}
               </div>
+            </div>
 
-              <p className="map-panel__distance">
-                <Icon name="pin" size={18} />
-                {route.metres === 0
-                  ? 'You are here'
-                  : `About ${route.metres} m, ${route.minutes} min walk from ${fromPhrase(describeStart(start))}`}
-              </p>
-              <ol className="map-steps">
-                {route.steps.map((step) => (
-                  <li key={step}>{step}</li>
-                ))}
-              </ol>
+            <p className="route-card__walk">
+              {route.metres === 0 ? (
+                <strong>You're at this stall</strong>
+              ) : (
+                <>
+                  <strong>
+                    {route.metres} m · {route.minutes} min
+                  </strong>{' '}
+                  <span>from {fromPhrase(describeStart(start))}</span>
+                </>
+              )}
+            </p>
 
-              <div className="map-panel__actions">
-                {guest && (
-                  <button
-                    type="button"
-                    className={`btn btn--outline${saved.has(target.exhibitor.id) ? ' is-saved' : ''}`}
-                    aria-pressed={saved.has(target.exhibitor.id)}
-                    onClick={() => handleToggleSave(target.exhibitor.id)}
-                  >
-                    <Icon name="bookmark" size={18} filled={saved.has(target.exhibitor.id)} />
-                    {saved.has(target.exhibitor.id) ? 'Saved' : 'Save'}
-                  </button>
-                )}
+            <div className="route-card__actions">
+              <button type="button" className="btn btn--primary" onClick={() => arriveHere(target.exhibitor.id)}>
+                I'm here, what's next?
+              </button>
+              {guest && (
                 <button
                   type="button"
-                  className="btn btn--primary"
-                  onClick={() => setParam({ from: target.exhibitor.id, stall: null })}
+                  className={`btn btn--outline btn--square${isSaved ? ' is-saved' : ''}`}
+                  aria-pressed={isSaved}
+                  aria-label={isSaved ? 'Saved to visit list' : 'Save to visit list'}
+                  onClick={() => handleToggleSave(target.exhibitor.id)}
                 >
-                  I'm here, pick the next stall
+                  <Icon name="bookmark" size={18} filled={isSaved} />
                 </button>
-              </div>
-              <p className="map-panel__note">Traced from the visitor guide's plan. Distances are approximate.</p>
-            </section>
-          ) : (
-            <MatchesByHall matches={matchList} hasGuest={guest !== null} onSelect={selectStall} />
-          )}
-        </aside>
-      </div>
+              )}
+            </div>
+
+            {route.steps.length > 0 && (
+              // Point at a step to see its stretch on the map; pick it to bring that stretch into view.
+              <ol className="map-steps" onMouseLeave={() => pointAt(null)}>
+                {route.steps.map((step, index) => {
+                  return (
+                    <li key={step}>
+                      <button
+                        type="button"
+                        className={`map-steps__step${index === activeStep ? ' is-active' : ''}`}
+                        aria-pressed={index === activeStep}
+                        onMouseEnter={() => pointAt(index)}
+                        onFocus={() => pointAt(index)}
+                        onBlur={() => pointAt(null)}
+                        onClick={() => {
+                          pointAt(index);
+                          setStepFocus((n) => n + 1);
+                          setSheet('peek');
+                        }}
+                      >
+                        <span className="map-steps__num" aria-hidden="true">
+                          {index + 1}
+                        </span>
+                        {step}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ol>
+            )}
+            <p className="map-panel__note">Traced from the visitor guide's plan. Distances are approximate.</p>
+          </section>
+        ) : (
+          <StallFinder
+            query={query}
+            onQuery={setQuery}
+            onFocusSearch={() => setSheet('open')}
+            sort={sort}
+            onSort={setSort}
+            matches={matchList}
+            matchById={matches}
+            hasGuest={guest !== null}
+            isLoading={guest !== null && state.status !== 'success' && state.status !== 'error'}
+            distanceTo={distanceTo}
+            onSelect={selectStall}
+            startLabel={describeStart(start)}
+          />
+        )}
+
+        <div className="field map-panel__from">
+          <span id="map-start-label">Starting from</span>
+          <Select
+            aria-labelledby="map-start-label"
+            searchable
+            value={startKey}
+            options={START_OPTIONS}
+            onChange={(key) => setParam({ from: key === 'entrance' ? null : key })}
+          />
+        </div>
+
+        <MapLegend className="map-legend--sheet" />
+      </aside>
     </div>
   );
 }
 
-interface MatchesByHallProps {
+interface StallFinderProps {
+  query: string;
+  onQuery: (query: string) => void;
+  onFocusSearch: () => void;
+  sort: SortOrder;
+  onSort: (sort: SortOrder) => void;
   matches: readonly Match[] | null;
+  matchById: ReadonlyMap<string, Match>;
   hasGuest: boolean;
+  isLoading: boolean;
+  distanceTo: (id: string) => number;
   onSelect: (id: string) => void;
+  startLabel: string;
 }
 
-/** With no stall picked: where the visitor's matches are, row by row, each one a tap away from directions. */
-function MatchesByHall({ matches, hasGuest, onSelect }: MatchesByHallProps) {
-  if (!hasGuest) {
-    return (
-      <section className="map-panel__empty">
-        <h2>See your matches on the map</h2>
-        <p className="muted">Tap any tile for directions now, or add your details and your best stalls light up.</p>
-        <Link to="/details" className="btn btn--primary">
-          Find my stalls
-        </Link>
-      </section>
-    );
+/** With no stall picked: search every stall, or browse your matches nearest first or best first. */
+function StallFinder({
+  query,
+  onQuery,
+  onFocusSearch,
+  sort,
+  onSort,
+  matches,
+  matchById,
+  hasGuest,
+  isLoading,
+  distanceTo,
+  onSelect,
+  startLabel,
+}: StallFinderProps) {
+  const needle = normalise(query.trim());
+
+  const found: BoothSpot[] = needle
+    ? BOOTH_SPOTS.filter((s) => normalise(s.exhibitor.name).includes(needle) || normalise(s.exhibitor.booth).includes(needle))
+        .slice(0, SEARCH_LIMIT)
+    : [];
+  const listed = needle
+    ? found.map((spot) => ({ spot, match: matchById.get(spot.exhibitor.id) }))
+    : (matches ?? [])
+        .map((match) => ({ spot: SPOT_BY_ID.get(match.exhibitor.id), match }))
+        .filter((row): row is { spot: BoothSpot; match: Match } => row.spot !== undefined);
+  if (!needle && sort === 'nearest') {
+    listed.sort((a, b) => distanceTo(a.spot.exhibitor.id) - distanceTo(b.spot.exhibitor.id));
   }
-  if (!matches) {
-    return (
-      <p className="muted" role="status">
-        Loading your matches…
-      </p>
-    );
-  }
+
   return (
-    <section aria-labelledby="by-hall">
-      <h2 id="by-hall" className="map-panel__title">
-        Your matches by row
-      </h2>
-      {HALLS.map((hall) => {
-        const inHall = matches.filter((m) => m.exhibitor.hall === hall).sort(byBooth);
-        if (inHall.length === 0) return null;
-        return (
-          <div key={hall} className="hall-list">
-            <h3>
-              Row {hall} <span className="muted">{inHall.length}</span>
-            </h3>
-            <ul>
-              {inHall.map((m) => {
-                const band = bandFor(m.score);
-                return (
-                  <li key={m.exhibitor.id}>
-                    <button type="button" className="hall-list__item" onClick={() => onSelect(m.exhibitor.id)}>
-                      <span className="hall-list__booth">{m.exhibitor.booth}</span>
-                      <span className="hall-list__name">{m.exhibitor.name}</span>
-                      <span className={`hall-list__score tone-${band.tone}`}>{m.score}%</span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
+    <section className="finder" aria-label="Find a stall">
+      <label className="finder__search">
+        <Icon name="search" size={18} />
+        <span className="visually-hidden">Search stalls</span>
+        <input
+          type="search"
+          value={query}
+          placeholder="Search by company or booth"
+          autoComplete="off"
+          onChange={(e) => onQuery(e.target.value)}
+          onFocus={onFocusSearch}
+        />
+      </label>
+
+      {!needle && hasGuest && matches && (
+        <div className="finder__bar">
+          <h2 className="finder__title">Your top {matches.length}</h2>
+          <div className="segmented" role="group" aria-label="Order">
+            <button type="button" aria-pressed={sort === 'nearest'} onClick={() => onSort('nearest')}>
+              Nearest
+            </button>
+            <button type="button" aria-pressed={sort === 'best'} onClick={() => onSort('best')}>
+              Best match
+            </button>
           </div>
-        );
-      })}
+        </div>
+      )}
+      {!needle && hasGuest && matches && sort === 'nearest' && (
+        <p className="finder__hint">Walking distance from {fromPhrase(startLabel)}.</p>
+      )}
+
+      {!needle && !hasGuest && (
+        <div className="finder__empty">
+          <p>Search any stall above, or add your details and your best matches light up on the map.</p>
+          <Link to="/details" className="btn btn--primary">
+            Find my stalls
+          </Link>
+        </div>
+      )}
+      {!needle && isLoading && (
+        <p className="muted" role="status">
+          Loading your matches…
+        </p>
+      )}
+      {needle && found.length === 0 && (
+        <p className="finder__none" role="status">
+          No stall matches “{query.trim()}”. Try a booth like LC 16 or part of a company name.
+        </p>
+      )}
+
+      {listed.length > 0 && (
+        <ul className="finder__list">
+          {listed.map(({ spot, match }) => {
+            const band = match ? bandFor(match.score) : null;
+            return (
+              <li key={spot.exhibitor.id}>
+                <button type="button" className="finder__row" onClick={() => onSelect(spot.exhibitor.id)}>
+                  <span className={`finder__booth${band ? ` tone-${band.tone}` : ''}`}>{spot.exhibitor.booth}</span>
+                  <span className="finder__name">{spot.exhibitor.name}</span>
+                  <span className="finder__meta">
+                    {match && band && <strong className={`tone-${band.tone}`}>{match.score}%</strong>}
+                    {Number.isFinite(distanceTo(spot.exhibitor.id)) && <span>{distanceTo(spot.exhibitor.id)} m</span>}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </section>
   );
 }
 
 /** Swatches drawn with the same shapes as the map, so the key reads exactly like the floor. */
-function MapLegend() {
-  const tile = (className: string, gloss: boolean) => (
-    <svg width="18" height="18" viewBox="0 0 3.4 3.4" aria-hidden="true">
-      <g className={className}>
-        <rect className="tile__body" width="3.4" height="3.4" rx="0.45" />
-        {gloss && <path className="tile__gloss" d="M0.35 0.35 H2.1 L0.35 2.1 Z" />}
+function MapLegend({ className }: { className: string }) {
+  const tile = (tileClass: string) => (
+    <svg width="14" height="14" viewBox="0 0 3.4 3.4" aria-hidden="true">
+      <g className={tileClass}>
+        <rect className="tile__body" width="3.4" height="3.4" rx="0.5" />
       </g>
     </svg>
   );
   return (
-    <ul className="map-legend">
-      <li>{tile('tile', false)}Other stall</li>
-      <li>{tile('tile tile--glazed tone-strong', true)}80%+ match</li>
-      <li>{tile('tile tile--glazed tone-good', true)}60–79%</li>
-      <li>{tile('tile tile--glazed tone-partial', true)}Below 60%</li>
+    <ul className={`map-legend ${className}`} aria-label="Map key">
+      <li>{tile('tile tile--glazed tone-strong')}80%+</li>
+      <li>{tile('tile tile--glazed tone-good')}60–79%</li>
+      <li>{tile('tile tile--glazed tone-partial')}Under 60%</li>
+      <li>{tile('tile')}Other stall</li>
       <li>
-        <svg width="18" height="18" viewBox="0 0 4 4" aria-hidden="true">
-          <circle className="tile__saved" cx="2" cy="2" r="1.1" />
+        <svg width="14" height="14" viewBox="0 0 4 4" aria-hidden="true">
+          <circle className="tile__saved" cx="2" cy="2" r="1.3" />
         </svg>
         Saved
-      </li>
-      <li>
-        <svg width="26" height="18" viewBox="0 0 26 18" aria-hidden="true">
-          <path d="M2 9h22" className="map-legend__route" />
-        </svg>
-        Your route
       </li>
     </ul>
   );

@@ -32,6 +32,10 @@ const PATHS = {
   plus: ['M12 5v14', 'M5 12h14'],
   minus: ['M5 12h14'],
   fit: ['M4 9V4h5', 'M20 9V4h-5', 'M4 15v5h5', 'M20 15v5h-5'],
+  search: ['M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z', 'm20 20-4-4'],
+  chevronUp: ['m18 15-6-6-6 6'],
+  chevronDown: ['m6 9 6 6 6-6'],
+  home: ['M3 10.5 12 3l9 7.5', 'M5 9.5V20h5v-6h4v6h5V9.5'],
 } as const;
 
 export type IconName = keyof typeof PATHS;
@@ -41,12 +45,14 @@ interface IconProps {
   size?: number;
   filled?: boolean;
   strokeWidth?: number;
+  className?: string;
 }
 
 /** Decorative icon: always paired with visible text or an aria-label on its parent. */
-export function Icon({ name, size = 20, filled = false, strokeWidth = 1.75 }: IconProps) {
+export function Icon({ name, size = 20, filled = false, strokeWidth = 1.75, className }: IconProps) {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"

@@ -43,9 +43,10 @@ export function LoadingPage() {
     [state],
   );
 
-  // When matching finishes, put focus on the next step so Enter continues the demo.
+  // When matching finishes, put focus on the next step so Enter continues the demo. Without
+  // scrolling: on phones the button sits below the plan, and the reveal is what to watch.
   useEffect(() => {
-    if (isDone) viewLinkRef.current?.focus();
+    if (isDone) viewLinkRef.current?.focus({ preventScroll: true });
   }, [isDone]);
 
   useEffect(() => {
@@ -89,17 +90,22 @@ export function LoadingPage() {
   return (
     <div className="container loading-page" aria-busy={isLoading}>
       <figure className="loading-page__floor">
-        <MatchingFloor scanned={Math.round((percent / 100) * EXHIBITORS.length)} matches={matchMap} />
+        <MatchingFloor progress={percent / 100} matches={matchMap} />
         <figcaption>
           {isDone ? (
             <>
-              Your matches are coloured: {hallSummary(state.data.results)}.
+              Your top {TOP_N} in Hall 1: {hallSummary(state.data.results)}.
               {SHOW_MAP && (
                 <>
                   {' '}
                   <Link to="/map">See them on the map</Link>
                 </>
               )}
+              <span className="floor-key">
+                <span className="tone-strong">80% and up</span>
+                <span className="tone-good">60–79%</span>
+                <span className="tone-partial">Under 60%</span>
+              </span>
             </>
           ) : (
             `Compared ${Math.round((percent / 100) * EXHIBITORS.length)} of ${EXHIBITORS.length} stalls`

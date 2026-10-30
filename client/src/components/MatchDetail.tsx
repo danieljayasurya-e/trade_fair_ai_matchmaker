@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { segmentLabel } from '../data/taxonomy';
-import { SHOW_MAP } from '../features';
+import { SHOW_HOW_IT_WORKS, SHOW_MAP } from '../features';
 import type { Match } from '../types';
 import { bandFor, initialsOf } from '../utils/score';
 import { Icon } from './Icon';
@@ -109,8 +109,13 @@ export function MatchDetail({
           </ul>
 
           <p className="detail__note">
-            The score is the geometric mean of both directions, from profile data only.{' '}
-            <Link to="/how-it-works">How scoring works</Link>
+            The score is the geometric mean of both directions, from profile data only.
+            {SHOW_HOW_IT_WORKS && (
+              <>
+                {' '}
+                <Link to="/how-it-works">How scoring works</Link>
+              </>
+            )}
           </p>
         </section>
 
