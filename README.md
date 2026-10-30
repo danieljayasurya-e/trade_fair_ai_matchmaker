@@ -12,17 +12,20 @@ A fair with hundreds of stalls is overwhelming for guests, and exhibitors strugg
 
 | Capability | Status |
 |---|---|
-| Ingest guest and exhibitor profiles (structured + unstructured) | TODO: not started |
-| Compatibility scoring (normalized, explainable) | TODO: not started |
-| Top 30 recommendations with booth details and match rationale | TODO: not started |
-| Guest web app: select profile, view scores, bookmark, save/export | TODO: not started |
-| Filter/sort by score, industry, hall/booth, product category | TODO: not started |
-| Stretch: exhibitor portal, anonymized lead insights | TODO: not started |
-| Stretch: MMI mobile app PoC, real-time sync | TODO: not started |
+| Ingest guest and exhibitor profiles (structured + unstructured) | Done |
+| Compatibility scoring (normalized, explainable) | Done |
+| Top 30 recommendations with booth details and match rationale | Done |
+| Guest web app: select profile, view scores, bookmark, save/export | Done |
+| Filter/sort by score, booth row, product category | Done |
+| Hall 1 map and walking directions | Done (extra) |
+| Stretch: exhibitor portal, anonymized lead insights | Not built |
+| Stretch: MMI mobile app PoC, real-time sync | Not connected; needs contract v1.1 changes |
+
+**Live:** <http://92.4.77.213>
 
 ## Quick start
 
-`TODO:` Not runnable yet. See [docs/SETUP.md](docs/SETUP.md) for the setup checklist, to be completed as the stack is chosen.
+See [Running it](#running-it) below, then [client/README.md](client/README.md) and [backend/README.md](backend/README.md).
 
 ## Live demo flow
 
@@ -35,13 +38,17 @@ Select or upload a guest profile → run the matching engine → show top 30 wit
 | [CLAUDE.md](CLAUDE.md) | Context for AI coding assistants |
 | [docs/PROJECT_GOALS.md](docs/PROJECT_GOALS.md) | Goals, users, success criteria, judging |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Components, data flow, integrations |
-| [docs/SETUP.md](docs/SETUP.md) | Environment and configuration |
+| [client/README.md](client/README.md) | Frontend: screens, structure, data, limitations |
+| [backend/README.md](backend/README.md) | Backend: endpoints, scoring, data, deployment |
+| [docs/api-contract.md](docs/api-contract.md) | API specification (v1.1) |
+| [docs/AI.md](docs/AI.md) | AI: models, data preparation, evaluation, responsible AI, limitations |
+| [docs/SETUP.md](docs/SETUP.md) | Setup and demo-day checklist |
 | [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Team, workflow, conventions, timeline |
 | [docs/GLOSSARY.md](docs/GLOSSARY.md) | Domain and technical terms |
 
 ## Team
 
-Team 4, UI/UX mentor: Sneha. Team name and leader: `TODO:`. Roster in [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
+Team 4 (Brogrammers), UI/UX mentor: Sneha. Team leader: `TODO:`. Roster in [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
 ## Running it
 

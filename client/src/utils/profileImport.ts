@@ -8,13 +8,13 @@ import type { GuestFormValues } from './guestForm';
 export const EXAMPLE_PROFILE_JSON = JSON.stringify(
   {
     name: 'Example visitor',
-    industry: 'Manufacturing',
+    industry: 'Metal Fabrication & Manufacturing',
     jobRole: 'Plant Manager',
     seniority: 'Manager',
     companySize: '201-1000',
     region: 'West India',
-    interests: ['Industrial Automation', 'Predictive Maintenance', 'IoT Sensors'],
-    freeText: 'Retrofitting two assembly lines and looking for condition-monitoring sensors.',
+    interests: ['Laser Cutting & Welding', 'Laser Sources'],
+    freeText: 'Replacing an old CO2 cutter with a fiber laser cutting machine.',
   },
   null,
   2,

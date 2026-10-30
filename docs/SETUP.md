@@ -1,48 +1,45 @@
 # Setup
 
-> **Status (29 Oct 2026):** The repository has no source code, so there is nothing to install or run yet. This is a checklist to complete as the stack is chosen. Do not guess versions or commands.
+Full details are in [client/README.md](../client/README.md) and [backend/README.md](../backend/README.md).
 
 ## 1. Prerequisites
 
-| Item | Details |
-|---|---|
-| Git | Repository initialised at `D:\daniel\projects\trade_fair_ai_matchmaker` (Windows). No commits yet. |
-| Language runtimes | `TODO:` depends on chosen stack |
-| Package manager | `TODO:` |
-| Database / storage | `TODO:` |
-| AI model access | `TODO:` API key or local model. A local model or cached responses is **required as a demo fallback**. |
+Git, Node.js with npm, and Python 3.12 or newer. Nothing needs an API key to run. `GROQ_API_KEY` is only for re-tagging exhibitors.
 
 ## 2. Get the code
 
-```
-git clone <TODO: remote URL>
+```bash
+git clone https://github.com/danieljayasurya-e/trade_fair_ai_matchmaker.git
 cd trade_fair_ai_matchmaker
 ```
-`TODO:` Remote repository URL (not recorded in the project).
 
-## 3. Install
+## 3. Run the backend
 
-`TODO:` Install commands for backend and frontend.
+```bash
+cd backend && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python build_index.py
+.venv/bin/uvicorn app:app --host 0.0.0.0 --port 4000
+```
 
-## 4. Configuration
+## 4. Run the web app
 
-`TODO:` List environment variables (e.g. model API key, DB connection). Rules:
-- Never commit secrets or API keys.
-- Provide a `.env.example` with placeholder values once config exists.
+```bash
+cd client && npm install && npm run dev
+```
 
-## 5. Load data
+## 5. Test
 
-`TODO:` How to load guest and exhibitor profiles (source, format, seed command). Use synthetic or consented data only; no real personal data in the repo.
+```bash
+backend/.venv/bin/python backend/smoke_test.py http://localhost:4000
+```
 
-## 6. Run
+## 6. Deploy
 
-`TODO:` Commands to start backend, frontend, and matching engine.
+```bash
+deploy/deploy.sh 92.4.77.213 ~/.ssh/brogrammers_vm
+```
 
-## 7. Test
-
-`TODO:` Test commands. Minimum checks to add: top 30 returned, scores normalized, latency < 2 s, filters work.
-
-## 8. Demo-day preparation (from the briefing)
+## 7. Demo-day preparation (from the briefing)
 
 | Item | Requirement |
 |---|---|
@@ -52,6 +49,10 @@ cd trade_fair_ai_matchmaker
 | UX delays | Clear visual indicators for latency and inference processing |
 | Final touches | 31 Oct, 9–10 AM: test environments and set up for live demo |
 
-## 9. Troubleshooting
+## 8. Troubleshooting
 
-`TODO:` Add issues and fixes as they are discovered.
+| Problem | Likely cause |
+|---|---|
+| Results line says "Offline demo" | The web app can't reach the API; check `/api/health` |
+| The live site won't open | Type `http://` in full; the site has no HTTPS. Some networks may also block it |
+| The VM responds over SSH but not on port 80 | Check Oracle's security list rule and `systemctl status nginx` |
