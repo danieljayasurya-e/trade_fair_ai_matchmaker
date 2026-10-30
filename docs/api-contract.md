@@ -29,7 +29,7 @@ The mobile app validates every response strictly. A response that breaks one of 
 
 | Item | Value |
 | --- | --- |
-| Base URL | `http://<host>:4000`. All paths start with `/api`. |
+| Base URL | `http://92.4.77.213` on the deployed VM (nginx on port 80), or `http://<host>:4000` when running the backend directly. All paths start with `/api`. |
 | Network | Listen on `0.0.0.0`, not `127.0.0.1`, so phones on the same Wi-Fi can reach it. Plain HTTP is fine on the LAN. |
 | Headers | Requests with a body send `Content-Type: application/json`. Respond with `Content-Type: application/json; charset=utf-8`. |
 | Auth | None for the hackathon. The guest ID is the only key. |
