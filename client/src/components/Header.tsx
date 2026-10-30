@@ -1,13 +1,14 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useSession } from '../context/SessionContext';
-import { SHOW_MAP } from '../features';
+import { SHOW_HOW_IT_WORKS, SHOW_MAP } from '../features';
+import { Breadcrumbs } from './Breadcrumbs';
 import { LogoMark } from './Logo';
 import { initialsOf } from '../utils/score';
 
 export function Header() {
   const { guest, bookmarkIds } = useSession();
   const { pathname } = useLocation();
-  // Before there is a profile (landing, or the blank details form) the header only offers "How it works".
+  // Before there is a profile (landing, or the blank details form) the header shows no section links.
   const isStart = pathname === '/' || (pathname === '/details' && !guest);
 
   return (
@@ -31,7 +32,7 @@ export function Header() {
               </NavLink>
             </>
           )}
-          <NavLink to="/how-it-works">How it works</NavLink>
+          {SHOW_HOW_IT_WORKS && <NavLink to="/how-it-works">How it works</NavLink>}
         </nav>
 
         <span className="live-pill">
@@ -45,6 +46,7 @@ export function Header() {
           </span>
         )}
       </div>
+      <Breadcrumbs />
     </header>
   );
 }

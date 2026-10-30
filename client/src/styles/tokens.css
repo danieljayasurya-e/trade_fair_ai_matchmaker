@@ -51,4 +51,6 @@
   --content-width: 85rem;
   /* Height of the sticky site header; sticky panels sit just below it. */
   --header-h: 4.25rem;
+  /* The breadcrumb row under the header; pages that have one add it to --header-h. */
+  --crumbs-h: 2.5rem;
 }

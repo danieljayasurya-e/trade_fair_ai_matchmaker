@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
+import { COMPANY_SIZES, INDUSTRIES, INTERESTS, REGIONS, SENIORITIES } from '../data/taxonomy';
 import { useLocalStorageState } from '../hooks/useLocalStorageState';
 import { syncBookmark } from '../services/apiClient';
 import type { Guest } from '../types';
@@ -20,8 +21,11 @@ interface SessionContextValue {
 
 const SessionContext = createContext<SessionContextValue | null>(null);
 
-// A profile saved by an older build lacks the newer fields; treat it as no profile rather than
-// feeding the scorer undefined values.
+const isOneOf = (list: readonly string[], value: unknown) => typeof value === 'string' && list.includes(value);
+
+// A profile saved by an older build can lack fields or use choices that no longer exist (the sector
+// lists change with the exhibitor data, and the server rejects unknown ones). Treat it as no
+// profile rather than showing "We couldn't load your matches".
 const isGuest = (value: unknown): value is Guest | null => {
   if (value === null) return true;
   if (typeof value !== 'object') return false;
@@ -29,9 +33,13 @@ const isGuest = (value: unknown): value is Guest | null => {
   return (
     typeof guest.id === 'string' &&
     typeof guest.jobRole === 'string' &&
-    typeof guest.seniority === 'string' &&
-    typeof guest.region === 'string' &&
-    Array.isArray(guest.interests)
+    isOneOf(INDUSTRIES, guest.industry) &&
+    isOneOf(SENIORITIES, guest.seniority) &&
+    isOneOf(COMPANY_SIZES, guest.companySize) &&
+    isOneOf(REGIONS, guest.region) &&
+    Array.isArray(guest.interests) &&
+    guest.interests.length > 0 &&
+    guest.interests.every((interest) => isOneOf(INTERESTS, interest))
   );
 };
 

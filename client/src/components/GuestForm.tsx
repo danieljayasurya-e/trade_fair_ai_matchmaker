@@ -2,6 +2,7 @@ import { useId, useMemo, useRef, useState } from 'react';
 import type { FormEvent, ReactNode, RefObject } from 'react';
 import { COMPANY_SIZES, INDUSTRIES, INTERESTS, REGIONS, SENIORITIES, segmentLabel } from '../data/taxonomy';
 import type { GuestInput } from '../types';
+import { Select } from './Select';
 import { FIELD_ORDER, FREE_TEXT_MAX, NAME_MAX, validateGuestForm } from '../utils/guestForm';
 import type { FieldErrors, FieldName, GuestFormValues } from '../utils/guestForm';
 
@@ -21,6 +22,11 @@ interface GuestFormProps {
   /** Lets the page move focus to the submit button after a sample fills the form. */
   submitRef?: RefObject<HTMLButtonElement | null>;
 }
+
+const asOptions = <T extends string>(values: readonly T[]) => values.map((value) => ({ value, label: value }));
+const INDUSTRIES_OPTIONS = asOptions(INDUSTRIES);
+const SENIORITIES_OPTIONS = asOptions(SENIORITIES);
+const REGIONS_OPTIONS = asOptions(REGIONS);
 
 const toggleIn = <T,>(list: readonly T[], value: T): T[] =>
   list.includes(value) ? list.filter((item) => item !== value) : [...list, value];
@@ -86,29 +92,23 @@ export function GuestForm({ values, onChange, onSubmit, submitLabel, submitRef }
           </Field>
 
           <Field id={idOf('industry')} label="Industry" error={errors.industry}>
-            <select
+            <Select
               {...fieldProps('industry')}
               value={values.industry}
-              onChange={(e) => onChange({ industry: INDUSTRIES.find((o) => o === e.target.value) ?? '' })}
-            >
-              <option value="">Select your industry</option>
-              {INDUSTRIES.map((option) => (
-                <option key={option}>{option}</option>
-              ))}
-            </select>
+              options={INDUSTRIES_OPTIONS}
+              placeholder="Select your industry"
+              onChange={(industry) => onChange({ industry })}
+            />
           </Field>
 
           <Field id={idOf('seniority')} label="Seniority" error={errors.seniority}>
-            <select
+            <Select
               {...fieldProps('seniority')}
               value={values.seniority}
-              onChange={(e) => onChange({ seniority: SENIORITIES.find((o) => o === e.target.value) ?? '' })}
-            >
-              <option value="">Select your seniority</option>
-              {SENIORITIES.map((option) => (
-                <option key={option}>{option}</option>
-              ))}
-            </select>
+              options={SENIORITIES_OPTIONS}
+              placeholder="Select your seniority"
+              onChange={(seniority) => onChange({ seniority })}
+            />
           </Field>
 
           <FieldGroup legend="Company size (employees)" error={errors.companySize} control={fieldProps('companySize')}>
@@ -129,16 +129,13 @@ export function GuestForm({ values, onChange, onSubmit, submitLabel, submitRef }
           </FieldGroup>
 
           <Field id={idOf('region')} label="Region" error={errors.region}>
-            <select
+            <Select
               {...fieldProps('region')}
               value={values.region}
-              onChange={(e) => onChange({ region: REGIONS.find((o) => o === e.target.value) ?? '' })}
-            >
-              <option value="">Select your region</option>
-              {REGIONS.map((option) => (
-                <option key={option}>{option}</option>
-              ))}
-            </select>
+              options={REGIONS_OPTIONS}
+              placeholder="Select your region"
+              onChange={(region) => onChange({ region })}
+            />
           </Field>
         </section>
 

@@ -29,7 +29,11 @@ export interface Route {
   metres: number;
   minutes: number;
   steps: string[];
+  /** For each step, the stretch of the drawn path it describes; null for "it's on your left" and the like. */
+  stepLegs: (Leg | null)[];
 }
+
+export type Leg = readonly [from: Point, to: Point];
 
 /** Average walking pace through a busy hall, metres per minute. */
 const WALK_PACE = 70;
@@ -133,8 +137,9 @@ const legPhrase = (heading: Heading) =>
 
 const nearAisle = (p: Point) => LONG_AISLES.find((a) => Math.abs(a.at - p.x) < 0.01)?.beside;
 
-function stepsFor(points: Point[], target: BoothSpot, opening: string): string[] {
+function stepsFor(points: Point[], target: BoothSpot, opening: string): Pick<Route, 'steps' | 'stepLegs'> {
   const steps: string[] = [];
+  const stepLegs: (Leg | null)[] = [];
   let heading: Heading | null = null;
   for (let i = 1; i < points.length; i++) {
     const a = points[i - 1];
@@ -152,12 +157,14 @@ function stepsFor(points: Point[], target: BoothSpot, opening: string): string[]
       const turn = turnWord(heading, next);
       steps.push(turn === 'ahead' ? `Keep going ${rest}.` : `Turn ${turn} and walk ${rest}.`);
     }
+    stepLegs.push([a, b]);
     heading = next;
   }
   const finalTurn = heading ? turnWord(heading, target.facing) : 'ahead';
   const where = finalTurn === 'left' || finalTurn === 'right' ? `on your ${finalTurn}` : 'straight ahead';
   steps.push(`${target.exhibitor.booth} is ${where}.`);
-  return steps;
+  stepLegs.push(null);
+  return { steps, stepLegs };
 }
 
 function lengthOf(points: Point[]): number {
@@ -174,13 +181,19 @@ export function routeTo(start: StartPlace, targetId: string): Route | null {
   const target = SPOT_BY_ID.get(targetId);
   if (!target) return null;
   if (start.kind === 'stall' && start.id === targetId) {
-    return { points: [target.front], metres: 0, minutes: 0, steps: [`You're already at ${target.exhibitor.booth}.`] };
+    return { points: [target.front], metres: 0, minutes: 0, steps: [`You're already at ${target.exhibitor.booth}.`], stepLegs: [null] };
   }
 
   const origin = start.kind === 'stall' ? SPOT_BY_ID.get(start.id) : undefined;
   // Booths sharing one space have the same front; there is nothing to walk.
   if (origin && same(origin.front, target.front)) {
-    return { points: [target.front], metres: 0, minutes: 0, steps: [`${target.exhibitor.booth} shares this space. You're there.`] };
+    return {
+      points: [target.front],
+      metres: 0,
+      minutes: 0,
+      steps: [`${target.exhibitor.booth} shares this space. You're there.`],
+      stepLegs: [null],
+    };
   }
 
   const frontAisleY = FRONT_AISLE?.at ?? MAIN_ENTRANCE.y;
@@ -197,6 +210,6 @@ export function routeTo(start: StartPlace, targetId: string): Route | null {
     points,
     metres,
     minutes: Math.max(1, Math.round(metres / WALK_PACE)),
-    steps: stepsFor(points, target, opening),
+    ...stepsFor(points, target, opening),
   };
 }
