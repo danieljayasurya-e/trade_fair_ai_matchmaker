@@ -12,18 +12,18 @@ import { decodeStart, describeStart, encodeStart, routeTo } from '../services/wa
 import type { Match } from '../types';
 import { bandFor } from '../utils/score';
 
-/** "Main entrance" → "the main entrance", "Hall 2 door" → "the Hall 2 door", "Booth B-121" → "booth B-121". */
+/** "Main entrance" → "the main entrance", "Booth LC 24" → "booth LC 24". */
 const fromPhrase = (place: string) =>
   place === 'Main entrance'
     ? 'the main entrance'
     : place.startsWith('Booth')
-      ? `b${place.slice(1).replace('-', '‑')}` // non-breaking hyphen keeps "A-134" on one line
+      ? `b${place.slice(1)}`
       : `the ${place}`;
 
 const byBooth =(a: { exhibitor: { booth: string } }, b: { exhibitor: { booth: string } }) =>
   a.exhibitor.booth.localeCompare(b.exhibitor.booth, undefined, { numeric: true });
 
-// Phase 2: every stall on a sample venue plan, and walking directions to any one of them.
+// Every stall on the Hall 1 plan from the visitor guide, and walking directions to any one of them.
 export function MapPage() {
   useDocumentTitle('Find your way');
   const { guest, bookmarkIds } = useSession();
@@ -37,7 +37,7 @@ export function MapPage() {
   const start = useMemo(() => decodeStart(startKey), [startKey]);
   const route = useMemo(() => (targetId ? routeTo(start, targetId) : null), [start, targetId]);
 
-  const matchList = state.status === 'success' ? state.data.matches : null;
+  const matchList = state.status === 'success' ? state.data.results : null;
   const matches = useMemo(
     () => new Map((matchList ?? []).map((m): [string, Match] => [m.exhibitor.id, m])),
     [matchList],
@@ -70,8 +70,8 @@ export function MapPage() {
       <header className="map-page__head">
         <h1>Find your way</h1>
         <p className="muted">
-          Every stall at the show, hall by hall. Your matches are the glazed tiles; pick one to get walking
-          directions.
+          Every stall in Hall 1, from the visitor guide's floor plan. Your matches are coloured; pick one to get
+          walking directions.
         </p>
       </header>
 
@@ -95,7 +95,7 @@ export function MapPage() {
               <select value={targetId ?? ''} onChange={(e) => setParam({ stall: e.target.value || null })}>
                 <option value="">Choose a stall</option>
                 {HALLS.map((hall) => (
-                  <optgroup key={hall} label={`Hall ${hall}`}>
+                  <optgroup key={hall} label={`Row ${hall}`}>
                     {BOOTH_SPOTS.filter((s) => s.exhibitor.hall === hall).map((s) => (
                       <option key={s.exhibitor.id} value={s.exhibitor.id}>
                         {s.exhibitor.booth} · {s.exhibitor.name}
@@ -111,14 +111,9 @@ export function MapPage() {
               <select value={startKey} onChange={(e) => setParam({ from: e.target.value === 'entrance' ? null : e.target.value })}>
                 <optgroup label="Entrances">
                   <option value="entrance">Main entrance</option>
-                  {HALLS.map((hall) => (
-                    <option key={hall} value={`door-${hall}`}>
-                      Hall {hall} door
-                    </option>
-                  ))}
                 </optgroup>
                 {HALLS.map((hall) => (
-                  <optgroup key={hall} label={`Booths in Hall ${hall}`}>
+                  <optgroup key={hall} label={`Booths in row ${hall}`}>
                     {BOOTH_SPOTS.filter((s) => s.exhibitor.hall === hall).map((s) => (
                       <option key={s.exhibitor.id} value={s.exhibitor.id}>
                         {s.exhibitor.booth} · {s.exhibitor.name}
@@ -135,7 +130,7 @@ export function MapPage() {
               <div className="map-panel__stall">
                 <h2 id="route-title">{target.exhibitor.name}</h2>
                 <p className="muted">
-                  Hall {target.exhibitor.hall} · Booth {target.exhibitor.booth} · {target.exhibitor.city}
+                  Hall 1 · Booth {target.exhibitor.booth}
                 </p>
                 {targetMatch && band ? (
                   <p className={`map-panel__score tone-${band.tone}`}>
@@ -180,7 +175,7 @@ export function MapPage() {
                   I'm here, pick the next stall
                 </button>
               </div>
-              <p className="map-panel__note">Sample layout. Hall and booth positions are not the official floor plan.</p>
+              <p className="map-panel__note">Traced from the visitor guide's plan. Distances are approximate.</p>
             </section>
           ) : (
             <MatchesByHall matches={matchList} hasGuest={guest !== null} onSelect={selectStall} />
@@ -197,7 +192,7 @@ interface MatchesByHallProps {
   onSelect: (id: string) => void;
 }
 
-/** With no stall picked: where the visitor's matches are, hall by hall, each one a tap away from directions. */
+/** With no stall picked: where the visitor's matches are, row by row, each one a tap away from directions. */
 function MatchesByHall({ matches, hasGuest, onSelect }: MatchesByHallProps) {
   if (!hasGuest) {
     return (
@@ -220,7 +215,7 @@ function MatchesByHall({ matches, hasGuest, onSelect }: MatchesByHallProps) {
   return (
     <section aria-labelledby="by-hall">
       <h2 id="by-hall" className="map-panel__title">
-        Your matches by hall
+        Your matches by row
       </h2>
       {HALLS.map((hall) => {
         const inHall = matches.filter((m) => m.exhibitor.hall === hall).sort(byBooth);
@@ -228,7 +223,7 @@ function MatchesByHall({ matches, hasGuest, onSelect }: MatchesByHallProps) {
         return (
           <div key={hall} className="hall-list">
             <h3>
-              Hall {hall} <span className="muted">{inHall.length}</span>
+              Row {hall} <span className="muted">{inHall.length}</span>
             </h3>
             <ul>
               {inHall.map((m) => {

@@ -7,7 +7,7 @@ export type MinScore = 0 | 60 | 80;
 export interface Filters {
   minScore: MinScore;
   halls: Hall[];
-  /** Segments; an exhibitor passes if it is listed under any of them. */
+  /** Product areas; an exhibitor passes if it is listed under any of them. */
   categories: Interest[];
   savedOnly: boolean;
   sort: SortKey;
@@ -23,7 +23,7 @@ export const DEFAULT_FILTERS: Filters = {
 
 export const SORT_LABEL: Record<SortKey, string> = {
   best: 'Best match',
-  hall: 'Hall & booth',
+  hall: 'Row & booth',
   name: 'Name A–Z',
 };
 

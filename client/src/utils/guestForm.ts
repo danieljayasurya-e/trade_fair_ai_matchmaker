@@ -79,4 +79,8 @@ export function validateGuestForm(values: GuestFormValues): ValidationResult {
 /** A new id per person keeps one visitor's saved stalls from showing up for the next. */
 export const newGuestId = () => `g-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
 
-export const toGuest = (input: GuestInput, id: string = newGuestId()): Guest => ({ id, ...input });
+export const toGuest = (input: GuestInput, id: string = newGuestId()): Guest => ({
+  id,
+  updatedAt: new Date().toISOString(),
+  ...input,
+});

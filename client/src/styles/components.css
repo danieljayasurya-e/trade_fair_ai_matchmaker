@@ -1548,6 +1548,7 @@ dialog::backdrop {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 70vh;
   font-family: var(--font);
 }
 .matching-floor__hall {

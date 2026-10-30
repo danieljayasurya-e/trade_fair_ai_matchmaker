@@ -27,14 +27,14 @@ export function MatchDetail({
   onPrevious,
   onNext,
 }: MatchDetailProps) {
-  const { exhibitor, score, rank, breakdown, factors } = match;
+  const { exhibitor, score, rank, factors, insights } = match;
   const band = bandFor(score);
 
   const subscores = [
-    { label: 'Semantic similarity', value: breakdown.semantic },
-    { label: 'Interest overlap', value: breakdown.interest },
-    { label: 'Intent match', value: breakdown.intent },
-    { label: 'Buyer fit', value: breakdown.buyerFit },
+    { label: 'Semantic similarity', value: Math.round(factors.semantic * 100) },
+    { label: 'Interest overlap', value: Math.round(factors.interest * 100) },
+    { label: 'Intent match', value: Math.round(factors.intent * 100) },
+    { label: 'Buyer fit', value: Math.round(factors.buyerFit * 100) },
   ];
 
   return (
@@ -46,7 +46,7 @@ export function MatchDetail({
         <div className="detail__title">
           <h2 id="detail-title">{exhibitor.name}</h2>
           <p>
-            Hall {exhibitor.hall} · Booth {exhibitor.booth} · {exhibitor.city}, {exhibitor.state}
+            Hall 1 · Booth {[exhibitor.booth, ...exhibitor.otherBooths].join(' / ')}
           </p>
           {SHOW_MAP && (
             <Link to={`/map?stall=${exhibitor.id}`} className="detail__route">
@@ -90,11 +90,11 @@ export function MatchDetail({
           </ul>
 
           <p className="detail__direction">
-            You → stall <strong>{breakdown.g2e}%</strong> · Stall → you <strong>{breakdown.e2g}%</strong>
+            You → stall <strong>{Math.round(factors.g2e * 100)}%</strong> · Stall → you <strong>{Math.round(factors.e2g * 100)}%</strong>
           </p>
 
           <ul className="factors">
-            {factors.map((factor) => (
+            {insights.map((factor) => (
               <li key={factor.label}>
                 <span className="factors__tick" aria-hidden="true">
                   <Icon name="check" size={13} strokeWidth={3} />
@@ -115,18 +115,21 @@ export function MatchDetail({
         </section>
 
         <section className="detail__section" aria-labelledby="detail-products">
-          <h3 id="detail-products">Segments</h3>
-          <ul className="chip-list">
-            {exhibitor.tags.map((tag) => (
-              <li key={tag} className="chip chip--grey">
-                {tag}
-              </li>
-            ))}
-          </ul>
-          <h3>Location</h3>
-          <p className="muted">
-            {exhibitor.city}, {exhibitor.state}. Hall and booth are sample values for this demo.
-          </p>
+          {exhibitor.description && <p className="muted">{exhibitor.description}</p>}
+          <h3 id="detail-products">Products</h3>
+          {exhibitor.products.length > 0 ? (
+            <ul className="chip-list">
+              {exhibitor.products.map((product) => (
+                <li key={product} className="chip chip--grey">
+                  {product}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="muted">No product details on file.</p>
+          )}
+          <h3>Based in</h3>
+          <p className="muted">{[exhibitor.city, exhibitor.country].filter(Boolean).join(', ') || 'Not on file'}</p>
         </section>
       </div>
 

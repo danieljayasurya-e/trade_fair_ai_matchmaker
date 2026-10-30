@@ -1,40 +1,31 @@
-// Walking directions on the sample venue layout (data/venue.ts). Pure functions: a start and a
-// target stall go in; a path to draw, a distance and plain-language steps come out.
-import { CONCOURSE, MAIN_ENTRANCE, SPOT_BY_ID, hallCentreX, hallDoor } from '../data/venue';
+// Walking directions on the Hall 1 plan (data/venue.ts). Pure functions: a start and a target stall
+// go in; a path to draw, a distance and plain-language steps come out.
+import { CROSS_AISLES, LONG_AISLES, MAIN_ENTRANCE, SPOT_BY_ID } from '../data/venue';
 import type { BoothSpot, Point } from '../data/venue';
-import { HALLS } from '../data/taxonomy';
-import type { Hall } from '../data/taxonomy';
 
 /** Where the visitor says they are. */
-export type StartPlace = { kind: 'entrance' } | { kind: 'door'; hall: Hall } | { kind: 'stall'; id: string };
+export type StartPlace = { kind: 'entrance' } | { kind: 'stall'; id: string };
 
 export const ENTRANCE: StartPlace = { kind: 'entrance' };
 
-/** URL-safe encoding, so a start can live in the query string: "entrance", "door-2" or an exhibitor id. */
+/** URL-safe encoding, so a start can live in the query string: "entrance" or an exhibitor id. */
 export function encodeStart(start: StartPlace): string {
-  if (start.kind === 'entrance') return 'entrance';
-  if (start.kind === 'door') return `door-${start.hall}`;
-  return start.id;
+  return start.kind === 'entrance' ? 'entrance' : start.id;
 }
 
 export function decodeStart(value: string | null): StartPlace {
-  if (!value || value === 'entrance') return ENTRANCE;
-  const door = /^door-(\d)$/.exec(value);
-  const hall = HALLS.find((h) => h === door?.[1]);
-  if (hall) return { kind: 'door', hall };
-  return SPOT_BY_ID.has(value) ? { kind: 'stall', id: value } : ENTRANCE;
+  return value && SPOT_BY_ID.has(value) ? { kind: 'stall', id: value } : ENTRANCE;
 }
 
 export function describeStart(start: StartPlace): string {
   if (start.kind === 'entrance') return 'Main entrance';
-  if (start.kind === 'door') return `Hall ${start.hall} door`;
   const spot = SPOT_BY_ID.get(start.id);
   return spot ? `Booth ${spot.exhibitor.booth}` : 'Main entrance';
 }
 
 export interface Route {
   points: Point[];
-  /** Walking distance in metres along the drawn path. */
+  /** Approximate walking distance in metres along the drawn path. */
   metres: number;
   minutes: number;
   steps: string[];
@@ -43,47 +34,130 @@ export interface Route {
 /** Average walking pace through a busy hall, metres per minute. */
 const WALK_PACE = 70;
 
-const ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
-const ordinal = (n: number) => ORDINALS[n - 1] ?? `${n}th`;
+const FRONT_AISLE = CROSS_AISLES[CROSS_AISLES.length - 1];
 
-/** From a booth front, out to its aisle and along to the centre aisle. */
-const toCentreAisle = (spot: BoothSpot): Point[] => [
-  spot.front,
-  { x: spot.front.x, y: spot.aisleY },
-  { x: hallCentreX(spot.exhibitor.hall), y: spot.aisleY },
-];
+const same = (a: Point, b: Point) => Math.abs(a.x - b.x) < 0.01 && Math.abs(a.y - b.y) < 0.01;
+const key = (p: Point) => `${p.x.toFixed(2)},${p.y.toFixed(2)}`;
+const distance = (a: Point, b: Point) => Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
 
-/** From anywhere a visitor can start, to the concourse walking line. */
-function toConcourse(start: StartPlace): Point[] {
-  if (start.kind === 'entrance') return [MAIN_ENTRANCE, { x: MAIN_ENTRANCE.x, y: CONCOURSE.walkY }];
-  if (start.kind === 'door') {
-    const door = hallDoor(start.hall);
-    return [door, { x: door.x, y: CONCOURSE.walkY }];
+/** Shortest path along the aisle grid, by Dijkstra over junctions plus the two end points. */
+function aislePath(from: Point, to: Point): Point[] {
+  const lines = [
+    ...LONG_AISLES.map((a) => ({ vertical: true, at: a.at, from: a.from, to: a.to })),
+    ...CROSS_AISLES.map((a) => ({ vertical: false, at: a.at, from: a.from, to: a.to })),
+  ];
+  const onLine = (p: Point, l: (typeof lines)[number]) =>
+    l.vertical
+      ? Math.abs(p.x - l.at) < 0.01 && p.y >= l.from - 0.01 && p.y <= l.to + 0.01
+      : Math.abs(p.y - l.at) < 0.01 && p.x >= l.from - 0.01 && p.x <= l.to + 0.01;
+
+  const nodes = new Map<string, Point>();
+  const add = (p: Point) => nodes.set(key(p), p);
+  add(from);
+  add(to);
+  for (const v of lines.filter((l) => l.vertical)) {
+    for (const h of lines.filter((l) => !l.vertical)) {
+      const p = { x: v.at, y: h.at };
+      if (onLine(p, v) && onLine(p, h)) add(p);
+    }
   }
-  const spot = SPOT_BY_ID.get(start.id);
-  if (!spot) return toConcourse(ENTRANCE);
-  const door = hallDoor(spot.exhibitor.hall);
-  return [...toCentreAisle(spot), door, { x: door.x, y: CONCOURSE.walkY }];
+
+  const all = [...nodes.values()];
+  const neighbours = (p: Point) =>
+    lines
+      .filter((l) => onLine(p, l))
+      .flatMap((l) => {
+        const here = l.vertical ? p.y : p.x;
+        const along = all.filter((q) => !same(p, q) && onLine(q, l));
+        const value = (q: Point) => (l.vertical ? q.y : q.x);
+        const before = along.filter((q) => value(q) < here).sort((a, b) => value(b) - value(a))[0];
+        const after = along.filter((q) => value(q) > here).sort((a, b) => value(a) - value(b))[0];
+        return [before, after].filter((q): q is Point => q !== undefined);
+      });
+
+  const dist = new Map<string, number>([[key(from), 0]]);
+  const prev = new Map<string, Point>();
+  const open = new Set<string>([key(from)]);
+  while (open.size > 0) {
+    const currentKey = [...open].sort((a, b) => (dist.get(a) ?? Infinity) - (dist.get(b) ?? Infinity))[0];
+    if (currentKey === undefined || currentKey === key(to)) break;
+    open.delete(currentKey);
+    const current = nodes.get(currentKey);
+    if (!current) break;
+    for (const next of neighbours(current)) {
+      const total = (dist.get(currentKey) ?? Infinity) + distance(current, next);
+      if (total < (dist.get(key(next)) ?? Infinity)) {
+        dist.set(key(next), total);
+        prev.set(key(next), current);
+        open.add(key(next));
+      }
+    }
+  }
+
+  const path: Point[] = [to];
+  let cursor = to;
+  while (!same(cursor, from)) {
+    const before = prev.get(key(cursor));
+    if (!before) return [from, to];
+    path.unshift(before);
+    cursor = before;
+  }
+  return path;
 }
 
-const startHall = (start: StartPlace): Hall | null =>
-  start.kind === 'door' ? start.hall : start.kind === 'stall' ? (SPOT_BY_ID.get(start.id)?.exhibitor.hall ?? null) : null;
+/** Merges consecutive legs that run in the same direction, so each remaining point is a real turn. */
+function simplify(points: Point[]): Point[] {
+  return points.filter((p, i) => {
+    const a = points[i - 1];
+    const b = points[i + 1];
+    if (!a || !b) return true;
+    return !((a.x === p.x && p.x === b.x) || (a.y === p.y && p.y === b.y));
+  });
+}
 
-function pathTo(start: StartPlace, target: BoothSpot): Point[] {
-  const hall = target.exhibitor.hall;
-  const centreX = hallCentreX(hall);
-  const arrive: Point[] = [{ x: centreX, y: target.aisleY }, { x: target.front.x, y: target.aisleY }, target.front];
+type Heading = 'north' | 'south' | 'east' | 'west';
 
-  if (startHall(start) === hall) {
-    if (start.kind === 'door') return [hallDoor(hall), ...arrive];
-    const from = SPOT_BY_ID.get(start.kind === 'stall' ? start.id : '');
-    if (from && from.row === target.row) {
-      return [from.front, { x: from.front.x, y: from.aisleY }, { x: target.front.x, y: target.aisleY }, target.front];
+const headingOf = (a: Point, b: Point): Heading => {
+  if (Math.abs(b.x - a.x) > Math.abs(b.y - a.y)) return b.x > a.x ? 'east' : 'west';
+  return b.y > a.y ? 'south' : 'north';
+};
+
+const CLOCKWISE: readonly Heading[] = ['north', 'east', 'south', 'west'];
+function turnWord(from: Heading, to: Heading): 'left' | 'right' | 'ahead' | 'back' {
+  const delta = (CLOCKWISE.indexOf(to) - CLOCKWISE.indexOf(from) + 4) % 4;
+  return delta === 0 ? 'ahead' : delta === 1 ? 'right' : delta === 3 ? 'left' : 'back';
+}
+
+const legPhrase = (heading: Heading) =>
+  heading === 'north' ? 'away from the entrance' : heading === 'south' ? 'towards the entrance' : `along the cross aisle`;
+
+const nearAisle = (p: Point) => LONG_AISLES.find((a) => Math.abs(a.at - p.x) < 0.01)?.beside;
+
+function stepsFor(points: Point[], target: BoothSpot, opening: string): string[] {
+  const steps: string[] = [];
+  let heading: Heading | null = null;
+  for (let i = 1; i < points.length; i++) {
+    const a = points[i - 1];
+    const b = points[i];
+    if (!a || !b) continue;
+    const next = headingOf(a, b);
+    const metres = Math.round(distance(a, b));
+    if (metres === 0) continue;
+    const beside = next === 'east' || next === 'west' ? nearAisle(b) : undefined;
+    const destination = beside ? ` to the aisle beside row ${beside}` : '';
+    const rest = `about ${metres} m ${legPhrase(next)}${destination}`;
+    if (heading === null) {
+      steps.push(`${opening}, walk ${rest}.`);
+    } else {
+      const turn = turnWord(heading, next);
+      steps.push(turn === 'ahead' ? `Keep going ${rest}.` : `Turn ${turn} and walk ${rest}.`);
     }
-    if (from) return [...toCentreAisle(from), ...arrive];
+    heading = next;
   }
-  const door = hallDoor(hall);
-  return [...toConcourse(start), { x: door.x, y: CONCOURSE.walkY }, door, ...arrive];
+  const finalTurn = heading ? turnWord(heading, target.facing) : 'ahead';
+  const where = finalTurn === 'left' || finalTurn === 'right' ? `on your ${finalTurn}` : 'straight ahead';
+  steps.push(`${target.exhibitor.booth} is ${where}.`);
+  return steps;
 }
 
 function lengthOf(points: Point[]): number {
@@ -91,84 +165,9 @@ function lengthOf(points: Point[]): number {
   for (let i = 1; i < points.length; i++) {
     const a = points[i - 1];
     const b = points[i];
-    if (a && b) total += Math.abs(b.x - a.x) + Math.abs(b.y - a.y); // every leg is straight along an aisle
+    if (a && b) total += distance(a, b);
   }
   return total;
-}
-
-/** "Turn left into aisle 3. B-123 is the second stall on your right." Facing tells us which way left is. */
-function arriveStep(target: BoothSpot, facing: 'in' | 'out'): string {
-  const aisle = target.row + 1;
-  const turn = (target.side === 'left') === (facing === 'in') ? 'left' : 'right';
-  // Booths sit on the far side of their aisle, so heading west they are on the right, east on the left.
-  const side = target.side === 'left' ? 'right' : 'left';
-  return `Turn ${turn} into aisle ${aisle}. ${target.exhibitor.booth} is the ${ordinal(target.fromCentre)} stall on your ${side}.`;
-}
-
-function concourseStep(fromX: number, hall: Hall, facingNorth: boolean, opening: string): string {
-  const door = hallDoor(hall);
-  const goingEast = door.x > fromX;
-  // Facing north (coming in from the entrance) east is on the right; facing south (leaving a hall) it is on the left.
-  const turn = goingEast === facingNorth ? 'right' : 'left';
-  const passed = HALLS.filter((h) => {
-    const x = hallDoor(h).x;
-    return goingEast ? x > fromX && x <= door.x : x < fromX && x >= door.x;
-  }).length;
-  return `${opening} turn ${turn} along the concourse. Hall ${hall} is the ${ordinal(passed)} hall door.`;
-}
-
-function walkUpStep(hall: Hall, target: BoothSpot, throughDoor: boolean): string {
-  const aisle = target.row + 1;
-  const lead = throughDoor ? `Go through the Hall ${hall} door` : `From the Hall ${hall} door`;
-  return aisle === 1
-    ? `${lead}; aisle 1 is straight ahead.`
-    : `${lead} and walk up the centre aisle to aisle ${aisle}.`;
-}
-
-function stepsTo(start: StartPlace, target: BoothSpot): string[] {
-  const hall = target.exhibitor.hall;
-  const steps: string[] = [];
-
-  if (startHall(start) === hall && start.kind === 'stall') {
-    const from = SPOT_BY_ID.get(start.id);
-    if (from && from.row === target.row) {
-      const between = Math.abs(from.col - target.col);
-      const across = from.side !== target.side ? ', across the centre aisle' : '';
-      steps.push(
-        `Step back into aisle ${from.row + 1}. ${target.exhibitor.booth} is on the same side, ${between} ${between === 1 ? 'stall' : 'stalls'} along${across}.`,
-      );
-      return steps;
-    }
-    if (from) {
-      const goingIn = target.row > from.row;
-      steps.push(
-        `From ${from.exhibitor.booth}, step into aisle ${from.row + 1} and walk to the centre aisle.`,
-        `Walk ${goingIn ? 'away from' : 'towards'} the hall door to aisle ${target.row + 1}.`,
-        arriveStep(target, goingIn ? 'in' : 'out'),
-      );
-      return steps;
-    }
-  }
-
-  if (start.kind === 'door' && start.hall === hall) {
-    steps.push(walkUpStep(hall, target, false));
-  } else {
-    if (start.kind === 'entrance') {
-      steps.push(concourseStep(MAIN_ENTRANCE.x, hall, true, 'Go in through the main entrance and'));
-    } else {
-      const fromHall = startHall(start);
-      if (fromHall) {
-        const opening =
-          start.kind === 'stall'
-            ? `From ${SPOT_BY_ID.get(start.id)?.exhibitor.booth ?? 'your booth'}, walk back down the centre aisle and out of Hall ${fromHall}, then`
-            : `Leave Hall ${fromHall} by its door and`;
-        steps.push(concourseStep(hallDoor(fromHall).x, hall, false, opening));
-      }
-    }
-    steps.push(walkUpStep(hall, target, true));
-  }
-  steps.push(arriveStep(target, 'in'));
-  return steps;
 }
 
 export function routeTo(start: StartPlace, targetId: string): Route | null {
@@ -177,10 +176,27 @@ export function routeTo(start: StartPlace, targetId: string): Route | null {
   if (start.kind === 'stall' && start.id === targetId) {
     return { points: [target.front], metres: 0, minutes: 0, steps: [`You're already at ${target.exhibitor.booth}.`] };
   }
-  const points = pathTo(start, target).filter(
-    (p, i, all) => i === 0 || p.x !== all[i - 1]?.x || p.y !== all[i - 1]?.y,
+
+  const origin = start.kind === 'stall' ? SPOT_BY_ID.get(start.id) : undefined;
+  // Booths sharing one space have the same front; there is nothing to walk.
+  if (origin && same(origin.front, target.front)) {
+    return { points: [target.front], metres: 0, minutes: 0, steps: [`${target.exhibitor.booth} shares this space. You're there.`] };
+  }
+
+  const frontAisleY = FRONT_AISLE?.at ?? MAIN_ENTRANCE.y;
+  const begin: Point = origin ? origin.access : { x: LONG_AISLES[2]?.at ?? MAIN_ENTRANCE.x, y: frontAisleY };
+  const lead: Point[] = origin ? [origin.front] : [MAIN_ENTRANCE, { x: begin.x, y: MAIN_ENTRANCE.y }];
+  const points = simplify(
+    [...lead, ...aislePath(begin, target.access), target.front].filter(
+      (p, i, all) => i === 0 || !same(p, all[i - 1] as Point),
+    ),
   );
   const metres = Math.round(lengthOf(points));
-  return { points, metres, minutes: Math.max(1, Math.round(metres / WALK_PACE)), steps: stepsTo(start, target) };
+  const opening = origin ? `From ${origin.exhibitor.booth}` : 'From the main entrance';
+  return {
+    points,
+    metres,
+    minutes: Math.max(1, Math.round(metres / WALK_PACE)),
+    steps: stepsFor(points, target, opening),
+  };
 }
-

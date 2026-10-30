@@ -1,0 +1,1784 @@
+{
+ "17-opto-electronics": {
+  "tags": [],
+  "industries": []
+ },
+ "industrial-product-monitor": {
+  "tags": [],
+  "industries": []
+ },
+ "optical-fusion": {
+  "tags": [],
+  "industries": []
+ },
+ "premier": {
+  "tags": [],
+  "industries": []
+ },
+ "99-business-media": {
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications",
+   "Energy & Solar"
+  ]
+ },
+ "aconix-laser-automation": {
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ "advanced-photonics": {
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications",
+   "Energy & Solar"
+  ]
+ },
+ "aimil": {
+  "tags": [
+   "Metrology & Test",
+   "Sensors & Detectors",
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "alkion-photonics": {
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Optical Components",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "apzem-environmental": {
+  "tags": [
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ "aryan-laser-cut": {
+  "tags": [
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ "asphericon": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "atq-metro": {
+  "tags": [
+   "Metrology & Test",
+   "Imaging & Machine Vision",
+   "Laser Marking & Engraving",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "beephoton-technology-changzhou": {
+  "tags": [
+   "Sensors & Detectors",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "beijing-daheng-optoelectronics": {
+  "tags": [
+   "Optical Components",
+   "Laser Sources",
+   "Fibre Optics",
+   "Opto-Mechanics",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "beijing-jcz": {
+  "tags": [
+   "Scanners & Beam Delivery",
+   "Controllers & Software",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ "beijing-reallight": {
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "braun-quarld-quartz-glass-lianyungang": {
+  "tags": [
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "brightech-laser": {
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ "britton-innotech": {
+  "tags": [
+   "Optical Components",
+   "Fibre Optics",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "changchun-boxin-photoelectric": {
+  "tags": [
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "c-and-c-laser-engineering": {
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "chuangchun-lano": {
+  "tags": [
+   "Imaging & Machine Vision",
+   "Optical Components",
+   "Sensors & Detectors"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "chunghwa-leading-photonics-tech": {
+  "tags": [
+   "Sensors & Detectors",
+   "Imaging & Machine Vision",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "coemtek-business-solutions": {
+  "tags": [
+   "Laser Sources",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ "coherent-laser": {
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Medical & Life Sciences"
+  ]
+ },
+ "comtek": {
+  "tags": [
+   "Spectroscopy & Analytical",
+   "Metrology & Test",
+   "Optical Components",
+   "Fibre Optics",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Trading & Distribution"
+  ]
+ },
+ "coremorrow": {
+  "tags": [
+   "Motion & Positioning",
+   "Controllers & Software",
+   "Scanners & Beam Delivery",
+   "Metrology & Test",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "cryslaser": {
+  "tags": [
+   "Optical Materials & Crystals",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "dataray": {
+  "tags": [
+   "Beam Profiling & Power Meters",
+   "Metrology & Test",
+   "Controllers & Software",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "deeplase": {
+  "tags": [
+   "Fibre Optics",
+   "Laser Sources",
+   "Quantum Technologies"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "dongguan-strong-laser-advanced-equipment": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Laser Sources",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ "delta-optical-thin-film-a-s": {
+  "tags": [
+   "Optical Coatings & Thin Film",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "doon-opticals-systems": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "dxs-optics": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences"
+  ]
+ },
+ "dynotech-instruments": {
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Spectroscopy & Analytical",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Trading & Distribution"
+  ]
+ },
+ "eblana-photonics": {
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "ecoptik-chinaltd": {
+  "tags": [
+   "Optical Components"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "edmund-optics": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Imaging & Machine Vision",
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "ekspla": {
+  "tags": [
+   "Laser Sources",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "epic": {
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": []
+ },
+ "etchon-marks-control": {
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "evosys-laser": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ "exail": {
+  "tags": [
+   "Fibre Optics",
+   "Optical Components",
+   "Laser Sources",
+   "Quantum Technologies"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "first-light-lamps": {
+  "tags": [
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences"
+  ]
+ },
+ "fluence-technology-sp-z-o-0": {
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "foxmat": {
+  "tags": [
+   "Optical Components",
+   "Opto-Mechanics",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "fraunhofer-hhi": {
+  "tags": [
+   "Optical Components",
+   "Laser Sources",
+   "Quantum Technologies",
+   "Sensors & Detectors",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "gamma-lasertech": {
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ "gohi-technology-wuhan": {
+  "tags": [
+   "Sensors & Detectors",
+   "Spectroscopy & Analytical",
+   "Optical Materials & Crystals",
+   "Optical Components"
+  ],
+  "industries": [
+   "Medical & Life Sciences",
+   "Energy & Solar"
+  ]
+ },
+ "guangdong-huicheng-vacuum": {
+  "tags": [
+   "Vacuum & Semiconductor Equipment",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ "guangzhou-new-cklaser": {
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ "h-p-instruments": {
+  "tags": [
+   "Metrology & Test",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Energy & Solar",
+   "Trading & Distribution"
+  ]
+ },
+ "halma": {
+  "tags": [],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Energy & Solar"
+  ]
+ },
+ "hhv-advanced": {
+  "tags": [
+   "Optical Coatings & Thin Film",
+   "Optical Components",
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "holmarc-opto-mechatronics": {
+  "tags": [
+   "Spectroscopy & Analytical",
+   "Opto-Mechanics",
+   "Optical Components",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "hong-teng-engineering": {
+  "tags": [
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ "i-tech-media": {
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Energy & Solar"
+  ]
+ },
+ "iec-inter-expo-consult": {
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications",
+   "Energy & Solar"
+  ]
+ },
+ "imm-photonics": {
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Fibre Optics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "indo-mim": {
+  "tags": [
+   "Additive Manufacturing"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Medical & Life Sciences"
+  ]
+ },
+ "indoforeign": {
+  "tags": [
+   "Laser Marking & Engraving"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "induportals-media-publishing": {
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ "infrared-optics": {
+  "tags": [
+   "Optical Components",
+   "Laser Sources",
+   "Fibre Optics",
+   "Optical Materials & Crystals",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "innolite": {
+  "tags": [
+   "Opto-Mechanics",
+   "Optical Components",
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "ipg-photonics": {
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Telecom & Data Communications"
+  ]
+ },
+ "jds-motion": {
+  "tags": [
+   "Motion & Positioning",
+   "Laser Cutting & Welding",
+   "Controllers & Software",
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "kameshwara": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Scanners & Beam Delivery",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ "keysight": {
+  "tags": [
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "laser": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ "laser-industries-association-of": {
+  "tags": [],
+  "industries": []
+ },
+ "laser-science-services-i": {
+  "tags": [
+   "Laser Sources",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision",
+   "Optical Coatings & Thin Film",
+   "Fibre Optics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia",
+   "Energy & Solar"
+  ]
+ },
+ "laseratwork": {
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "laserman-india-magazine": {
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": []
+ },
+ "laserquant": {
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia"
+  ]
+ },
+ "laservall-technosolutions": {
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Trading & Distribution"
+  ]
+ },
+ "light-conversion": {
+  "tags": [
+   "Laser Sources",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "lucius-global": {
+  "tags": [
+   "Fibre Optics",
+   "Optical Components",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Telecom & Data Communications"
+  ]
+ },
+ "luoyang-dingming-optical": {
+  "tags": [
+   "Optical Components",
+   "Optical Materials & Crystals",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "luxinar-laser": {
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "macfos": {
+  "tags": [
+   "Additive Manufacturing",
+   "Sensors & Detectors"
+  ],
+  "industries": [
+   "Automotive & EV",
+   "Electronics & Semiconductors",
+   "Trading & Distribution"
+  ]
+ },
+ "machine-house": {
+  "tags": [
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "magod-laser-machining": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Additive Manufacturing"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ "maiman-electronics-sl": {
+  "tags": [
+   "Laser Sources",
+   "Controllers & Software",
+   "Cooling & Chillers",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "maxphotonics": {
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Cleaning",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ "mas-auto-systems-pvt-ltd-bochu": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Controllers & Software",
+   "Motion & Positioning",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Trading & Distribution"
+  ]
+ },
+ "megawatt-lasers": {
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Cooling & Chillers",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "messe-muenchen-shanghai": {
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "micro-epsilon": {
+  "tags": [
+   "Sensors & Detectors",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "micro-hybrid-electronic": {
+  "tags": [
+   "Sensors & Detectors",
+   "Optical Components"
+  ],
+  "industries": [
+   "Automotive & EV",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "monoline-laser-and-robotics-machinery": {
+  "tags": [
+   "Additive Manufacturing",
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "mrsi-mycronic": {
+  "tags": [
+   "Opto-Mechanics",
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Electronics & Semiconductors"
+  ]
+ },
+ "nagata": {
+  "tags": [
+   "Optical Components",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "new-age-instruments-materials": {
+  "tags": [
+   "Laser Sources",
+   "Beam Profiling & Power Meters",
+   "Spectroscopy & Analytical",
+   "Fibre Optics",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "ningbo-longsheng-optics": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "ohara-optical-malaysia": {
+  "tags": [
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "obducat": {
+  "tags": [
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Electronics & Semiconductors"
+  ]
+ },
+ "optics-allied-engineering": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Opto-Mechanics",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "optosigma": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Opto-Mechanics",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "oxide": {
+  "tags": [
+   "Optical Materials & Crystals",
+   "Optical Components",
+   "Laser Sources",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "photik-scientific": {
+  "tags": [
+   "Laser Sources",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision",
+   "Optical Coatings & Thin Film",
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "photonicore": {
+  "tags": [
+   "Fibre Optics",
+   "Laser Sources",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence"
+  ]
+ },
+ "plano-optics": {
+  "tags": [
+   "Optical Components",
+   "Opto-Mechanics",
+   "Optical Coatings & Thin Film",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Research & Academia"
+  ]
+ },
+ "prima-medi": {
+  "tags": [],
+  "industries": [
+   "Medical & Life Sciences",
+   "Trading & Distribution"
+  ]
+ },
+ "prime-accutech": {
+  "tags": [
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia"
+  ]
+ },
+ "primes": {
+  "tags": [
+   "Beam Profiling & Power Meters",
+   "Metrology & Test",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Research & Academia"
+  ]
+ },
+ "protect-laserschutz": {
+  "tags": [
+   "Laser Safety",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "quantec": {
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Optical Components",
+   "Controllers & Software",
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Research & Academia"
+  ]
+ },
+ "quantum-design": {
+  "tags": [
+   "Metrology & Test",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision",
+   "Cooling & Chillers",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "qusyn-tech": {
+  "tags": [
+   "Quantum Technologies"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "r-s-technology-india-systems": {
+  "tags": [
+   "Metrology & Test",
+   "Imaging & Machine Vision",
+   "Beam Profiling & Power Meters"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "raito-optoelectronics": {
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Cleaning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "raylase": {
+  "tags": [
+   "Scanners & Beam Delivery",
+   "Controllers & Software",
+   "Opto-Mechanics",
+   "Laser Cutting & Welding",
+   "Additive Manufacturing"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ "raytech-photonics": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Laser Sources",
+   "Cooling & Chillers",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ "rgb-laser-systems": {
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia"
+  ]
+ },
+ "scanlab": {
+  "tags": [
+   "Scanners & Beam Delivery",
+   "Controllers & Software",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "sensortherm": {
+  "tags": [
+   "Metrology & Test",
+   "Sensors & Detectors",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Research & Academia"
+  ]
+ },
+ "sfo-technologies-pvt-ltd-optronics-division": {
+  "tags": [
+   "Fibre Optics",
+   "Laser Sources",
+   "Optical Components",
+   "Sensors & Detectors"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "shanghai-levin-automation": {
+  "tags": [
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV"
+  ]
+ },
+ "shanxi-dawei-laser": {
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "shenzhen-jpt-opto-electronics": {
+  "tags": [
+   "Laser Sources",
+   "Fibre Optics",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Telecom & Data Communications",
+   "Energy & Solar"
+  ]
+ },
+ "shenzhen-ospri-intelligent-technologyco": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ "shenzhen-ruida": {
+  "tags": [
+   "Controllers & Software",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Research & Academia"
+  ]
+ },
+ "shenzhen-shenyan-cnc": {
+  "tags": [
+   "Controllers & Software",
+   "Scanners & Beam Delivery",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia"
+  ]
+ },
+ "shenzhen-sub-lattice-optical": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "shenzhen-superscan": {
+  "tags": [
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Research & Academia"
+  ]
+ },
+ "shenzhen-trocen-automation": {
+  "tags": [
+   "Controllers & Software",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "shimadzu": {
+  "tags": [
+   "Optical Components",
+   "Spectroscopy & Analytical",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "sichuan-yasi-optics": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "sino-galvo-jiangsu-technologyico": {
+  "tags": [
+   "Scanners & Beam Delivery",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ "sinoptics-engineering": {
+  "tags": [
+   "Optical Components",
+   "Sensors & Detectors",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "sm-laser": {
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Laser Cleaning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "solutions-for-lasers-and-photonics": {
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Spectroscopy & Analytical",
+   "Fibre Optics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "specialise-instruments-marketing-company": {
+  "tags": [
+   "Spectroscopy & Analytical",
+   "Laser Sources",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "specialise-products": {
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Additive Manufacturing",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "spectaris": {
+  "tags": [],
+  "industries": []
+ },
+ "spt-laser": {
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "super-sonic-industry": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Motion & Positioning",
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "tec5": {
+  "tags": [
+   "Spectroscopy & Analytical",
+   "Metrology & Test",
+   "Sensors & Detectors"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "techsapphire": {
+  "tags": [
+   "Optical Materials & Crystals",
+   "Optical Components"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "the-optical-society-of": {
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Research & Academia"
+  ]
+ },
+ "thorlabs": {
+  "tags": [
+   "Optical Components",
+   "Fibre Optics",
+   "Sensors & Detectors",
+   "Laser Sources",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "toptica-photonics-se": {
+  "tags": [
+   "Laser Sources",
+   "Quantum Technologies",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ "triquench": {
+  "tags": [
+   "Motion & Positioning",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ "trokut-solutions": {
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Fibre Optics",
+   "Additive Manufacturing"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Research & Academia",
+   "Energy & Solar"
+  ]
+ },
+ "uab-lidaris": {
+  "tags": [
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ "v-s": {
+  "tags": [
+   "Imaging & Machine Vision",
+   "Optical Components",
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ "vdma-laser-and-laser-systems-for-material-processing": {
+  "tags": [],
+  "industries": []
+ },
+ "western-systems": {
+  "tags": [
+   "Laser Sources",
+   "Quantum Technologies"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "winarc-cutting-system": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Motion & Positioning",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ "xian-snp-precision-optics": {
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "z-optics": {
+  "tags": [
+   "Optical Components",
+   "Laser Sources",
+   "Fibre Optics"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ "мента-hitech-industries": {
+  "tags": [
+   "Laser Cutting & Welding",
+   "Motion & Positioning",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Research & Academia"
+  ]
+ }
+}

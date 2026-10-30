@@ -1,6 +1,5 @@
-import { mockMatchingService } from './matchingService';
+import { apiMatchingService } from './matchingService';
 
-// Swap this export for a real API-backed implementation later.
-export const matchingService = mockMatchingService;
+export const matchingService = apiMatchingService;
 export { TOP_N } from './matchingService';
 export type { MatchingService, MatchingOptions } from './matchingService';

@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { useLocalStorageState } from '../hooks/useLocalStorageState';
+import { syncBookmark } from '../services/apiClient';
 import type { Guest } from '../types';
 
 type BookmarksByGuest = Record<string, string[]>;
@@ -56,6 +57,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   const toggleBookmark = useCallback(
     (exhibitorId: string) => {
       if (!guestId) return;
+      if (guest) void syncBookmark(guest, exhibitorId, !bookmarkSet.has(exhibitorId));
       setBookmarksByGuest((all) => {
         const current = all[guestId] ?? [];
         const next = current.includes(exhibitorId)
@@ -64,7 +66,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
         return { ...all, [guestId]: next };
       });
     },
-    [guestId, setBookmarksByGuest],
+    [guest, guestId, bookmarkSet, setBookmarksByGuest],
   );
 
   const clearBookmarks = useCallback(() => {

@@ -1,11 +1,13 @@
-// The UI only talks to the `MatchingService` interface. To go live, implement it with
-// fetch() calls to the recommendation API and swap the export in services/index.ts.
+// The UI only talks to the `MatchingService` interface: the backend when it answers, otherwise the
+// same scoring rules run in the browser so the demo survives a network failure.
 import type { Guest, MatchResponse, SampleProfile } from '../types';
 import { SAMPLE_PROFILES } from '../data/guests';
 import { EXHIBITORS } from '../data/exhibitors';
+import { fetchRecommendations, isApiUp } from './apiClient';
 import { rankExhibitors } from './scoring';
 
 export const TOP_N = 30;
+const MIN_SCREEN_MS = 900;
 
 export interface MatchingOptions {
   signal?: AbortSignal;
@@ -65,10 +67,26 @@ export const mockMatchingService: MatchingService = {
     if (shouldSimulateFailure()) throw new Error('The matching service did not respond.');
 
     const response: MatchResponse = {
-      matches: rankExhibitors(guest, EXHIBITORS, TOP_N),
-      meta: { latencyMs: Math.round(performance.now() - started), scanned: EXHIBITORS.length },
+      results: rankExhibitors(guest, EXHIBITORS, TOP_N),
+      latencyMs: Math.round(performance.now() - started),
+      total: EXHIBITORS.length,
+      source: 'offline',
     };
     cache.set(key, response);
     return response;
+  },
+};
+
+export const apiMatchingService: MatchingService = {
+  listSampleProfiles: mockMatchingService.listSampleProfiles,
+
+  async getTopMatches(guest, options = {}) {
+    if (!(await isApiUp())) return mockMatchingService.getTopMatches(guest, options);
+    // The engine takes milliseconds; hold the matching screen long enough to read. `latencyMs` stays the real time.
+    const [response] = await Promise.all([
+      fetchRecommendations(guest, options.signal),
+      options.fresh ? wait(MIN_SCREEN_MS, options.signal) : undefined,
+    ]);
+    return { ...response, source: 'live' };
   },
 };

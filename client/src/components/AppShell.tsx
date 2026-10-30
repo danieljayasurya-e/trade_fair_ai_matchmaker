@@ -38,7 +38,7 @@ export function AppShell() {
             <Icon name="shield" size={18} />
             Rankings come only from how well profiles fit. No exhibitor pays for placement.
           </p>
-          <p>Sample profiles are fictional. Hall and booth numbers are sample values, not the official floor plan.</p>
+          <p>Sample profiles are fictional. Exhibitors and booths are from the 2026 visitor guide; product details come from public web sources.</p>
         </div>
       </footer>
       {hasTabBar && <TabBar />}

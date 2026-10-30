@@ -1,0 +1,4 @@
+.venv/
+models/
+data/guests.json
+__pycache__/

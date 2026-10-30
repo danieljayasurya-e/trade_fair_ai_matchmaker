@@ -42,3 +42,17 @@ Select or upload a guest profile → run the matching engine → show top 30 wit
 ## Team
 
 Team 4, UI/UX mentor: Sneha. Team name and leader: `TODO:`. Roster in [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
+
+## Running it
+
+```bash
+cd backend && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python build_index.py
+.venv/bin/uvicorn app:app --host 0.0.0.0 --port 4000
+```
+
+```bash
+cd client && npm install && npm run dev
+```
+
+`backend/smoke_test.py` checks a running server against `docs/api-contract.md`. Exhibitor data comes from `data/`: run `build_frontend_data.py` after changing it, then `build_index.py`.

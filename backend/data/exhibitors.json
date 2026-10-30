@@ -1,0 +1,4240 @@
+[
+ {
+  "id": "ex-99-business-media",
+  "name": "99 BUSINESS MEDIA",
+  "description": "99 Business Media is an India-based publisher of B2B and industrial journals covering multiple sectors. It also participates in trade fairs and exhibitions to promote its publications.",
+  "hall": "LD",
+  "booth": "LD 62",
+  "otherBooths": [],
+  "city": "Delhi",
+  "country": "India",
+  "products": [
+   "B2B and industrial journals",
+   "print and digital publications",
+   "exhibition-special issues"
+  ],
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-aconix-laser-automation",
+  "name": "ACONIX LASER AUTOMATION INDIA PRIVATE LIMITED",
+  "description": "Aconix Laser Automation India Private Limited sells laser marking equipment and fiber laser sources, along with dot-peen marking machines. Its listings identify Chennai as its location.",
+  "hall": "LE",
+  "booth": "LE 46",
+  "otherBooths": [],
+  "city": "Chennai",
+  "country": "India",
+  "products": [
+   "UV laser marking machines",
+   "fiber laser sources",
+   "dot-peen marking machines"
+  ],
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-advanced-photonics",
+  "name": "ADVANCED PHOTONICS",
+  "description": "Advanced Photonics is a Mumbai-based photonics and laser technology company that supplies equipment and provides technical services and systems integration. It also designs and develops products such as fiber-optics educational kits.",
+  "hall": "LC",
+  "booth": "LC 36",
+  "otherBooths": [],
+  "city": "Mumbai",
+  "country": "India",
+  "products": [
+   "lasers",
+   "light sources",
+   "optics and optomechanics",
+   "fiber-optic products",
+   "motion-control systems",
+   "spectroscopy and imaging equipment",
+   "light-measurement systems",
+   "photonics assembly and testing systems",
+   "fiber-optics educational kits"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-aimil",
+  "name": "AIMIL LTD",
+  "description": "Aimil Ltd is an Indian instrumentation company that manufactures and supplies equipment for civil engineering, materials testing, electronics, analytical and industrial applications. It also provides related technical and consultancy services.",
+  "hall": "LF",
+  "booth": "LF 21",
+  "otherBooths": [],
+  "city": "New Delhi",
+  "country": "India",
+  "products": [
+   "civil engineering test equipment",
+   "soil and concrete testing equipment",
+   "structural monitoring instruments",
+   "geotechnical instruments",
+   "non-destructive testing equipment",
+   "analytical instruments",
+   "electronics test and measurement equipment",
+   "noise and vibration monitoring systems",
+   "XRF analyzers",
+   "laser scanners"
+  ],
+  "tags": [
+   "Metrology & Test",
+   "Sensors & Detectors",
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-alkion-photonics",
+  "name": "ALKION PHOTONICS PRIVATE LIMITED",
+  "description": "Alkion Photonics is a Surat-based supplier of laser optics, laser sources, vision systems, and laser equipment. Its listed product range includes laser marking and welding machines, laser sources, lenses, and positioning stages.",
+  "hall": "LB",
+  "booth": "LB 11",
+  "otherBooths": [],
+  "city": "Surat",
+  "country": "India",
+  "products": [
+   "laser marking machines",
+   "UV laser sources",
+   "fiber laser sources",
+   "laser welding machines",
+   "laser optics and F-theta lenses",
+   "laser viewing plates",
+   "laser equipment parts",
+   "precision rotation and translation stages"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Optical Components",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-apzem-environmental",
+  "name": "APZEM ENVIRONMENTAL",
+  "description": "APZEM Environmental designs, manufactures, and supplies industrial air-pollution-control equipment, including fume extractors and dust collectors for laser processing applications. It also provides customized system design, installation guidance, commissioning assistance, and after-sales support.[3][6]",
+  "hall": "LA",
+  "booth": "LA 18",
+  "otherBooths": [],
+  "city": "Chennai",
+  "country": "India",
+  "products": [
+   "dust collectors",
+   "laser fume extractors",
+   "wet scrubbers",
+   "dry scrubbers",
+   "hybrid scrubbers",
+   "fume hoods",
+   "ventilation systems",
+   "blowers",
+   "ducting"
+  ],
+  "tags": [
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-aryan-laser-cut",
+  "name": "ARYAN LASER CUT PRIVATE LIMITED",
+  "description": "Aryan Laser Cut Private Limited provides CNC laser-cutting services and produces custom metal and non-metal parts in Noida. Its listed materials include stainless steel, mild steel, aluminium, copper, and brass.[1][2]",
+  "hall": "LD",
+  "booth": "LD 61",
+  "otherBooths": [],
+  "city": "Noida",
+  "country": "India",
+  "products": [
+   "laser-cut metal and non-metal parts",
+   "stainless steel components",
+   "mild steel components",
+   "aluminium components",
+   "copper components",
+   "brass components"
+  ],
+  "tags": [
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ {
+  "id": "ex-asphericon",
+  "name": "ASPHERICON GMBH",
+  "description": "Asphericon GmbH is a Jena-based German manufacturer of precision aspheric optical components and systems. It also provides optical design, manufacturing, coating, metrology, characterization, and assembly services.",
+  "hall": "LC",
+  "booth": "LC 45",
+  "otherBooths": [],
+  "city": "Jena",
+  "country": "Germany",
+  "products": [
+   "aspheric lenses",
+   "spherical lenses",
+   "freeform optics",
+   "acylinders",
+   "axicons",
+   "mirrors and reflectors",
+   "mounted optics",
+   "optical systems",
+   "beam expanders",
+   "beam shapers"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-atq-metro",
+  "name": "ATQ METRO PRIVATE LIMITED",
+  "description": "ATQ Metro Private Limited is a Pune-based manufacturer and service provider of industrial metrology and dimensional measurement systems. It also provides inspection, calibration, repair, upgrade, and training services.",
+  "hall": "LB",
+  "booth": "LB 82",
+  "otherBooths": [],
+  "city": "Pune",
+  "country": "India",
+  "products": [
+   "vision measuring machines",
+   "video measuring systems",
+   "profile projectors",
+   "cutting tool inspection machines",
+   "digital microscopes",
+   "laser marking machines",
+   "coordinate measuring machines",
+   "metrology fixtures"
+  ],
+  "tags": [
+   "Metrology & Test",
+   "Imaging & Machine Vision",
+   "Laser Marking & Engraving",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-beephoton-technology-changzhou",
+  "name": "BEEPHOTON TECHNOLOGY (CHANGZHOU) CO., LTD.",
+  "description": "Beephoton Technology (Changzhou) Co., Ltd. develops and manufactures high-performance photodetectors and X-ray detection products. Its products serve medical imaging and diagnostics, industrial non-destructive testing, security screening, and analytical instruments.",
+  "hall": "LB",
+  "booth": "LB 51",
+  "otherBooths": [],
+  "city": "Changzhou",
+  "country": "China",
+  "products": [
+   "photodiodes",
+   "linear detector cards",
+   "medical CT detector modules",
+   "X-ray detector modules",
+   "X-ray linear scan cameras",
+   "detector cards and subsystems"
+  ],
+  "tags": [
+   "Sensors & Detectors",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-beijing-daheng-optoelectronics",
+  "name": "BEIJING DAHENG OPTOELECTRONICS TECHNOLOGY CO.,LTD.",
+  "description": "Beijing-based optical technology company that designs and manufactures optical components, modules, subsystem assemblies and systems. Its parent company describes its work as including optomechatronic systems, ultrafast lasers, nondestructive testing and laser application engineering.",
+  "hall": "LA",
+  "booth": "LA 26",
+  "otherBooths": [],
+  "city": "Beijing",
+  "country": "China",
+  "products": [
+   "optical components",
+   "optical modules and systems",
+   "precision mechanical components",
+   "motorized stages",
+   "laser accessories",
+   "ultrafast lasers",
+   "laser processing equipment",
+   "fiber-optic components",
+   "terahertz time-domain spectrometers"
+  ],
+  "tags": [
+   "Optical Components",
+   "Laser Sources",
+   "Fibre Optics",
+   "Opto-Mechanics",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-beijing-jcz",
+  "name": "BEIJING JCZ TECHNOLOGY CO .,LTD.",
+  "description": "Beijing JCZ Technology develops, manufactures, and sells beam transmission and control products for laser processing, including control software, hardware, scanning modules, and processing equipment. It also provides integrated solutions and technical services for laser processing applications.",
+  "hall": "LF",
+  "booth": "LF 20",
+  "otherBooths": [],
+  "city": "Beijing",
+  "country": "China",
+  "products": [
+   "EZCAD laser control software",
+   "laser marking control systems",
+   "laser cutting systems",
+   "laser welding systems",
+   "galvanometer scanners",
+   "laser processing control cards",
+   "3D laser processing systems",
+   "laser precision processing equipment"
+  ],
+  "tags": [
+   "Scanners & Beam Delivery",
+   "Controllers & Software",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-beijing-reallight",
+  "name": "BEIJING REALLIGHT TECHNOLOGY CO., LTD",
+  "description": "Beijing RealLight Technology Co., Ltd. develops, manufactures and sells diode lasers, microchip lasers, erbium glass lasers, solid-state lasers and related accessories. Its products serve medical, analytical, ranging and laser-processing applications.",
+  "hall": "LA",
+  "booth": "LA 27",
+  "otherBooths": [],
+  "city": "Beijing",
+  "country": "China",
+  "products": [
+   "fiber-coupled diode lasers",
+   "diode laser stacks",
+   "microchip lasers",
+   "erbium glass lasers",
+   "high-power solid-state lasers",
+   "high-energy lamp-pumped lasers",
+   "laser accessories"
+  ],
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-braun-quarld-quartz-glass-lianyungang",
+  "name": "BRAUN & QUARLD QUARTZ GLASS LIANYUNGANG LTD.",
+  "description": "Braun & Quarld Quartz Glass Lianyungang Ltd. manufactures quartz glass raw materials and processed products, including tubes, rods, plates, washing tanks, and boats. The company is based in Lianyungang, Jiangsu, China.",
+  "hall": "LD",
+  "booth": "LD 85",
+  "otherBooths": [],
+  "city": "Lianyungang",
+  "country": "China",
+  "products": [
+   "quartz glass tubes",
+   "quartz glass rods",
+   "quartz glass plates",
+   "quartz washing tanks",
+   "quartz boats",
+   "optical glass"
+  ],
+  "tags": [
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-brightech-laser",
+  "name": "BRIGHTECH LASER",
+  "description": "Brightech Laser manufactures and supplies industrial laser marking, welding, and cutting machines, as well as laser machine parts. Its products serve manufacturers, fabricators, and jewellery businesses.",
+  "hall": "LC",
+  "booth": "LC 74",
+  "otherBooths": [],
+  "city": "Ahmedabad",
+  "country": "India",
+  "products": [
+   "laser marking machines",
+   "fiber laser marking machines",
+   "laser welding machines",
+   "laser cutting machines",
+   "laser engraving machines",
+   "laser machine parts and accessories"
+  ],
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ {
+  "id": "ex-britton-innotech",
+  "name": "BRITTON INNOTECH LLP",
+  "description": "Britton Innotech LLP supplies optical and laser components to research laboratories and industrial laser users, and represents manufacturers of optics, lasers, semiconductor equipment, and fiber-optic products. It also provides sales and service support.",
+  "hall": "LE",
+  "booth": "LE 23",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "optical lenses",
+   "cameras",
+   "lasers",
+   "optical filters",
+   "optical components",
+   "fiber-optic components",
+   "semiconductor equipment"
+  ],
+  "tags": [
+   "Optical Components",
+   "Fibre Optics",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-c-and-c-laser-engineering",
+  "name": "C. AND C. LASER ENGINEERING PRIVATE LIMITED",
+  "description": "C. And C. Laser Engineering supplies scientific and industrial lasers and laser-processing systems, and provides custom integration and laser job-work and repair services. Its offerings include marking, engraving, cutting, welding and micromachining solutions.",
+  "hall": "LD",
+  "booth": "LD 67",
+  "otherBooths": [],
+  "city": "Mumbai",
+  "country": "India",
+  "products": [
+   "laser marking and engraving systems",
+   "laser cutting systems",
+   "laser welding systems",
+   "laser micromachining systems",
+   "scientific and industrial lasers",
+   "laser components"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-changchun-boxin-photoelectric",
+  "name": "CHANGCHUN BOXIN PHOTOELECTRIC CO., LTD.",
+  "description": "Changchun Boxin Photoelectric Co., Ltd. is a China-based manufacturer of precision optical components and customized optical solutions. Its products serve machine vision, industrial automation, scientific research, laser technology, and medical equipment applications.",
+  "hall": "LB",
+  "booth": "LB 61",
+  "otherBooths": [],
+  "city": "Changchun",
+  "country": "China",
+  "products": [
+   "optical lenses",
+   "cylindrical lenses",
+   "spherical lenses",
+   "aspherical lenses",
+   "infrared lenses",
+   "laser optics",
+   "mirrors",
+   "prisms",
+   "waveplates",
+   "optical windows",
+   "filters",
+   "machine-vision lenses"
+  ],
+  "tags": [
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-chuangchun-lano",
+  "name": "CHUANGCHUN LANO TECHNOLOGY CO., LTD.",
+  "description": "Changchun Lano Technology develops and manufactures machine-vision cameras, lenses, and lighting, and provides vision and automation system integration. Its listed products also include payload cameras, star sensors, and infrared lenses.",
+  "hall": "LB",
+  "booth": "LB 45",
+  "otherBooths": [],
+  "city": "Changchun",
+  "country": "China",
+  "products": [
+   "industrial cameras",
+   "machine vision lenses",
+   "telecentric lenses",
+   "infrared lenses",
+   "visual light sources",
+   "optical components",
+   "payload cameras",
+   "star sensors"
+  ],
+  "tags": [
+   "Imaging & Machine Vision",
+   "Optical Components",
+   "Sensors & Detectors"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-chunghwa-leading-photonics-tech",
+  "name": "CHUNGHWA LEADING PHOTONICS TECH CO., LTD.",
+  "description": "Chunghwa Leading Photonics Tech develops and manufactures InGaAs detectors and imaging products for short-wave infrared applications. Its products include area and linear image sensors, photodiodes, avalanche photodiodes, and cameras.[1][2]",
+  "hall": "LD",
+  "booth": "LD 59",
+  "otherBooths": [],
+  "city": "Taoyuan City",
+  "country": "Taiwan",
+  "products": [
+   "InGaAs area image sensors",
+   "InGaAs linear image sensors",
+   "InGaAs PIN photodiodes",
+   "InGaAs avalanche photodiodes",
+   "SWIR cameras"
+  ],
+  "tags": [
+   "Sensors & Detectors",
+   "Imaging & Machine Vision",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-coemtek-business-solutions",
+  "name": "COEMTEK BUSINESS SOLUTIONS PRIVATE LIMITED",
+  "description": "Coemtek Business Solutions provides and integrates manufacturing technologies, including laser, ultrasonic, inspection, and machining solutions. The company also offers application expertise, custom automation, and sales and service support.",
+  "hall": "LD",
+  "booth": "LD 15",
+  "otherBooths": [],
+  "city": "Chennai",
+  "country": "India",
+  "products": [
+   "laser systems",
+   "ultrasonic equipment",
+   "inspection systems",
+   "machining solutions",
+   "custom automation equipment"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ {
+  "id": "ex-coherent-laser",
+  "name": "COHERENT LASER INDIA PRIVATE LIMITED",
+  "description": "Coherent Laser India Private Limited is an Indian distributor of Coherent Inc. products, supplying industrial laser sources and systems for cutting, marking, welding, and other materials-processing applications. It also provides application support, training, installation, and after-sales service.",
+  "hall": "LC",
+  "booth": "LC 10",
+  "otherBooths": [],
+  "city": "Navi Mumbai",
+  "country": "India",
+  "products": [
+   "industrial laser sources",
+   "laser cutting systems",
+   "laser marking and engraving systems",
+   "laser welding systems",
+   "stent-cutting and medical-device systems",
+   "laser components"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-comtek",
+  "name": "COMTEK",
+  "description": "COMTEK Scientific Instruments is an India-based scientific solutions provider and distributor of international manufacturers’ products. It supplies and provides solutions for optical spectroscopy, test and measurement, thin-film measurement, biomedical, biotechnology, nanotechnology, and imaging applications.",
+  "hall": "LC",
+  "booth": "LC 31",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "optical spectroscopy systems",
+   "spectrometers",
+   "optical components",
+   "fiber optics",
+   "thin-film thickness measurement instruments",
+   "scientific test and measurement equipment",
+   "imaging systems"
+  ],
+  "tags": [
+   "Spectroscopy & Analytical",
+   "Metrology & Test",
+   "Optical Components",
+   "Fibre Optics",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Trading & Distribution"
+  ]
+ },
+ {
+  "id": "ex-coremorrow",
+  "name": "COREMORROW LTD.",
+  "description": "CoreMorrow Ltd. develops, manufactures, and sells nanoscale precision positioning products and solutions for high-end precision equipment. Its products serve photonics, semiconductor, optical, life-science, and other precision technology applications.",
+  "hall": "LB",
+  "booth": "LB 65",
+  "otherBooths": [],
+  "city": "Harbin",
+  "country": "China",
+  "products": [
+   "piezoelectric actuators",
+   "piezoelectric motors",
+   "precision positioning and scanning stages",
+   "piezoelectric deflection mirrors",
+   "objective scanners",
+   "hexapods",
+   "piezoelectric drivers and controllers",
+   "LVDT, capacitance, and laser measurement systems"
+  ],
+  "tags": [
+   "Motion & Positioning",
+   "Controllers & Software",
+   "Scanners & Beam Delivery",
+   "Metrology & Test",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-cryslaser",
+  "name": "CRYSLASER INC.",
+  "description": "Cryslaser manufactures laser crystals, nonlinear optical crystals, infrared optical materials, laser optics, and related components. The company was founded in 2007 and is based in Chengdu, China.[1][2]",
+  "hall": "LB",
+  "booth": "LB 52",
+  "otherBooths": [],
+  "city": "Chengdu",
+  "country": "China",
+  "products": [
+   "laser crystals (Nd:YAG, Nd:Ce:YAG, Cr4+:YAG, Yb:YAG, Er:YAG, YVO4)",
+   "nonlinear optical crystals (RTP, CLBO, BBO, LBO, KTP)",
+   "infrared optical materials (Ge, Si, ZnS, ZnSe)",
+   "laser optics (mirrors, windows, lenses)",
+   "laser components and modulators"
+  ],
+  "tags": [
+   "Optical Materials & Crystals",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-dataray",
+  "name": "DATARAY INC",
+  "description": "DataRay Inc. designs and manufactures laser beam profiling and analysis instruments for the photonics industry. Its products include beam profiling cameras, scanning slit profilers, and wavefront sensors.",
+  "hall": "LC",
+  "booth": "LC 36",
+  "otherBooths": [],
+  "city": "Monterey",
+  "country": "United States",
+  "products": [
+   "beam profiling cameras",
+   "scanning slit beam profilers",
+   "specialized beam profiler systems",
+   "wavefront sensors",
+   "laser profiling accessories",
+   "beam profiling software"
+  ],
+  "tags": [
+   "Beam Profiling & Power Meters",
+   "Metrology & Test",
+   "Controllers & Software",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-deeplase",
+  "name": "DEEPLASE TECHNOLOGIES PRIVATE LIMITED",
+  "description": "DeepLase Technologies develops and manufactures specialty optical fibers, fiber-laser systems, and other precision photonics equipment. Its products target applications including industrial manufacturing, telecommunications, healthcare, sensing, and quantum technology.",
+  "hall": "LC",
+  "booth": "LC 39",
+  "otherBooths": [],
+  "city": "New Delhi",
+  "country": "India",
+  "products": [
+   "specialty optical fibers",
+   "fiber lasers",
+   "narrow-linewidth lasers",
+   "supercontinuum light sources",
+   "single-photon sources",
+   "integrated photonics systems"
+  ],
+  "tags": [
+   "Fibre Optics",
+   "Laser Sources",
+   "Quantum Technologies"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-delta-optical-thin-film-a-s",
+  "name": "DELTA OPTICAL THIN FILM A/S",
+  "description": "Delta Optical Thin Film A/S designs and manufactures custom high-performance optical filters and thin-film components for OEM customers. Its products serve life-science, medical, and industrial applications.",
+  "hall": "LD",
+  "booth": "LD 52",
+  "otherBooths": [],
+  "city": "Hørsholm",
+  "country": "Denmark",
+  "products": [
+   "optical thin-film filters",
+   "bandpass filters",
+   "edge filters",
+   "blocking filters",
+   "continuously variable filters",
+   "linear variable filters",
+   "dichroic beamsplitters"
+  ],
+  "tags": [
+   "Optical Coatings & Thin Film",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-dongguan-strong-laser-advanced-equipment",
+  "name": "DONGGUAN STRONG LASER ADVANCED EQUIPMENT CO., LTD.",
+  "description": "Dongguan Strong Laser Advanced Equipment Co., Ltd. develops, manufactures, sells, and services laser micro-nano processing equipment and solutions. Its systems serve display, electronics, circuit board, semiconductor, brittle-material, and new-energy applications.[1][3]",
+  "hall": "LA",
+  "booth": "LA 29",
+  "otherBooths": [],
+  "city": "Dongguan",
+  "country": "China",
+  "products": [
+   "laser micro-nano processing systems",
+   "femtosecond and picosecond lasers",
+   "laser cutting machines",
+   "laser drilling machines",
+   "laser etching machines",
+   "automated laser processing production lines"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Laser Sources",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-doon-opticals-systems",
+  "name": "DOON OPTICALS SYSTEMS PVT LTD",
+  "description": "Doon Optical Systems manufactures precision optical components, coatings, and opto-mechanical assemblies in India. Its products serve laser, defense, aerospace, scientific, and medical-instrument applications.",
+  "hall": "LA",
+  "booth": "LA 25",
+  "otherBooths": [],
+  "city": "Dehradun",
+  "country": "India",
+  "products": [
+   "precision optical lenses",
+   "prisms",
+   "windows",
+   "mirrors",
+   "thin-film optical coatings",
+   "opto-mechanical assemblies"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-dxs-optics",
+  "name": "DXS OPTICS LTD.",
+  "description": "DXS Optics Ltd. is a Shenzhen-based manufacturer focused on the research, production, and sale of precision optical lenses and components. Its products include laser optics, protective windows, filters, and other optical components for industrial and medical applications.",
+  "hall": "LF",
+  "booth": "LF 25",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "laser protective lenses",
+   "F-theta scan lenses",
+   "aspherical lenses",
+   "spherical and precision optical lenses",
+   "filters",
+   "mirrors",
+   "beam splitters",
+   "telecentric lenses",
+   "collimating lenses",
+   "focusing lenses",
+   "prisms"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-dynotech-instruments",
+  "name": "DYNOTECH INSTRUMENTS PRIVATE LIMITED",
+  "description": "Dynotech Instruments Private Limited is an India-based supplier and distributor of laser, photonics, semiconductor, and spectroscopy products for research and industrial applications. It also provides equipment support, training, and repair services.",
+  "hall": "LE",
+  "booth": "LE 31",
+  "otherBooths": [],
+  "city": "New Delhi",
+  "country": "India",
+  "products": [
+   "laser systems",
+   "laser beam delivery systems",
+   "laser welding and micromachining systems",
+   "laser marking systems",
+   "ultrafast lasers",
+   "spectroscopy instruments",
+   "semiconductor deposition systems",
+   "optical metrology systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Spectroscopy & Analytical",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Trading & Distribution"
+  ]
+ },
+ {
+  "id": "ex-eblana-photonics",
+  "name": "EBLANA PHOTONICS LTD.",
+  "description": "Eblana Photonics designs and manufactures near- and mid-infrared laser diodes for sensing, LIDAR, metrology, quantum optics, and optical communications. It also provides post-fabrication services including optical coating, testing, and wafer, bar, and chip processing.",
+  "hall": "LC",
+  "booth": "LC 72",
+  "otherBooths": [],
+  "city": "Dun Laoghaire",
+  "country": "Ireland",
+  "products": [
+   "discrete-mode laser diodes",
+   "narrow-linewidth laser diodes",
+   "Fabry–Perot laser diodes",
+   "VCSELs",
+   "superluminescent diodes",
+   "gain chips",
+   "telecom laser diodes"
+  ],
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-ecoptik-chinaltd",
+  "name": "ECOPTIK (CHINA) LTD",
+  "description": "ECOPTIK (CHINA) LTD is a precision optical components manufacturer headquartered in Changchun, China. It makes custom optics for applications including lasers, aerospace, scientific research, communications, semiconductors, and medical technology.",
+  "hall": "LB",
+  "booth": "LB 41",
+  "otherBooths": [],
+  "city": "Changchun",
+  "country": "China",
+  "products": [
+   "spherical lenses",
+   "aspherical lenses",
+   "prisms",
+   "mirrors",
+   "optical windows",
+   "cylindrical lenses",
+   "optical domes",
+   "custom optical components"
+  ],
+  "tags": [
+   "Optical Components"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-edmund-optics",
+  "name": "EDMUND OPTICS INDIA PRIVATE LIMITED",
+  "description": "Edmund Optics India Private Limited is the Bengaluru-based Indian entity of Edmund Optics, providing optical and imaging components, sales, and local technical support. Edmund Optics designs and manufactures stock and custom optics, imaging systems, and optomechanical equipment.",
+  "hall": "LC",
+  "booth": "LC 14",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "precision optical components",
+   "lenses",
+   "mirrors",
+   "prisms",
+   "beamsplitters",
+   "optical filters",
+   "laser optics",
+   "imaging systems",
+   "optomechanical equipment"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Imaging & Machine Vision",
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-ekspla",
+  "name": "EKSPLA",
+  "description": "EKSPLA is a Vilnius-based manufacturer of solid-state and fiber lasers, laser systems, and optoelectronics for scientific, OEM, and industrial applications. Its products support research, spectroscopy, imaging, and materials processing.",
+  "hall": "LE",
+  "booth": "LE 30",
+  "otherBooths": [],
+  "city": "Vilnius",
+  "country": "Lithuania",
+  "products": [
+   "solid-state lasers",
+   "fiber lasers",
+   "femtosecond lasers",
+   "picosecond lasers",
+   "nanosecond lasers",
+   "tunable-wavelength lasers",
+   "high-intensity laser systems",
+   "laser spectroscopy and imaging systems",
+   "laser electronics",
+   "optical parametric oscillators and amplifiers"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-etchon-marks-control",
+  "name": "ETCHON MARKS CONTROL",
+  "description": "Etchon Marks Control is an Indian manufacturer and exporter of industrial marking, engraving, etching, cutting, and welding equipment under the EtchON brand. It also provides metal etching services.",
+  "hall": "LA",
+  "booth": "LA 15",
+  "otherBooths": [],
+  "city": "Aurangabad",
+  "country": "India",
+  "products": [
+   "fiber, UV, and CO2 laser marking machines",
+   "dot pin marking machines",
+   "electrochemical metal etching machines",
+   "CO2 laser engraving and cutting machines",
+   "fiber laser welding machines",
+   "marking machine parts and accessories"
+  ],
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-evosys-laser",
+  "name": "EVOSYS LASER GMBH",
+  "description": "Evosys Laser GmbH develops and manufactures customized laser systems, especially for welding plastics, and supports customers from application design through production integration and after-sales service. Its headquarters are in Erlangen, Germany.",
+  "hall": "LC",
+  "booth": "LC 41",
+  "otherBooths": [],
+  "city": "Erlangen",
+  "country": "Germany",
+  "products": [
+   "custom laser plastic welding systems",
+   "laser welding process modules",
+   "laser process and monitoring systems"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-exail",
+  "name": "EXAIL",
+  "description": "Exail designs and manufactures photonic and quantum components and systems, including specialty optical fibers, electro-optic modulators, lasers, and optical assemblies. It serves applications including high-power and biomedical lasers, space, sensing, and quantum communications.",
+  "hall": "LA",
+  "booth": "LA 20",
+  "otherBooths": [],
+  "city": "Saint-Germain-en-Laye",
+  "country": "France",
+  "products": [
+   "specialty optical fibers",
+   "lithium niobate electro-optic modulators",
+   "Fiber Bragg Gratings",
+   "fibered micro-optical benches",
+   "lasers",
+   "optical amplifiers",
+   "optical delay lines",
+   "quantum sensors"
+  ],
+  "tags": [
+   "Fibre Optics",
+   "Optical Components",
+   "Laser Sources",
+   "Quantum Technologies"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-first-light-lamps",
+  "name": "FIRST LIGHT LAMPS LTD",
+  "description": "First Light Lamps Ltd manufactures xenon and krypton flash lamps for OEMs and applications in medical, aesthetic, industrial, and decontamination markets. It is based in Ely, United Kingdom.",
+  "hall": "LD",
+  "booth": "LD 53",
+  "otherBooths": [],
+  "city": "Ely",
+  "country": "United Kingdom",
+  "products": [
+   "xenon flash lamps",
+   "krypton flash lamps",
+   "IPL replacement lamps",
+   "laser lamp components"
+  ],
+  "tags": [
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-fluence-technology-sp-z-o-0",
+  "name": "FLUENCE TECHNOLOGY SP. Z O.O.",
+  "description": "Fluence Technology is a Warsaw-based manufacturer of industrial-grade femtosecond fiber lasers using an all-fiber design. Its laser systems serve scientific, medical, and advanced manufacturing applications, including semiconductor and electronics production.[2][3]",
+  "hall": "LD",
+  "booth": "LD 06",
+  "otherBooths": [],
+  "city": "Warsaw",
+  "country": "Poland",
+  "products": [
+   "femtosecond fiber lasers",
+   "ultrafast laser systems",
+   "Jasper Micro femtosecond laser"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-foxmat",
+  "name": "FOXMAT SA",
+  "description": "FoXmat SA manufactures integrated photonic circuits, microfabricates optical MEMS, and deposits piezoelectric thin films on wafers. It serves the optoelectronic integrated-circuit market.",
+  "hall": "LD",
+  "booth": "LD 67",
+  "otherBooths": [],
+  "city": "Écublens",
+  "country": "Switzerland",
+  "products": [
+   "integrated photonic circuits",
+   "piezoelectric thin films",
+   "optical MEMS"
+  ],
+  "tags": [
+   "Optical Components",
+   "Opto-Mechanics",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-fraunhofer-hhi",
+  "name": "FRAUNHOFER HHI",
+  "description": "Fraunhofer HHI is a Berlin-based research institute working on optical and mobile communication networks, photonic components, sensing, and image processing. It develops and manufactures optical and optoelectronic components and modules, including InP-based lasers and photonic integrated circuits.",
+  "hall": "LC",
+  "booth": "LC 43",
+  "otherBooths": [],
+  "city": "Berlin",
+  "country": "Germany",
+  "products": [
+   "InP-based lasers",
+   "optical modulators",
+   "photodetectors",
+   "photonic integrated circuits",
+   "semiconductor optical amplifiers",
+   "optical communication test systems",
+   "single-photon detection modules",
+   "LiFi systems",
+   "FMCW LiDAR"
+  ],
+  "tags": [
+   "Optical Components",
+   "Laser Sources",
+   "Quantum Technologies",
+   "Sensors & Detectors",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-gamma-lasertech",
+  "name": "GAMMA LASERTECH",
+  "description": "Gamma Lasertech is an Ahmedabad-based Indian firm that manufactures and supplies laser marking, engraving, and cutting machines for industrial and jewelry applications. Its product range includes fiber and UV laser systems.",
+  "hall": "LA",
+  "booth": "LA 23",
+  "otherBooths": [],
+  "city": "Ahmedabad",
+  "country": "India",
+  "products": [
+   "laser marking machines",
+   "laser engraving machines",
+   "fiber laser cutting machines",
+   "laser welding machines",
+   "laser scanners"
+  ],
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ {
+  "id": "ex-gohi-technology-wuhan",
+  "name": "GOHI TECHNOLOGY (WUHAN) CO.,LTD",
+  "description": "GOHI Technology (Wuhan) manufactures photomultiplier tubes, PMT modules, and assembled radiation and scintillation detectors. It also distributes detectors, scintillation crystals, electronics, and nuclear radiation instruments, and offers customization and technical services.",
+  "hall": "LB",
+  "booth": "LB 66",
+  "otherBooths": [],
+  "city": "Wuhan",
+  "country": "China",
+  "products": [
+   "photomultiplier tubes",
+   "PMT modules",
+   "MCP-PMTs",
+   "scintillation detectors",
+   "CZT detectors",
+   "PIPS detectors",
+   "SiPMs and SiPM arrays",
+   "scintillation crystals",
+   "multichannel analyzers",
+   "preamplifiers",
+   "spectrometer systems"
+  ],
+  "tags": [
+   "Sensors & Detectors",
+   "Spectroscopy & Analytical",
+   "Optical Materials & Crystals",
+   "Optical Components"
+  ],
+  "industries": [
+   "Medical & Life Sciences",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-guangdong-huicheng-vacuum",
+  "name": "GUANGDONG HUICHENG VACUUM TECHNOLOGY CO., LTD.",
+  "description": "Guangdong Huicheng Vacuum Technology develops, manufactures, and sells vacuum coating and related production equipment. It also provides coating-process solutions and technical services.",
+  "hall": "LB",
+  "booth": "LB 88",
+  "otherBooths": [],
+  "city": "Dongguan",
+  "country": "China",
+  "products": [
+   "PVD coating equipment",
+   "ALD equipment",
+   "optical coating equipment",
+   "functional thin-film coating equipment",
+   "decorative coating equipment",
+   "roll-to-roll coating equipment",
+   "inline magnetron sputtering production lines",
+   "ultra-high-vacuum systems",
+   "semiconductor and electronic production equipment"
+  ],
+  "tags": [
+   "Vacuum & Semiconductor Equipment",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-guangzhou-new-cklaser",
+  "name": "GUANGZHOU NEW CKLASER CO.,LTD",
+  "description": "Guangzhou New CKLASER Co., Ltd. designs, develops, manufactures, and sells industrial laser processing equipment. Its products include laser marking, engraving, cutting, and denim-processing machines.",
+  "hall": "LD",
+  "booth": "LD 24",
+  "otherBooths": [],
+  "city": "Guangzhou",
+  "country": "China",
+  "products": [
+   "laser marking machines",
+   "laser engraving machines",
+   "laser cutting machines",
+   "laser jeans washing machines",
+   "large-format laser printing machines"
+  ],
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ {
+  "id": "ex-h-p-instruments",
+  "name": "H P INSTRUMENTS",
+  "description": "H P Instruments is an India-based supplier of scientific and precision instruments for analytical research, quality control, optical measurement, and battery testing. It distributes instruments from international manufacturers, including Trioptics.",
+  "hall": "LB",
+  "booth": "LB 40",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "optical measuring instruments",
+   "battery cycle life testing equipment",
+   "analytical and quality-control instruments"
+  ],
+  "tags": [
+   "Metrology & Test",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Energy & Solar",
+   "Trading & Distribution"
+  ]
+ },
+ {
+  "id": "ex-halma",
+  "name": "HALMA INDIA PRIVATE LIMITED",
+  "description": "HALMA INDIA PRIVATE LIMITED is the Bengaluru-headquartered Indian arm of Halma, providing strategic services including research and development and digital technology support. The Halma group operates across safety, environmental and analysis, and healthcare markets in India.",
+  "hall": "LC",
+  "booth": "LC 38",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [],
+  "tags": [],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-hhv-advanced",
+  "name": "HHV ADVANCED TECHNOLOGIES PRIVATE LIMITED",
+  "description": "HHV Advanced Technologies designs and manufactures thin-film deposition equipment, precision optics and optical coatings for research and industrial applications. It also provides customized design and coating services for sectors including space, defence and electronics.",
+  "hall": "LD",
+  "booth": "LD 23",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "thin-film deposition systems",
+   "PVD and CVD equipment",
+   "ALD systems",
+   "PECVD systems",
+   "precision optical components",
+   "laser optics",
+   "optical filters",
+   "thin-film coatings",
+   "periscope assemblies",
+   "infrared optics"
+  ],
+  "tags": [
+   "Optical Coatings & Thin Film",
+   "Optical Components",
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-holmarc-opto-mechatronics",
+  "name": "HOLMARC OPTO-MECHATRONICS LTD",
+  "description": "Holmarc Opto-Mechatronics Ltd is an Indian manufacturer of scientific and engineering instruments for research, industry, and education. Its products include optics, opto-mechanical systems, spectroscopy and microscopy instruments, and custom-designed positioning devices.",
+  "hall": "LB",
+  "booth": "LB 85",
+  "otherBooths": [],
+  "city": "Kochi",
+  "country": "India",
+  "products": [
+   "spectroscopy instruments",
+   "microscopes",
+   "holography instruments",
+   "optical components",
+   "opto-mechanical systems",
+   "optical positioning devices and stages",
+   "educational laboratory equipment",
+   "laser systems"
+  ],
+  "tags": [
+   "Spectroscopy & Analytical",
+   "Opto-Mechanics",
+   "Optical Components",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-hong-teng-engineering",
+  "name": "HONG TENG ENGINEERING INDIA PVT LTD",
+  "description": "Hong Teng Engineering India supplies power-transmission and automation products, including gear reducers and related drive components. It also provides technical advice and application support for customer systems.",
+  "hall": "LA",
+  "booth": "LA 01",
+  "otherBooths": [],
+  "city": "Raigad",
+  "country": "India",
+  "products": [
+   "gear reducers",
+   "planetary reducers",
+   "hollow rotary reducers",
+   "worm reducers",
+   "hypoid gear reducers",
+   "gear motors",
+   "screw jacks",
+   "right-angle gearboxes",
+   "linear bearings",
+   "precision locknuts"
+  ],
+  "tags": [
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ {
+  "id": "ex-i-tech-media",
+  "name": "I-TECH MEDIA PRIVATE LIMITED",
+  "description": "I-Tech Media Private Limited is an India-based industrial information and B2B media company headquartered in Mumbai. It produces print and digital publications, industry insights, and virtual and live events for sectors including manufacturing, construction, energy, and HVAC.",
+  "hall": "LC",
+  "booth": "LC 77",
+  "otherBooths": [],
+  "city": "Mumbai",
+  "country": "India",
+  "products": [
+   "print and digital industry publications",
+   "market intelligence",
+   "industry events",
+   "webinars",
+   "publishing outsourcing services"
+  ],
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-17-opto-electronics",
+  "name": "I7 OPTO-ELECTRONICS INC.",
+  "description": "",
+  "hall": "LD",
+  "booth": "LD 05",
+  "otherBooths": [],
+  "city": "",
+  "country": "",
+  "products": [],
+  "tags": [],
+  "industries": []
+ },
+ {
+  "id": "ex-iec-inter-expo-consult",
+  "name": "IEC INTER EXPO CONSULT GMBH",
+  "description": "IEC INTER EXPO CONSULT GmbH organizes international trade fair participation and specialized exhibitions, including German joint presentations. Its services include planning, budgeting, stand construction, transport and on-site support.",
+  "hall": "LC",
+  "booth": "LC 41",
+  "otherBooths": [
+   "LC 51"
+  ],
+  "city": "Berlin",
+  "country": "Germany",
+  "products": [
+   "international trade fair participation planning",
+   "German joint pavilion organization",
+   "exhibition stand construction and logistics",
+   "virtual exhibition presentations"
+  ],
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-imm-photonics",
+  "name": "IMM PHOTONICS GMBH",
+  "description": "IMM Photonics GmbH is a German developer, manufacturer, and distributor of photonic solutions, optical and optoelectronic components, and laser modules. It is headquartered in Unterschleißheim and serves applications including industrial automation, life sciences, and medical technology.",
+  "hall": "LC",
+  "booth": "LC 72",
+  "otherBooths": [],
+  "city": "Unterschleißheim",
+  "country": "Germany",
+  "products": [
+   "laser diodes",
+   "laser modules",
+   "VCSEL components",
+   "optical and optoelectronic components",
+   "fiber-optic systems",
+   "LED systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Fibre Optics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-indo-mim",
+  "name": "INDO-MIM LIMITED",
+  "description": "INDO-MIM Limited manufactures precision components using metal injection molding and other processes, including investment casting, precision machining, and additive manufacturing. It also provides component design, tooling, finishing, and assembly capabilities.",
+  "hall": "LE",
+  "booth": "LE 01",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "metal injection molded components",
+   "ceramic injection molded components",
+   "precision investment castings",
+   "precision-machined components",
+   "metal 3D-printed components",
+   "metal powders",
+   "tooling, jigs and fixtures"
+  ],
+  "tags": [
+   "Additive Manufacturing"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-indoforeign",
+  "name": "INDOFOREIGN TECHNOLOGIES",
+  "description": "IndoForeign Technologies is an India-based manufacturer and exporter of laser marking and engraving equipment. It also provides customized automation and marking solutions for production lines.",
+  "hall": "LB",
+  "booth": "LB 31",
+  "otherBooths": [],
+  "city": "Aurangabad",
+  "country": "India",
+  "products": [
+   "fiber laser marking machines",
+   "CO2 laser engraving machines",
+   "laser marking machines",
+   "laser marking machine spares and components",
+   "laser automation marking systems"
+  ],
+  "tags": [
+   "Laser Marking & Engraving"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-induportals-media-publishing",
+  "name": "INDUPORTALS MEDIA PUBLISHING",
+  "description": "Induportals Media Publishing provides digital publishing and online media for industrial and engineering sectors. Its offerings include websites, newsletters, digital magazines, targeted email campaigns, webinars, and videos.",
+  "hall": "LF",
+  "booth": "LF 15",
+  "otherBooths": [],
+  "city": "",
+  "country": "Spain",
+  "products": [
+   "industry-focused websites",
+   "newsletters",
+   "digital magazines",
+   "targeted email marketing",
+   "webinars",
+   "videos",
+   "social media publishing"
+  ],
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-industrial-product-monitor",
+  "name": "INDUSTRIAL PRODUCT MONITOR",
+  "description": "",
+  "hall": "LD",
+  "booth": "LD 65",
+  "otherBooths": [],
+  "city": "",
+  "country": "",
+  "products": [],
+  "tags": [],
+  "industries": []
+ },
+ {
+  "id": "ex-infrared-optics",
+  "name": "INFRARED OPTICS PRIVATE LIMITED",
+  "description": "INFRARED OPTICS PRIVATE LIMITED is an India-based supplier and representative of manufacturers of optical, laser, semiconductor and fiber-optic products. It serves research and industrial customers and provides sales, service and application support.",
+  "hall": "LD",
+  "booth": "LD 31",
+  "otherBooths": [],
+  "city": "Faridabad",
+  "country": "India",
+  "products": [
+   "optical components",
+   "lasers and laser components",
+   "laser spares",
+   "optomechanics",
+   "optical design software",
+   "CO2 and fiber laser optics and nozzles",
+   "optical fibers and fiber-optic components",
+   "terahertz optics",
+   "collimators and infrared assemblies",
+   "optical materials",
+   "laser diode drivers and controllers",
+   "spectrometers"
+  ],
+  "tags": [
+   "Optical Components",
+   "Laser Sources",
+   "Fibre Optics",
+   "Optical Materials & Crystals",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-innolite",
+  "name": "INNOLITE GMBH",
+  "description": "Innolite GmbH develops and manufactures ultra-precision machine tools and produces molds and optical components. It supports customers with optical production and process development.",
+  "hall": "LC",
+  "booth": "LC 46",
+  "otherBooths": [],
+  "city": "Aachen",
+  "country": "Germany",
+  "products": [
+   "ultra-precision machine tools",
+   "optical mold inserts",
+   "polymer optics",
+   "metal optics",
+   "ultra-precision clamping systems"
+  ],
+  "tags": [
+   "Opto-Mechanics",
+   "Optical Components",
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-ipg-photonics",
+  "name": "IPG PHOTONICS (INDIA) PRIVATE LIMITED",
+  "description": "IPG Photonics (India) Private Limited supplies and manufactures laser solutions for industrial, telecommunications, and medical applications. It also provides laser application and service centers in India.[1][2][3]",
+  "hall": "LB",
+  "booth": "LB 01",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "fiber lasers",
+   "direct diode lasers",
+   "pulsed and ultrafast lasers",
+   "laser amplifiers",
+   "beam delivery systems",
+   "laser cutting and welding systems",
+   "laser marking systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-jds-motion",
+  "name": "JDS MOTION TECHNOLOGY PRIVATE LIMITED",
+  "description": "JDS Motion Technology Private Limited supplies motion-control products and precision components for industrial applications. Its catalog includes CNC and laser controllers, motors and drives, linear-motion components, and laser-processing heads.",
+  "hall": "LF",
+  "booth": "LF 24",
+  "otherBooths": [],
+  "city": "Ahmedabad",
+  "country": "India",
+  "products": [
+   "motion controllers",
+   "CNC and laser controllers",
+   "stepper and servo motors and drives",
+   "spindles",
+   "power supplies",
+   "planetary gearboxes",
+   "linear guideways",
+   "ball screws",
+   "rack-and-pinion systems",
+   "laser cutting and welding heads",
+   "robot manipulators"
+  ],
+  "tags": [
+   "Motion & Positioning",
+   "Laser Cutting & Welding",
+   "Controllers & Software",
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-kameshwara",
+  "name": "KAMESHWARA TECHNOLOGIES LLP",
+  "description": "Kameshwara Technologies LLP is an India-based manufacturer and seller of laser and CNC machinery. Its product range includes fiber laser cutting, laser marking and plasma cutting machines, CNC routers, and woodworking equipment.",
+  "hall": "LA",
+  "booth": "LA 11",
+  "otherBooths": [],
+  "city": "Hyderabad",
+  "country": "India",
+  "products": [
+   "fiber laser cutting machines",
+   "laser marking machines",
+   "CO2 laser cutting machines",
+   "CNC routers",
+   "plasma cutting machines",
+   "wood carving machines",
+   "wood lathe machines",
+   "3D laser scanners"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Scanners & Beam Delivery",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ {
+  "id": "ex-keysight",
+  "name": "KEYSIGHT TECHNOLOGIES",
+  "description": "Keysight Technologies India Private Limited is the Indian subsidiary of Keysight Technologies, Inc., supplying electronic design, test and measurement solutions. Its portfolio includes test equipment and solutions for photonics, communications, semiconductors, aerospace and defense.",
+  "hall": "LE",
+  "booth": "LE 41",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "optical and photonic test equipment",
+   "oscilloscopes",
+   "signal generators",
+   "network analyzers",
+   "spectrum analyzers",
+   "electronic design and test solutions"
+  ],
+  "tags": [
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-laser-industries-association-of",
+  "name": "LASER INDUSTRIES ASSOCIATION OF INDIA",
+  "description": "The Laser Industries Association of India is an industry association supporting the laser and photonics sector in India. It promotes industry collaboration and participates in related trade fairs and events.",
+  "hall": "LC",
+  "booth": "LC 75",
+  "otherBooths": [],
+  "city": "Navi Mumbai",
+  "country": "India",
+  "products": [],
+  "tags": [],
+  "industries": []
+ },
+ {
+  "id": "ex-laser-science-services-i",
+  "name": "LASER SCIENCE SERVICES (I) PVT LTD",
+  "description": "Laser Science Services (I) Pvt. Ltd. distributes lasers and related equipment for scientific research and industrial manufacturing in India. It represents international manufacturers and provides systems for research laboratories and production applications.",
+  "hall": "LC",
+  "booth": "LC 10",
+  "otherBooths": [],
+  "city": "Navi Mumbai",
+  "country": "India",
+  "products": [
+   "scientific and industrial laser systems",
+   "spectroscopy equipment",
+   "microscopy and imaging systems",
+   "thin-film deposition systems",
+   "fiber-processing tools",
+   "solar characterization systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision",
+   "Optical Coatings & Thin Film",
+   "Fibre Optics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-laser",
+  "name": "LASER TECHNOLOGIES PVT LTD",
+  "description": "Laser Technologies Pvt Ltd is an India-based supplier and manufacturer of industrial laser machinery and equipment for cutting, welding, marking, engraving, hardening, and cladding. It also provides laser equipment repair, maintenance, training, and support services.",
+  "hall": "LD",
+  "booth": "LD 11",
+  "otherBooths": [],
+  "city": "Navi Mumbai",
+  "country": "India",
+  "products": [
+   "fiber laser cutting machines",
+   "metal and non-metal laser cutting machines",
+   "laser welding machines",
+   "laser marking machines",
+   "laser engraving equipment",
+   "laser hardening systems",
+   "laser cladding systems",
+   "laser sources and spares"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ {
+  "id": "ex-laseratwork",
+  "name": "LASERATWORK GMBH",
+  "description": "LaserAtWork GmbH develops and manufactures compact ultrafast laser systems for medical, industrial, and scientific applications. Its product line includes femtosecond oscillators, amplifier systems, and laboratory drivers.",
+  "hall": "LD",
+  "booth": "LD 30",
+  "otherBooths": [],
+  "city": "Höchst",
+  "country": "Austria",
+  "products": [
+   "HUMMINGBIRD femtosecond laser oscillators",
+   "PEREGRINE femtosecond laser systems",
+   "LABMATE configurable laboratory driver"
+  ],
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-laserman-india-magazine",
+  "name": "LASERMAN INDIA MAGAZINE",
+  "description": "Laserman India Magazine is a publication covering developments, applications, and industry news related to laser technology in India. It serves professionals, researchers, and other readers in the laser sector.[1][2]",
+  "hall": "LC",
+  "booth": "LC 23",
+  "otherBooths": [],
+  "city": "",
+  "country": "India",
+  "products": [
+   "laser technology magazine",
+   "industry articles",
+   "expert interviews",
+   "laser industry news and coverage"
+  ],
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": []
+ },
+ {
+  "id": "ex-laserquant",
+  "name": "LASERQUANT TECHNOLOGY PRIVATE LIMITED",
+  "description": "LaserQuant is an Indian photonics supplier and solutions provider that distributes laser systems and optical components, and offers integration, installation, maintenance, and repair services. It supports industrial and research applications including laser marking, micromachining, precision cutting, and quantum photonics.",
+  "hall": "LD",
+  "booth": "LD 21",
+  "otherBooths": [],
+  "city": "Nagpur",
+  "country": "India",
+  "products": [
+   "laser sources",
+   "DPSS lasers",
+   "UV and green lasers",
+   "fiber lasers",
+   "tunable laser systems",
+   "photonics components",
+   "laser marking and engraving systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-laservall-technosolutions",
+  "name": "LASERVALL TECHNOSOLUTIONS PRIVATE LIMITED",
+  "description": "Laservall Technosolutions Private Limited manufactures and supplies laser marking, engraving, and cutting equipment from Bengaluru, India. It also sells imported equipment, including products from Datalogic.",
+  "hall": "LB",
+  "booth": "LB 18",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "laser marking machines",
+   "laser engraving machines",
+   "fiber laser markers",
+   "CO2 laser cutting machines",
+   "laser hallmarking systems",
+   "laser welding machines",
+   "barcode scanners",
+   "laser machine power sources"
+  ],
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Trading & Distribution"
+  ]
+ },
+ {
+  "id": "ex-light-conversion",
+  "name": "LIGHT CONVERSION",
+  "description": "Light Conversion designs and manufactures ultrafast laser systems and related optical equipment for scientific, industrial, and medical applications. Its product range includes femtosecond lasers, wavelength-tunable sources, OPCPA systems, spectroscopy systems, and microscopy sources.",
+  "hall": "LB",
+  "booth": "LB 34",
+  "otherBooths": [],
+  "city": "Vilnius",
+  "country": "Lithuania",
+  "products": [
+   "femtosecond lasers",
+   "optical parametric amplifiers (OPAs)",
+   "optical parametric chirped-pulse amplifiers (OPCPAs)",
+   "spectroscopy systems",
+   "microscopy laser sources",
+   "harmonic generators"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-lucius-global",
+  "name": "LUCIUS GLOBAL PRIVATE LIMITED",
+  "description": "Lucius Global Private Limited, operating as Lucius Global Photonics, is a Delhi-based photonics company offering optical components and fiber-optic solutions. It distributes photonics products and provides product development, system integration, and technical support.",
+  "hall": "LA",
+  "booth": "LA 21",
+  "otherBooths": [],
+  "city": "Delhi",
+  "country": "India",
+  "products": [
+   "DWDM multiplexers and demultiplexers",
+   "optical delay lines",
+   "optical hybrids",
+   "delay-line interferometers",
+   "optical switches",
+   "fiber-optic collimators",
+   "optical modulators",
+   "fiber lasers and amplifiers",
+   "optical sensors",
+   "fiber Bragg gratings"
+  ],
+  "tags": [
+   "Fibre Optics",
+   "Optical Components",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-luoyang-dingming-optical",
+  "name": "LUOYANG DINGMING OPTICAL TECHNOLOGY CO., LTD.",
+  "description": "Luoyang Dingming Optical Technology manufactures optical components and semiconductor substrate products. Its product range includes precision components made from silicon, germanium, fluoride crystals, zinc selenide, sapphire, and other optical materials.",
+  "hall": "LD",
+  "booth": "LD 86",
+  "otherBooths": [],
+  "city": "Luoyang",
+  "country": "China",
+  "products": [
+   "infrared optical lenses",
+   "windows",
+   "prisms",
+   "mirrors",
+   "laser and scanning mirrors",
+   "semiconductor wafers",
+   "optical substrates",
+   "coating materials"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Materials & Crystals",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-luxinar-laser",
+  "name": "LUXINAR LASER INC",
+  "description": "Luxinar Inc. (also listed as Iradion Laser Inc.) is the U.S. Luxinar entity, based in Uxbridge, Massachusetts. It manufactures industrial laser sources for material processing applications.",
+  "hall": "LD",
+  "booth": "LD 67",
+  "otherBooths": [],
+  "city": "Uxbridge",
+  "country": "United States",
+  "products": [
+   "CO2 laser sources",
+   "short-pulse laser sources",
+   "ultrashort-pulse laser sources"
+  ],
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-macfos",
+  "name": "MACFOS LIMITED",
+  "description": "Macfos Limited operates the Robu.in e-commerce platform, selling electronic components and engineering products. It also offers 3D printing, laser cutting, prototyping, assembly, and PCB manufacturing services.[3][8]",
+  "hall": "LC",
+  "booth": "LC 09",
+  "otherBooths": [],
+  "city": "Pune",
+  "country": "India",
+  "products": [
+   "electronic components",
+   "development boards",
+   "sensors",
+   "motors",
+   "drone parts",
+   "robotics kits",
+   "3D printers and parts",
+   "batteries and chargers",
+   "electronic modules and displays",
+   "EV parts"
+  ],
+  "tags": [
+   "Additive Manufacturing",
+   "Sensors & Detectors"
+  ],
+  "industries": [
+   "Automotive & EV",
+   "Electronics & Semiconductors",
+   "Trading & Distribution"
+  ]
+ },
+ {
+  "id": "ex-machine-house",
+  "name": "MACHINE HOUSE (INDIA) PRIVATE LIMITED",
+  "description": "Machine House (India) Private Limited manufactures and supplies vibration-isolation solutions, including systems used to protect precision machinery and sensitive laser, photonics, and semiconductor equipment. It also provides vibration measurement, analysis, and project support, and represents Germany-based Bilz Vibration Technology in India.",
+  "hall": "LE",
+  "booth": "LE 34",
+  "otherBooths": [],
+  "city": "Nashik",
+  "country": "India",
+  "products": [
+   "anti-vibration mounts and pads",
+   "vibration-isolation tables and platforms",
+   "rubber and membrane air springs",
+   "leveling wedges and pads",
+   "machine foundations"
+  ],
+  "tags": [
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-magod-laser-machining",
+  "name": "MAGOD LASER MACHINING PVT. LTD",
+  "description": "Magod Laser Machining Pvt. Ltd. is an India-based laser manufacturing and industrial services company headquartered in Bengaluru. It provides laser cutting, welding, cladding, hardening, drilling, metal 3D printing, fabrication, and product-development support.",
+  "hall": "LA",
+  "booth": "LA 31",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "laser-cut sheet and plate components",
+   "laser-cut tubes and pipes",
+   "5-axis laser-cut parts",
+   "laser-welded components",
+   "laser-cladded and hardened parts",
+   "laser-drilled parts",
+   "metal 3D-printed parts",
+   "fabricated metal components"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Additive Manufacturing"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ {
+  "id": "ex-maiman-electronics-sl",
+  "name": "MAIMAN ELECTRONICS SL",
+  "description": "Maiman Electronics S.L. develops and manufactures laser diode drivers, TEC controllers, and laser diode modules. Its products serve applications including materials processing, medical equipment, laser measurement, and scientific research.",
+  "hall": "LF",
+  "booth": "LF 18",
+  "otherBooths": [],
+  "city": "Castelldefels",
+  "country": "Spain",
+  "products": [
+   "laser diode drivers",
+   "laser diode controllers",
+   "TEC temperature controllers",
+   "laser diode modules",
+   "laser power supplies"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Controllers & Software",
+   "Cooling & Chillers",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-mas-auto-systems-pvt-ltd-bochu",
+  "name": "MAS Auto Systems Pvt. Ltd (Bochu)",
+  "description": "MAS Auto Systems Pvt. Ltd. is an India-based distributor and service provider for industrial automation, motion-control, and robotics products. It represents Bochu laser-cutting systems and other brands, and supplies products including laser controllers, heads, laser sources, motors, and drives.",
+  "hall": "LC",
+  "booth": "LC 21",
+  "otherBooths": [],
+  "city": "Navi Mumbai",
+  "country": "India",
+  "products": [
+   "laser cutting controllers",
+   "laser cutting heads",
+   "laser welding machines",
+   "laser power sources",
+   "servo motors and drives",
+   "stepper motors",
+   "gearboxes",
+   "linear guideways",
+   "ball screws",
+   "CNC spindles",
+   "pipe-cutting chucks"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Controllers & Software",
+   "Motion & Positioning",
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Trading & Distribution"
+  ]
+ },
+ {
+  "id": "ex-maxphotonics",
+  "name": "MAXPHOTONICS CO.,LTD",
+  "description": "Maxphotonics is a Shenzhen-based manufacturer that develops and produces fiber lasers and optical components. Its products support industrial processes including cutting, welding, marking, cleaning, and additive manufacturing.",
+  "hall": "LB",
+  "booth": "LB 21",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "CW fiber lasers",
+   "pulsed fiber lasers",
+   "QCW fiber lasers",
+   "diode lasers",
+   "laser welding machines",
+   "laser cleaning machines",
+   "UV lasers",
+   "optical components"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Cleaning",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ {
+  "id": "ex-megawatt-lasers",
+  "name": "MEGAWATT LASERS",
+  "description": "MegaWatt Lasers Inc. designs and manufactures solid-state laser components and systems, including pump chambers, resonators, and microlasers. It also provides laser consulting, research and development, and application-specific laser solutions.",
+  "hall": "LF",
+  "booth": "LF 16",
+  "otherBooths": [],
+  "city": "Hilton Head Island",
+  "country": "United States",
+  "products": [
+   "solid-state lasers",
+   "laser pump chambers",
+   "laser resonators",
+   "diode-pumped solid-state microlasers",
+   "laser assemblies",
+   "laser rods",
+   "laser optics",
+   "flashlamps",
+   "laser drivers and electronics",
+   "cooling systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Cooling & Chillers",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-мента-hitech-industries",
+  "name": "MEHTA HITECH INDUSTRIES LIMITED",
+  "description": "Mehta Hitech Industries Limited manufactures CNC routers, CO2 and fiber laser machines, and digital printing machines. It is headquartered in Ahmedabad, India.",
+  "hall": "LE",
+  "booth": "LE 10",
+  "otherBooths": [],
+  "city": "Ahmedabad",
+  "country": "India",
+  "products": [
+   "CO2 laser machines",
+   "fiber laser machines",
+   "CNC routers",
+   "digital printers"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Motion & Positioning",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-messe-muenchen-shanghai",
+  "name": "MESSE MUENCHEN SHANGHAI CO., LTD",
+  "description": "Messe Muenchen Shanghai Co., Ltd. organizes trade fairs and provides exhibition and event services in China. It is a wholly owned Chinese subsidiary of Messe München and covers sectors including laser technology, electronics, and laboratory technology.[1][2][3]",
+  "hall": "LB",
+  "booth": "LB 61",
+  "otherBooths": [
+   "LA 26",
+   "LD 64",
+   "LD 85"
+  ],
+  "city": "Shanghai",
+  "country": "China",
+  "products": [
+   "trade fairs",
+   "exhibitions",
+   "conferences",
+   "China pavilion services"
+  ],
+  "tags": [
+   "Media & Associations"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-micro-epsilon",
+  "name": "MICRO EPSILON INDIA PRIVATE LIMITED",
+  "description": "MICRO-EPSILON India Private Limited is the Indian entity of the Micro-Epsilon group, based in Pune. It provides precision sensor and measurement products for industrial applications; the group describes itself as a manufacturer, with development and manufacturing across the group.",
+  "hall": "LC",
+  "booth": "LC 30",
+  "otherBooths": [],
+  "city": "Pune",
+  "country": "India",
+  "products": [
+   "displacement sensors",
+   "laser sensors",
+   "confocal sensors",
+   "eddy-current sensors",
+   "capacitive sensors",
+   "infrared temperature sensors",
+   "color sensors",
+   "optical micrometers",
+   "2D/3D measurement systems",
+   "thickness measurement systems"
+  ],
+  "tags": [
+   "Sensors & Detectors",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-micro-hybrid-electronic",
+  "name": "MICRO-HYBRID ELECTRONIC GMBH",
+  "description": "Micro-Hybrid Electronic GmbH develops and manufactures custom microelectronics, infrared components, and sensors for temperature measurement, gas analysis, and inertial measurement. It is part of the Micro-Epsilon Group.",
+  "hall": "LC",
+  "booth": "LC 30",
+  "otherBooths": [],
+  "city": "Hermsdorf",
+  "country": "Germany",
+  "products": [
+   "infrared sensors",
+   "thermopile detectors",
+   "gas sensors",
+   "inertial sensors",
+   "infrared components",
+   "ceramic substrates",
+   "electronic packages"
+  ],
+  "tags": [
+   "Sensors & Detectors",
+   "Optical Components"
+  ],
+  "industries": [
+   "Automotive & EV",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-monoline-laser-and-robotics-machinery",
+  "name": "MONOLINE LASER AND ROBOTICS MACHINERY PRIVATE LIMITED",
+  "description": "Monoline Laser And Robotics Machinery Private Limited is an Ahmedabad-based Indian company that manufactures laser machinery and robotic automation systems. It also provides fiber-laser source, optical module, and related repair and maintenance services.",
+  "hall": "LC",
+  "booth": "LC 16",
+  "otherBooths": [],
+  "city": "Ahmedabad",
+  "country": "India",
+  "products": [
+   "metal 3D printers",
+   "fiber laser sources",
+   "laser welding machines",
+   "laser cladding machines",
+   "robotic cutting and welding systems",
+   "laser marking machines"
+  ],
+  "tags": [
+   "Additive Manufacturing",
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-mrsi-mycronic",
+  "name": "MRSI MYCRONIC",
+  "description": "MRSI Systems develops, manufactures, and sells high-precision die bonding systems for optoelectronics and microelectronics assembly. It is part of Swedish company Mycronic AB.",
+  "hall": "LD",
+  "booth": "LD 54",
+  "otherBooths": [],
+  "city": "Tewksbury",
+  "country": "United States",
+  "products": [
+   "automated die bonding systems",
+   "active alignment systems",
+   "fluid dispensers"
+  ],
+  "tags": [
+   "Opto-Mechanics",
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-nagata",
+  "name": "NAGATA CO.,LTD",
+  "description": "NAGATA Co., Ltd. is a Japanese supplier of optical measuring instruments, machinery, tools, and consumables. It also procures optical components including lenses, prisms, mirrors, filters, and beam splitters.[1][3][7]",
+  "hall": "LF",
+  "booth": "LF 23",
+  "otherBooths": [],
+  "city": "Okaya",
+  "country": "Japan",
+  "products": [
+   "optical measuring instruments",
+   "laser interferometers",
+   "optical machinery",
+   "diamond tools",
+   "optical lenses and components",
+   "optical consumables"
+  ],
+  "tags": [
+   "Optical Components",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-new-age-instruments-materials",
+  "name": "NEW AGE INSTRUMENTS & MATERIALS PVT. LTD",
+  "description": "New Age Instruments & Materials supplies scientific instrumentation and components for research and industrial applications. Its offerings include laser and photonics equipment, optics, spectroscopy systems, detectors, and semiconductor-processing equipment.",
+  "hall": "LC",
+  "booth": "LC 20",
+  "otherBooths": [],
+  "city": "Gurugram",
+  "country": "India",
+  "products": [
+   "lasers and laser components",
+   "optics and optomechanics",
+   "laser beam profilers",
+   "laser power and energy meters",
+   "spectrometers and monochromators",
+   "light sources",
+   "photodetectors and cameras",
+   "fiber-optic components",
+   "thin-film measurement systems",
+   "semiconductor processing equipment"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Beam Profiling & Power Meters",
+   "Spectroscopy & Analytical",
+   "Fibre Optics",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-ningbo-longsheng-optics",
+  "name": "NINGBO LONGSHENG OPTICS CO., LTD.",
+  "description": "Ningbo Longsheng Optics focuses on optical flat processing and optical coating processing, with ongoing technical research and development. Its listed categories include optical components and units and optical coatings.",
+  "hall": "LA",
+  "booth": "LA 28",
+  "otherBooths": [],
+  "city": "Ningbo",
+  "country": "China",
+  "products": [
+   "optical components",
+   "optical flats",
+   "optical coatings"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-obducat",
+  "name": "OBDUCAT GMBH",
+  "description": "Obducat Europe GmbH is based in Radolfzell, Germany, and focuses on sales and production of standard and customized resist- and wet-processing equipment. It is a subsidiary of Sweden-based Obducat AB.[2][7]",
+  "hall": "LC",
+  "booth": "LC 47",
+  "otherBooths": [],
+  "city": "Radolfzell",
+  "country": "Germany",
+  "products": [
+   "resist processing equipment",
+   "wet processing equipment",
+   "customized resist and wet processing systems"
+  ],
+  "tags": [
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-ohara-optical-malaysia",
+  "name": "OHARA OPTICAL MALAYSIA",
+  "description": "OHARA OPTICAL (M) Sdn. Bhd. manufactures and sells optical lens blanks from its facility in Merlimau, Malaysia. Its materials serve optical devices and applications including semiconductor equipment, imaging, medical devices, and astronomy.[2][3][5]",
+  "hall": "LF",
+  "booth": "LF 23",
+  "otherBooths": [],
+  "city": "Merlimau",
+  "country": "Malaysia",
+  "products": [
+   "optical lens blanks",
+   "optical glass",
+   "CLEARCERAM-Z",
+   "NANOCERAM",
+   "fused silica",
+   "i-Line high-homogeneity glass",
+   "lithium-ion conducting glass ceramic"
+  ],
+  "tags": [
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-optical-fusion",
+  "name": "OPTICAL FUSION INDIA",
+  "description": "",
+  "hall": "LC",
+  "booth": "LC 59",
+  "otherBooths": [],
+  "city": "",
+  "country": "",
+  "products": [],
+  "tags": [],
+  "industries": []
+ },
+ {
+  "id": "ex-optics-allied-engineering",
+  "name": "OPTICS & ALLIED ENGINEERING PRIVATE LIMITED",
+  "description": "Optics and Allied Engineering Private Limited (Optica) designs, develops, manufactures, and distributes precision optical components and assemblies. Its products serve sectors including aerospace, medical, astronomy, automation, and research.",
+  "hall": "LE",
+  "booth": "LE 20",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "optical lenses",
+   "aspheric lenses",
+   "prisms",
+   "optical mirrors",
+   "optical filters",
+   "infrared optics",
+   "optical windows",
+   "beamsplitters",
+   "LED backlights",
+   "light pipes",
+   "microscopes",
+   "vision systems"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Opto-Mechanics",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-optosigma",
+  "name": "OPTOSIGMA",
+  "description": "OptoSigma manufactures and distributes optical systems, optics, coatings, optomechanical assemblies, and positioning stages for research and industrial applications. It is part of Japan-based SIGMAKOKI Co., Ltd.[1][2][7]",
+  "hall": "LD",
+  "booth": "LD 06",
+  "otherBooths": [],
+  "city": "Santa Ana",
+  "country": "United States",
+  "products": [
+   "precision optics",
+   "optical systems",
+   "optical coatings",
+   "optomechanical assemblies",
+   "manual and motorized positioning stages",
+   "optical tables",
+   "laser and optical devices"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Opto-Mechanics",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-oxide",
+  "name": "OXIDE CORPORATION",
+  "description": "OXIDE Corporation is a Japan-based developer and manufacturer of optical products, including single crystals, optical components, laser sources, and optical measurement systems. It serves semiconductor, healthcare, and other photonics applications.",
+  "hall": "LD",
+  "booth": "LD 51",
+  "otherBooths": [],
+  "city": "Hokuto",
+  "country": "Japan",
+  "products": [
+   "nonlinear optical single crystals",
+   "scintillator crystals",
+   "laser crystals",
+   "optical components and devices",
+   "CW and pulsed lasers",
+   "laser converters",
+   "optical measurement systems",
+   "power semiconductor materials"
+  ],
+  "tags": [
+   "Optical Materials & Crystals",
+   "Optical Components",
+   "Laser Sources",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-photik-scientific",
+  "name": "PHOTIK SCIENTIFIC PRIVATE LIMITED",
+  "description": "Photik Scientific supplies scientific, industrial, and medical instruments, including laser, spectroscopy, microscopy, and thin-film deposition systems. It also provides application support, customized solutions, and systems integration.",
+  "hall": "LE",
+  "booth": "LE 26",
+  "otherBooths": [],
+  "city": "Faridabad",
+  "country": "India",
+  "products": [
+   "laser systems",
+   "spectroscopy equipment",
+   "microscopy equipment",
+   "imaging systems",
+   "optics and optomechanics",
+   "thin-film deposition systems",
+   "sputtering systems",
+   "thermal and electron-beam evaporation systems",
+   "pulsed laser deposition systems",
+   "molecular beam epitaxy systems",
+   "plasma-enhanced CVD systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision",
+   "Optical Coatings & Thin Film",
+   "Vacuum & Semiconductor Equipment"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-photonicore",
+  "name": "PHOTONICORE TECHNOLOGIES CO., LTD.",
+  "description": "PhotoniCore Technologies develops and manufactures fiber-optic laser components and modules, including side-pump combiners and high-power fiber laser engines. Its products serve industrial laser processing and aerospace laser communication applications.",
+  "hall": "LB",
+  "booth": "LB 83",
+  "otherBooths": [],
+  "city": "Tainan",
+  "country": "Taiwan",
+  "products": [
+   "high-power fiber laser engines",
+   "fiber laser components and modules",
+   "side-pump combiners",
+   "fiber laser cavities",
+   "optical components"
+  ],
+  "tags": [
+   "Fibre Optics",
+   "Laser Sources",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence"
+  ]
+ },
+ {
+  "id": "ex-plano-optics",
+  "name": "PLANO OPTICS PRIVATE LIMITED",
+  "description": "Plano Optics Private Limited manufactures precision optical instruments, components, and optomechanical products for industrial, scientific, and defense applications. It also provides optical metrology and alignment solutions, including custom-designed products and coatings.",
+  "hall": "LD",
+  "booth": "LD 81",
+  "otherBooths": [],
+  "city": "Pondicherry",
+  "country": "India",
+  "products": [
+   "autocollimators",
+   "collimators",
+   "interferometers",
+   "optical prisms",
+   "telescopes",
+   "optomechanical accessories",
+   "monochromatic light sources",
+   "optical mirrors",
+   "beam splitters",
+   "optical flats"
+  ],
+  "tags": [
+   "Optical Components",
+   "Opto-Mechanics",
+   "Optical Coatings & Thin Film",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-premier",
+  "name": "PREMIER",
+  "description": "",
+  "hall": "LD",
+  "booth": "LD 01",
+  "otherBooths": [],
+  "city": "",
+  "country": "",
+  "products": [],
+  "tags": [],
+  "industries": []
+ },
+ {
+  "id": "ex-prima-medi",
+  "name": "PRIMA MEDI",
+  "description": "PRIMA MEDI is a Chennai-based supplier of medical equipment, surgical and safety products, and industrial consumables. It distributes GloveOn disposable gloves and serves healthcare, pharmaceutical, and other industrial customers.",
+  "hall": "LC",
+  "booth": "LC 56",
+  "otherBooths": [],
+  "city": "Chennai",
+  "country": "India",
+  "products": [
+   "disposable nitrile gloves",
+   "latex gloves",
+   "medical equipment",
+   "surgical and disposable safety products",
+   "PPE",
+   "cleanroom and hygiene products",
+   "MRO consumables"
+  ],
+  "tags": [],
+  "industries": [
+   "Medical & Life Sciences",
+   "Trading & Distribution"
+  ]
+ },
+ {
+  "id": "ex-prime-accutech",
+  "name": "PRIME ACCUTECH",
+  "description": "PRIME ACCUTECH manufactures precision granite surface plates in Mysore, Karnataka. Its plates provide reference surfaces for inspection and layout and serve as mounting bases for gauging systems.[1]",
+  "hall": "LB",
+  "booth": "LB 81",
+  "otherBooths": [],
+  "city": "Mysore",
+  "country": "India",
+  "products": [
+   "granite surface plates"
+  ],
+  "tags": [
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-primes",
+  "name": "PRIMES GMBH",
+  "description": "PRIMES GmbH develops and manufactures measurement instruments and systems for laser beam diagnostics in industrial applications. It also provides calibration and service for laser power measuring devices.",
+  "hall": "LC",
+  "booth": "LC 53",
+  "otherBooths": [],
+  "city": "Pfungstadt",
+  "country": "Germany",
+  "products": [
+   "laser beam diagnostic systems",
+   "laser power meters",
+   "beam distribution measurement devices",
+   "beam quality measurement devices",
+   "beam caustic measurement systems",
+   "ScanFieldMonitor"
+  ],
+  "tags": [
+   "Beam Profiling & Power Meters",
+   "Metrology & Test",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-protect-laserschutz",
+  "name": "PROTECT-LASERSCHUTZ GMBH",
+  "description": "PROTECT-Laserschutz GmbH is a Nuremberg-based manufacturer of laser, welding, and occupational safety products, including eyewear, barriers, windows, cabins, and curtains. It also develops customized protection solutions and provides risk analyses, spectral measurements, and employee training.",
+  "hall": "LF",
+  "booth": "LF 14",
+  "otherBooths": [],
+  "city": "Nuremberg",
+  "country": "Germany",
+  "products": [
+   "laser safety eyewear and visors",
+   "laser protection windows and filters",
+   "laser safety film",
+   "laser safety cabins",
+   "laser protection curtains and blinds",
+   "mobile laser protection barriers",
+   "protective clothing",
+   "welding protection eyewear and windows",
+   "laser welding helmets",
+   "patient and IPL protective eyewear"
+  ],
+  "tags": [
+   "Laser Safety",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-quantec",
+  "name": "QUANTEC INC.",
+  "description": "Quantec Inc. is a Japan-based laser technology company that develops, manufactures, sells, and services laser processing equipment, optical units, and laser sources. It also integrates laser systems and distributes laser sources and related components and materials.",
+  "hall": "LE",
+  "booth": "LE 55",
+  "otherBooths": [],
+  "city": "Machida",
+  "country": "Japan",
+  "products": [
+   "laser processing equipment",
+   "laser optical units",
+   "laser light sources",
+   "optical components",
+   "laser-related materials"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Optical Components",
+   "Controllers & Software",
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-quantum-design",
+  "name": "QUANTUM DESIGN INDIA PRIVATE LIMITED",
+  "description": "Quantum Design India Private Limited supplies scientific instruments for research in materials science and related fields. It provides sales and technical support for Quantum Design and partner products in India.",
+  "hall": "LE",
+  "booth": "LE 40",
+  "otherBooths": [],
+  "city": "Navi Mumbai",
+  "country": "India",
+  "products": [
+   "physical property measurement systems",
+   "magnetic property measurement systems",
+   "cryostats",
+   "cryocoolers and compressors",
+   "helium plants",
+   "single-crystal growth furnaces",
+   "maskless microlithography systems",
+   "optical tweezers",
+   "FMR spectrometers",
+   "nanoscale spectroscopy and imaging systems"
+  ],
+  "tags": [
+   "Metrology & Test",
+   "Spectroscopy & Analytical",
+   "Imaging & Machine Vision",
+   "Cooling & Chillers",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-qusyn-tech",
+  "name": "QUSYN TECH",
+  "description": "QuSyn Tech is an Indian quantum-technology company developing solutions in quantum computing and secure communication. It works with research and academic partners to bring quantum technologies into practical use.",
+  "hall": "LC",
+  "booth": "LC 57",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "quantum computing solutions",
+   "quantum secure communication solutions",
+   "quantum cryptography"
+  ],
+  "tags": [
+   "Quantum Technologies"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-r-s-technology-india-systems",
+  "name": "R S TECHNOLOGY (INDIA) SYSTEMS",
+  "description": "R S Technology (India) Systems is an India-based supplier and importer of industrial metrology and inspection equipment. Its product range includes optical and vision measuring systems, microscopes, profile projectors, and laser profiling systems.[1][2]",
+  "hall": "LE",
+  "booth": "LE 12",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "profile projectors",
+   "vision and video measuring systems",
+   "optical comparators",
+   "microscopes",
+   "roughness testing machines",
+   "coordinate measuring systems",
+   "touch probe systems",
+   "laser profiling systems"
+  ],
+  "tags": [
+   "Metrology & Test",
+   "Imaging & Machine Vision",
+   "Beam Profiling & Power Meters"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-raito-optoelectronics",
+  "name": "RAITO OPTOELECTRONICS PRIVATE LIMITED",
+  "description": "RAITO designs and manufactures fiber laser sources for cutting, welding, cleaning, and cladding applications. It is headquartered in Hosur, India, and offers related technical support and service.",
+  "hall": "LC",
+  "booth": "LC 11",
+  "otherBooths": [],
+  "city": "Hosur",
+  "country": "India",
+  "products": [
+   "continuous-wave fiber laser sources",
+   "1–6 kW single-module fiber lasers",
+   "6–60 kW multi-module fiber lasers"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Cleaning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-raylase",
+  "name": "RAYLASE GMBH",
+  "description": "RAYLASE GmbH develops and supplies opto-mechanical laser beam deflection systems, control electronics, and software for industrial laser material processing. Its solutions support applications including laser cutting, welding, surface processing, and additive manufacturing.",
+  "hall": "LC",
+  "booth": "LC 42",
+  "otherBooths": [],
+  "city": "Wessling",
+  "country": "Germany",
+  "products": [
+   "galvanometer scanners",
+   "laser deflection units and scan heads",
+   "laser control electronics",
+   "laser processing software",
+   "high-power welding modules",
+   "busbar welding modules"
+  ],
+  "tags": [
+   "Scanners & Beam Delivery",
+   "Controllers & Software",
+   "Opto-Mechanics",
+   "Laser Cutting & Welding",
+   "Additive Manufacturing"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-raytech-photonics",
+  "name": "RAYTECH PHOTONICS",
+  "description": "Raytech Photonics is a Pune-based seller and service provider for laser technology equipment. Its offerings include laser cutting, welding and marking machines, laser sources, and related components.",
+  "hall": "LF",
+  "booth": "LF 12",
+  "otherBooths": [],
+  "city": "Pune",
+  "country": "India",
+  "products": [
+   "laser cutting machines",
+   "laser welding machines",
+   "laser marking machines",
+   "laser sources",
+   "chillers",
+   "cutting heads",
+   "controllers",
+   "laser consumables and parts"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving",
+   "Laser Sources",
+   "Cooling & Chillers",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-rgb-laser-systems",
+  "name": "RGB LASER SYSTEMS",
+  "description": "RGB Lasersystems GmbH designs and manufactures compact laser modules and photonic systems for research and industrial applications. It also provides custom laser solutions.",
+  "hall": "LC",
+  "booth": "LC 49",
+  "otherBooths": [],
+  "city": "Saal an der Donau",
+  "country": "Germany",
+  "products": [
+   "laser modules",
+   "compact laser systems",
+   "custom laser solutions"
+  ],
+  "tags": [
+   "Laser Sources"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-scanlab",
+  "name": "SCANLAB GMBH",
+  "description": "SCANLAB GmbH develops and manufactures galvanometer scanners and laser scanning solutions for deflecting and positioning laser beams. Its products serve industrial materials processing and applications including electronics, additive manufacturing, and medical technology.",
+  "hall": "LC",
+  "booth": "LC 52",
+  "otherBooths": [],
+  "city": "Puchheim",
+  "country": "Germany",
+  "products": [
+   "galvanometer scanners",
+   "2D and 3D scan heads",
+   "laser scan systems",
+   "z-axes and z-scanners",
+   "laser processing software",
+   "scan control electronics",
+   "calibration systems",
+   "optical accessories"
+  ],
+  "tags": [
+   "Scanners & Beam Delivery",
+   "Controllers & Software",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-sensortherm",
+  "name": "SENSORTHERM GMBH",
+  "description": "Sensortherm develops, manufactures, and sells digital infrared measurement systems for non-contact industrial temperature measurement. Its products include pyrometers, control systems, scanners, calibration systems, and software.",
+  "hall": "LC",
+  "booth": "LC 48",
+  "otherBooths": [],
+  "city": "Steinbach am Taunus",
+  "country": "Germany",
+  "products": [
+   "digital pyrometers",
+   "infrared thermometers",
+   "infrared switches",
+   "scanners",
+   "PID controllers",
+   "system components",
+   "calibration systems",
+   "measurement software"
+  ],
+  "tags": [
+   "Metrology & Test",
+   "Sensors & Detectors",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-sfo-technologies-pvt-ltd-optronics-division",
+  "name": "SFO TECHNOLOGIES PVT. LTD. (OPTRONICS DIVISION)",
+  "description": "SFO Technologies’ Optronics Division designs and manufactures fiber-optic and photonics components and systems, including active and passive optical products. Its capabilities include fiber-optic connectivity, sensors, and laser technologies for communications, industrial, defense, and aerospace applications.",
+  "hall": "LB",
+  "booth": "LB 10",
+  "otherBooths": [],
+  "city": "Kochi",
+  "country": "India",
+  "products": [
+   "fiber-optic patch cords",
+   "PLC splitters",
+   "FBT splitters",
+   "fiber management systems",
+   "fiber lasers",
+   "high-power lasers",
+   "sensors",
+   "perimeter detection systems",
+   "erbium-doped fiber amplifiers (EDFAs)",
+   "optical transmitters and receivers",
+   "optical transponders"
+  ],
+  "tags": [
+   "Fibre Optics",
+   "Laser Sources",
+   "Optical Components",
+   "Sensors & Detectors"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-shanghai-levin-automation",
+  "name": "SHANGHAI LEVIN AUTOMATION TECHNOLOGY CO., LTD.",
+  "description": "Shanghai Levin Automation Technology Co., Ltd. provides laser application solutions and laser accessories, and describes itself as a manufacturer integrating production, research and development, and sales. It also offers laser equipment repair and maintenance services.",
+  "hall": "LB",
+  "booth": "LB 43",
+  "otherBooths": [],
+  "city": "Shanghai",
+  "country": "China",
+  "products": [
+   "laser machine equipment",
+   "laser machine accessories",
+   "fiber laser machine accessories",
+   "CO2 laser machine accessories",
+   "ultrafast laser machine accessories"
+  ],
+  "tags": [
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV"
+  ]
+ },
+ {
+  "id": "ex-shanxi-dawei-laser",
+  "name": "SHANXI DAWEI LASER TECHNOLOGY CO., LTD",
+  "description": "Shanxi Dawei Laser Technology Co., Ltd. develops, manufactures, and sells industrial lasers, including RF CO₂ and UV laser products. Its manufacturing base is in Taiyuan, Shanxi, and its products serve industrial processing, medical and aesthetic, electronics, and packaging applications.[2][8]",
+  "hall": "LB",
+  "booth": "LB 46",
+  "otherBooths": [],
+  "city": "Taiyuan",
+  "country": "China",
+  "products": [
+   "RF CO₂ lasers, 30–500 W",
+   "UV lasers, 3 W and 5 W",
+   "T100 water-cooled laser",
+   "T80 air-cooled laser",
+   "D60 air-cooled laser"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Cutting & Welding",
+   "Laser Marking & Engraving"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-shenzhen-jpt-opto-electronics",
+  "name": "SHENZHEN JPT OPTO-ELECTRONICS CO., LTD.",
+  "description": "Shenzhen JPT Opto-Electronics develops, manufactures, and sells lasers, laser and optical intelligent equipment, and fiber-optic components. Its products and services support precision laser processing, semiconductor inspection, optical communications, and related industrial applications.",
+  "hall": "LD",
+  "booth": "LD 20",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "pulsed fiber lasers",
+   "continuous-wave fiber lasers",
+   "MOPA fiber lasers",
+   "solid-state lasers",
+   "ultrafast lasers",
+   "laser and optical intelligent equipment",
+   "fiber-optic components",
+   "optical communication devices"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Fibre Optics",
+   "Optical Components"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Telecom & Data Communications",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-shenzhen-ospri-intelligent-technologyco",
+  "name": "SHENZHEN OSPRI INTELLIGENT TECHNOLOGYCO., LTD",
+  "description": "Shenzhen OSPRI Intelligent Technology Co., Ltd. develops and manufactures industrial laser processing heads, including cutting and welding heads. It also provides automation control system hardware and software, technical support, and related services.",
+  "hall": "LD",
+  "booth": "LD 33",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "laser cutting heads",
+   "laser welding heads",
+   "3D cutting heads",
+   "laser processing heads"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing"
+  ]
+ },
+ {
+  "id": "ex-shenzhen-ruida",
+  "name": "SHENZHEN RUIDA TECHNOLOGY CO., LTD.",
+  "description": "Shenzhen Ruida Technology develops and manufactures control systems and automation components for laser cutting, engraving, marking, welding, and cleaning equipment. The company also provides research and development and services in motion control and machine vision.",
+  "hall": "LB",
+  "booth": "LB 42",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "CO2 laser controllers",
+   "fiber laser cutting controllers",
+   "laser marking controllers",
+   "laser vision controllers",
+   "precision cutting controllers",
+   "laser height controllers",
+   "laser welding controllers",
+   "laser cleaning controllers",
+   "motion controllers",
+   "machine vision systems"
+  ],
+  "tags": [
+   "Controllers & Software",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-shenzhen-shenyan-cnc",
+  "name": "SHENZHEN SHENYAN CNC CO., LTD.",
+  "description": "Shenzhen Shenyan CNC develops and manufactures motion-control, machine-vision, and laser-equipment control systems. Its products support laser cutting, engraving, and marking of metal and non-metal materials.",
+  "hall": "LB",
+  "booth": "LB 64",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "laser control systems",
+   "laser cutting and engraving controllers",
+   "laser marking controllers",
+   "galvanometer dual-flight control systems",
+   "visual positioning laser control systems",
+   "panoramic vision laser control systems",
+   "vibration knife control systems"
+  ],
+  "tags": [
+   "Controllers & Software",
+   "Scanners & Beam Delivery",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-shenzhen-sub-lattice-optical",
+  "name": "SHENZHEN SUB-LATTICE OPTICAL TECHNOLOGY CO., LTD.",
+  "description": "Shenzhen Sub-Lattice Optical Technology Co., Ltd. manufactures optical components for laser systems and provides customized solutions. Its processes include optical design, production, coating, inspection, and assembly.",
+  "hall": "LB",
+  "booth": "LB 53",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "F-theta lenses",
+   "telecentric lenses",
+   "beam expanders",
+   "focusing lenses",
+   "laser welding heads",
+   "optical mirrors",
+   "protective windows",
+   "output couplers",
+   "beam combiners"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-shenzhen-superscan",
+  "name": "SHENZHEN SUPERSCAN TECHNOLOGY CO., LTD",
+  "description": "Shenzhen SuperScan Technology Co., Ltd. develops and manufactures optical 2D scanning galvanometers and 3D dynamic scanning systems. Its products are used in laser marking, cutting, welding, and other laser-processing applications.",
+  "hall": "LB",
+  "booth": "LB 62",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "2D optical scanning galvanometers",
+   "3D dynamic scanning systems",
+   "laser scan heads"
+  ],
+  "tags": [
+   "Scanners & Beam Delivery"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-shenzhen-trocen-automation",
+  "name": "SHENZHEN TROCEN AUTOMATION TECHNOLOGY CO. LTD.",
+  "description": "Shenzhen Trocen Automation Technology develops, manufactures, sells, and services industrial automation motion-control systems. Its product range includes controllers and visual-positioning systems for laser and blade-cutting machines.",
+  "hall": "LD",
+  "booth": "LD 61",
+  "otherBooths": [],
+  "city": "Shenzhen",
+  "country": "China",
+  "products": [
+   "laser cutting motion controllers",
+   "fiber laser cutting controllers",
+   "oscillating-tool cutting controllers",
+   "CCD visual recognition and positioning systems",
+   "LaserCAD software",
+   "TroCutCAD software",
+   "TroCCDCut software"
+  ],
+  "tags": [
+   "Controllers & Software",
+   "Motion & Positioning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-shimadzu",
+  "name": "SHIMADZU CORPORATION",
+  "description": "Shimadzu Corporation is a Japan-based manufacturer of analytical and measuring instruments, medical systems, and industrial equipment. Its optical-device products include diffraction gratings, laser mirrors and windows, and laser spectrum analyzers.",
+  "hall": "LE",
+  "booth": "LE 51",
+  "otherBooths": [],
+  "city": "Kyoto",
+  "country": "Japan",
+  "products": [
+   "diffraction gratings",
+   "laser mirrors and windows",
+   "laser spectrum analyzers",
+   "aspherical mirrors",
+   "beamsplitters",
+   "spectrometers",
+   "precision refractometers"
+  ],
+  "tags": [
+   "Optical Components",
+   "Spectroscopy & Analytical",
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-sichuan-yasi-optics",
+  "name": "SICHUAN YASI OPTICS CO.,LTD",
+  "description": "Sichuan Yasi Optics manufactures and sells precision optical components, including high-power laser and infrared optics. It also provides optical R&D and technical services.",
+  "hall": "LB",
+  "booth": "LB 63",
+  "otherBooths": [],
+  "city": "Guanghan",
+  "country": "China",
+  "products": [
+   "optical lenses",
+   "prisms",
+   "optical windows",
+   "mirrors",
+   "laser optics",
+   "infrared optical components",
+   "optical glass components"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-sino-galvo-jiangsu-technologyico",
+  "name": "SINO-GALVO(JIANGSU) TECHNOLOGYICO.,LTD.",
+  "description": "Sino-Galvo (Jiangsu) Technology Co., Ltd. is a Zhenjiang-based developer and manufacturer of high-precision optical galvanometer scanners and their control systems. Its products support laser processing applications including marking, welding, cutting, and cleaning.",
+  "hall": "LE",
+  "booth": "LE 11",
+  "otherBooths": [],
+  "city": "Zhenjiang",
+  "country": "China",
+  "products": [
+   "optical galvanometer scanners",
+   "galvo-mirror systems",
+   "laser control systems",
+   "laser scanning systems"
+  ],
+  "tags": [
+   "Scanners & Beam Delivery",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences"
+  ]
+ },
+ {
+  "id": "ex-sinoptics-engineering",
+  "name": "SINOPTICS ENGINEERING PTE LTD",
+  "description": "Sinoptics Engineering designs and manufactures custom and off-the-shelf optical parts and assemblies, including electro-optical components and night-vision accessories. It also provides built-to-print and custom manufacturing services.",
+  "hall": "LE",
+  "booth": "LE 52",
+  "otherBooths": [],
+  "city": "Singapore",
+  "country": "Singapore",
+  "products": [
+   "electro-optical components",
+   "night vision device accessories",
+   "custom optical parts",
+   "optical assemblies"
+  ],
+  "tags": [
+   "Optical Components",
+   "Sensors & Detectors",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-sm-laser",
+  "name": "SM LASER TECHNOLOGY",
+  "description": "SM Laser Technology is a Bengaluru-based company that designs and manufactures laser machines. Its products include laser marking, engraving, cutting, welding, and cleaning machines.",
+  "hall": "LD",
+  "booth": "LD 10",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "laser marking machines",
+   "laser engraving machines",
+   "laser cutting machines",
+   "laser welding machines",
+   "laser cleaning machines",
+   "special-purpose machines"
+  ],
+  "tags": [
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Laser Cleaning"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-solutions-for-lasers-and-photonics",
+  "name": "SOLUTIONS FOR LASERS AND PHOTONICS PRIVATE LIMITED",
+  "description": "The company supplies laser, photonics and scientific equipment for research, OEM and industrial applications in India. It also provides technical sales and support.",
+  "hall": "LF",
+  "booth": "LF 11",
+  "otherBooths": [],
+  "city": "New Delhi",
+  "country": "India",
+  "products": [
+   "lasers",
+   "spectrometers",
+   "atomic layer deposition systems",
+   "atomic force microscopes",
+   "ellipsometers",
+   "sputtering systems",
+   "optical power meters",
+   "laser marking, welding and cutting systems",
+   "fiber cables",
+   "laser beam delivery components",
+   "optical mounts",
+   "vibration isolation systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Spectroscopy & Analytical",
+   "Fibre Optics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-specialise-instruments-marketing-company",
+  "name": "SPECIALISE INSTRUMENTS MARKETING COMPANY",
+  "description": "Specialise Instruments Marketing Company supplies scientific and industrial instrumentation and provides application support, installation, and after-sales service. Its product areas include spectroscopy, surface science, lasers, cryogenics, and measurement and control solutions for flexible packaging and converting.",
+  "hall": "LE",
+  "booth": "LE 21",
+  "otherBooths": [],
+  "city": "Mumbai",
+  "country": "India",
+  "products": [
+   "spectroscopy instruments",
+   "surface science instruments",
+   "lasers",
+   "cryogenic systems",
+   "high-speed ICCD cameras",
+   "online gauging and web inspection systems"
+  ],
+  "tags": [
+   "Spectroscopy & Analytical",
+   "Laser Sources",
+   "Imaging & Machine Vision"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-specialise-products",
+  "name": "SPECIALISE PRODUCTS PRIVATE LIMITED",
+  "description": "Specialise Products Private Limited is an Indian scientific-instrument and customized-solutions company serving research institutions and private companies. It develops and manufactures tailored systems, integrates equipment, and distributes photonics products as an authorized sales and service partner.",
+  "hall": "LA",
+  "booth": "LA 24",
+  "otherBooths": [],
+  "city": "Navi Mumbai",
+  "country": "India",
+  "products": [
+   "laser systems",
+   "laser marking machines",
+   "laser cutting machines",
+   "laser engraving machines",
+   "3D printers",
+   "spectroscopy instruments",
+   "photon-counting products",
+   "laser power meters",
+   "maskless lithography systems",
+   "time correlators",
+   "microchannel plate detectors",
+   "channel electron multipliers"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Laser Marking & Engraving",
+   "Laser Cutting & Welding",
+   "Additive Manufacturing",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-spt-laser",
+  "name": "SPT LASER TECHNOLOGY CO.LTD",
+  "description": "SPT Laser Technology Co., Ltd. is a China-based manufacturer of CO2 lasers and laser components, with optical research, design, manufacturing, and sales operations. It also develops laser obstacle-removal equipment and provides CO2 laser application solutions.",
+  "hall": "LB",
+  "booth": "LB 54",
+  "otherBooths": [],
+  "city": "Dongguan",
+  "country": "China",
+  "products": [
+   "CO2 RF lasers",
+   "CO2 laser tubes",
+   "laser lenses",
+   "laser mirrors",
+   "laser power supplies",
+   "laser obstacle removers",
+   "laser accessories"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Laser Cutting & Welding"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-super-sonic-industry",
+  "name": "SUPER SONIC INDUSTRY PRIVATE LIMITED",
+  "description": "Super Sonic Industry Private Limited imports and distributes industrial machine parts and automation products in India. Its offerings include laser machine parts, textile machinery components, and plasma and laser machinery products.",
+  "hall": "LF",
+  "booth": "LF 01",
+  "otherBooths": [],
+  "city": "Surat",
+  "country": "India",
+  "products": [
+   "laser machine parts",
+   "industrial automation components",
+   "textile machinery parts",
+   "plasma machine products",
+   "laser machinery",
+   "diamond machinery parts",
+   "industrial mechanical products"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Motion & Positioning",
+   "Opto-Mechanics"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-tec5",
+  "name": "TEC5 AG",
+  "description": "tec5 AG develops and manufactures spectrometer systems and components for industrial process analytics. Its products support chemical analysis, process monitoring, and measurement across UV/VIS, NIR, Raman, and LIBS methods.",
+  "hall": "LC",
+  "booth": "LC 48",
+  "otherBooths": [],
+  "city": "Steinbach",
+  "country": "Germany",
+  "products": [
+   "UV/VIS/NIR/Raman spectrometers",
+   "process spectrometers",
+   "photometers",
+   "spectrometer components and electronics",
+   "smart sensors",
+   "LIBS systems"
+  ],
+  "tags": [
+   "Spectroscopy & Analytical",
+   "Metrology & Test",
+   "Sensors & Detectors"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-techsapphire",
+  "name": "TECHSAPPHIRE LLC",
+  "description": "TECHSAPPHIRE LLC is a Russian engineering and manufacturing company that grows synthetic sapphire crystals and makes sapphire optical components and crystal-growing and processing equipment. Its exhibitor listing gives an address in the Belgorod area and describes its business as sapphire crystal growth and processing.[1][2]",
+  "hall": "LE",
+  "booth": "LE 43",
+  "otherBooths": [],
+  "city": "Belgorod",
+  "country": "Russia",
+  "products": [
+   "synthetic sapphire single crystals",
+   "sapphire optical elements, including plates, domes, prisms, and lenses",
+   "sapphire crystal-growing furnaces",
+   "sapphire crystal-processing equipment"
+  ],
+  "tags": [
+   "Optical Materials & Crystals",
+   "Optical Components"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-thorlabs",
+  "name": "THORLABS GMBH",
+  "description": "Thorlabs GmbH is Thorlabs’ German entity, based in Bergkirchen and registered in Germany. Thorlabs designs, manufactures, and sells photonics components, instruments, and systems for research and industrial applications.",
+  "hall": "LC",
+  "booth": "LC 24",
+  "otherBooths": [],
+  "city": "Bergkirchen",
+  "country": "Germany",
+  "products": [
+   "optical components and systems",
+   "laser diodes and laser systems",
+   "optical fibers and fiber components",
+   "optoelectronic devices",
+   "photodiodes and detectors",
+   "LEDs and controllers",
+   "optomechanical components",
+   "spectrometers"
+  ],
+  "tags": [
+   "Optical Components",
+   "Fibre Optics",
+   "Sensors & Detectors",
+   "Laser Sources",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-toptica-photonics-se",
+  "name": "TOPTICA PHOTONICS SE",
+  "description": "TOPTICA Photonics SE develops and manufactures high-end laser systems for scientific and industrial applications. Its products support fields including quantum technology, biophotonics, and industrial metrology.",
+  "hall": "LC",
+  "booth": "LC 44",
+  "otherBooths": [],
+  "city": "Gräfelfing",
+  "country": "Germany",
+  "products": [
+   "diode lasers",
+   "tunable diode lasers",
+   "ultrafast fiber lasers",
+   "laser amplifiers",
+   "terahertz systems",
+   "optical frequency combs",
+   "laser rack systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Quantum Technologies",
+   "Spectroscopy & Analytical"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Medical & Life Sciences",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-triquench",
+  "name": "TRIQUENCH INDIA PRIVATE LIMITED",
+  "description": "Triquench India Private Limited is an Ahmedabad-based manufacturer and supplier of electric and machine-tool spindles, CNC components, and selected laser optics. It also provides spindle repair services and reports manufacturing, trading, importing, and exporting activities.[1][3][4]",
+  "hall": "LB",
+  "booth": "LB 15",
+  "otherBooths": [],
+  "city": "Ahmedabad",
+  "country": "India",
+  "products": [
+   "electric and machine-tool spindles",
+   "CNC router and lathe spindles",
+   "water- and air-cooled spindle motors",
+   "laser collimating and protective lenses",
+   "linear guideways",
+   "ball screws",
+   "angular-contact ceramic ball bearings",
+   "AC servo motors and drives"
+  ],
+  "tags": [
+   "Motion & Positioning",
+   "Optical Components"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ {
+  "id": "ex-trokut-solutions",
+  "name": "TROKUT SOLUTIONS PVT LTD",
+  "description": "Trokut Solutions supplies and supports scientific and industrial technology products in India, including lasers, photonics equipment, photovoltaic testing tools and additive manufacturing solutions. It also provides tailored integration and technical support for research and industrial applications.[1][2]",
+  "hall": "LD",
+  "booth": "LD 06",
+  "otherBooths": [],
+  "city": "Thane",
+  "country": "India",
+  "products": [
+   "ultrafast, continuous-wave, pulsed and tunable lasers",
+   "fiber laser systems and components",
+   "optical components",
+   "photovoltaic testing equipment",
+   "sensor testing platforms",
+   "3D printing solutions",
+   "laser processing systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Optical Components",
+   "Fibre Optics",
+   "Additive Manufacturing"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Aerospace & Defence",
+   "Research & Academia",
+   "Energy & Solar"
+  ]
+ },
+ {
+  "id": "ex-uab-lidaris",
+  "name": "UAB LIDARIS",
+  "description": "UAB Lidaris provides testing and research services for laser optics, including laser-induced damage threshold, lifetime, and optical absorption measurements. It also advises on optimizing optical-element polishing and coating processes for high-power laser applications.",
+  "hall": "LD",
+  "booth": "LD 55",
+  "otherBooths": [],
+  "city": "Vilnius",
+  "country": "Lithuania",
+  "products": [
+   "laser-induced damage threshold testing",
+   "optical lifetime testing",
+   "optical absorption testing",
+   "optical inspection"
+  ],
+  "tags": [
+   "Metrology & Test"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia"
+  ]
+ },
+ {
+  "id": "ex-v-s",
+  "name": "V S TECHNOLOGY CORPORATION",
+  "description": "VS Technology Corporation is a Japan-based company that develops, designs, and manufactures optical lenses, components, and lighting systems. It also provides image-processing and optical solutions for industrial machine-vision applications.",
+  "hall": "LC",
+  "booth": "LC 55",
+  "otherBooths": [],
+  "city": "Tokyo",
+  "country": "Japan",
+  "products": [
+   "machine vision lenses",
+   "telecentric lenses",
+   "macro lenses",
+   "fixed-focal-length lenses",
+   "line-scan lenses",
+   "zoom lenses",
+   "infrared and SWIR optics",
+   "LED machine-vision lighting",
+   "optical components and units",
+   "image-processing solutions"
+  ],
+  "tags": [
+   "Imaging & Machine Vision",
+   "Optical Components",
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence",
+   "Electronics & Semiconductors"
+  ]
+ },
+ {
+  "id": "ex-western-systems",
+  "name": "WESTERN SYSTEMS TECHNOLOGIES LLP",
+  "description": "Western Systems Technologies LLP supplies and integrates RF, timing, and photonics technologies for mission-critical applications in space, defense, communications, and scientific research. The company also provides engineering and market-enablement support for these systems.",
+  "hall": "LD",
+  "booth": "LD 64",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "frequency combs",
+   "femtosecond lasers",
+   "diode lasers",
+   "quantum laser systems",
+   "atomic clocks",
+   "frequency comparators",
+   "quartz oscillators",
+   "RF and microwave systems",
+   "antenna systems"
+  ],
+  "tags": [
+   "Laser Sources",
+   "Quantum Technologies"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-winarc-cutting-system",
+  "name": "WINARC CUTTING SYSTEM",
+  "description": "Winarc Cutting System manufactures CNC metal-cutting machines from its base in Peenya, Bengaluru. It also provides installation, maintenance, repairs, technical support, and operator training.",
+  "hall": "LC",
+  "booth": "LC 01",
+  "otherBooths": [],
+  "city": "Bengaluru",
+  "country": "India",
+  "products": [
+   "CNC fiber laser cutting machines",
+   "CNC laser tube cutting machines",
+   "CNC plasma cutting machines",
+   "CNC oxy-fuel cutting machines",
+   "CNC profile cutting machines"
+  ],
+  "tags": [
+   "Laser Cutting & Welding",
+   "Motion & Positioning",
+   "Controllers & Software"
+  ],
+  "industries": [
+   "Metal Fabrication & Manufacturing",
+   "Automotive & EV",
+   "Aerospace & Defence"
+  ]
+ },
+ {
+  "id": "ex-xian-snp-precision-optics",
+  "name": "XIAN SNP PRECISION OPTICS CO. LTD.",
+  "description": "Xi'an SNP Precision Optics manufactures ultra-precision optical components and specializes in ultra-smooth optics, low-loss coatings, and optical cavities. It is based in Xi'an, China.[1][2]",
+  "hall": "LD",
+  "booth": "LD 70",
+  "otherBooths": [],
+  "city": "Xi'an",
+  "country": "China",
+  "products": [
+   "ultra-precision optical components",
+   "optical reference cavities",
+   "high-reflectivity, low-loss mirrors",
+   "super-smooth optical substrates",
+   "lenses",
+   "windows",
+   "prisms",
+   "laser gyroscope components"
+  ],
+  "tags": [
+   "Optical Components",
+   "Optical Coatings & Thin Film",
+   "Optical Materials & Crystals"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ },
+ {
+  "id": "ex-z-optics",
+  "name": "Z-OPTICS LIMITED",
+  "description": "Z-Optics Limited designs, manufactures, assembles, and supplies precision optical components and laser products. Its offerings include lenses, prisms, laser modules, and optical measurement services.",
+  "hall": "LC",
+  "booth": "LC 71",
+  "otherBooths": [],
+  "city": "Yueqing",
+  "country": "China",
+  "products": [
+   "optical lenses",
+   "prisms",
+   "mirrors",
+   "windows",
+   "laser diode modules",
+   "DPSS lasers",
+   "fiber collimators",
+   "laser beam-shaping optics"
+  ],
+  "tags": [
+   "Optical Components",
+   "Laser Sources",
+   "Fibre Optics"
+  ],
+  "industries": [
+   "Aerospace & Defence",
+   "Electronics & Semiconductors",
+   "Medical & Life Sciences",
+   "Research & Academia",
+   "Telecom & Data Communications"
+  ]
+ }
+]

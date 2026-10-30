@@ -16,7 +16,7 @@ const POINTS = [
   },
   {
     title: 'Plan your day',
-    body: 'Save stalls to a visit list grouped by hall, then print it or export it to take with you.',
+    body: 'Save stalls to a visit list grouped by row, then print it or export it to take with you.',
   },
 ];
 
@@ -34,7 +34,7 @@ export function LandingPage() {
   return (
     <div className="container landing">
       <section className="hero" aria-labelledby="hero-title">
-        <p className="eyebrow">AI visitor matchmaking</p>
+        <p className="eyebrow">LASER World of PHOTONICS INDIA · Hall 1, BIEC Bengaluru</p>
         <h1 id="hero-title">
           <span>{EXHIBITORS.length} stalls.</span> <span>Find your {TOP_N} in 2 seconds.</span>
         </h1>

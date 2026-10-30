@@ -25,7 +25,7 @@ export function FilterPanel({ matches, filters, onChange, onClear }: FilterPanel
   // Counts describe the whole top 30, so they don't shift as filters are applied.
   const counts = useMemo(
     () => ({
-      halls: HALLS.map((hall) => ({ value: hall, label: `Hall ${hall}`, count: matches.filter((m) => m.exhibitor.hall === hall).length })),
+      halls: HALLS.map((hall) => ({ value: hall, label: `Row ${hall}`, count: matches.filter((m) => m.exhibitor.hall === hall).length })),
       categories: INTERESTS.map((category) => ({
         value: category,
         label: segmentLabel(category),
@@ -65,7 +65,7 @@ export function FilterPanel({ matches, filters, onChange, onClear }: FilterPanel
       </fieldset>
 
       <fieldset className="filters__group">
-        <legend>Hall</legend>
+        <legend>Booth row</legend>
         <CheckList
           options={counts.halls}
           selected={filters.halls}
@@ -124,7 +124,7 @@ interface AppliedFiltersProps {
 export function AppliedFilters({ filters, onChange }: AppliedFiltersProps) {
   const chips: { label: string; remove: () => void }[] = [
     ...(filters.minScore ? [{ label: `${filters.minScore}%+ score`, remove: () => onChange({ minScore: DEFAULT_FILTERS.minScore }) }] : []),
-    ...filters.halls.map((hall) => ({ label: `Hall ${hall}`, remove: () => onChange({ halls: toggleIn(filters.halls, hall) }) })),
+    ...filters.halls.map((hall) => ({ label: `Row ${hall}`, remove: () => onChange({ halls: toggleIn(filters.halls, hall) }) })),
     ...filters.categories.map((category) => ({
       label: segmentLabel(category),
       remove: () => onChange({ categories: toggleIn(filters.categories, category) }),

@@ -3,13 +3,13 @@ import type { Match } from '../types';
 const csvCell = (value: string | number) => `"${String(value).replace(/"/g, '""')}"`;
 
 export function visitListToCsv(matches: readonly Match[]): string {
-  const header = ['Hall', 'Booth', 'Exhibitor', 'Match %', 'Matched on', 'Segments'];
+  const header = ['Row', 'Booth', 'Exhibitor', 'Match %', 'Matched on', 'Product areas'];
   const rows = matches.map((m) => [
     m.exhibitor.hall,
     m.exhibitor.booth,
     m.exhibitor.name,
     m.score,
-    m.factors.map((f) => f.label).join('; '),
+    m.insights.map((f) => f.label).join('; '),
     m.exhibitor.tags.join('; '),
   ]);
   return [header, ...rows].map((row) => row.map(csvCell).join(',')).join('\r\n');

@@ -12,10 +12,13 @@ export interface GuestInput {
   interests: Interest[];
   /** Free-text "what are you looking for?". */
   freeText: string;
+  /** Consent to share business contact details with exhibitors. */
+  optIn?: boolean;
 }
 
 export interface Guest extends GuestInput {
   id: string;
+  updatedAt: string;
 }
 
 export interface SampleProfile {
@@ -27,26 +30,31 @@ export interface SampleProfile {
 export interface Exhibitor {
   id: string;
   name: string;
-  /** Built from the record's own segments and location; the source list has no description. */
   description: string;
+  /** Booth row, such as "LC". Everything is in Hall 1. */
   hall: Hall;
-  /** Display code such as "A-101". Generated test value, not the official floor plan. */
+  /** Booth code from the visitor guide, such as "LC 24". */
   booth: string;
+  /** Any further booths the exhibitor also occupies. */
+  otherBooths: string[];
   city: string;
-  state: string;
-  /** Segments this exhibitor is listed under; compared with visitor interests. */
+  country: string;
+  products: string[];
+  /** Product areas this exhibitor is tagged with; compared with visitor interests. */
   tags: Interest[];
+  /** Sectors this exhibitor sells to; its stand-in for target-buyer criteria. */
+  industries: Industry[];
 }
 
-/** 0–100 values behind a score. */
-export interface ScoreBreakdown {
+/** 0 to 1 values behind a score. */
+export interface Factors {
   /** How closely the visitor's wording reads like the exhibitor's offer. */
   semantic: number;
-  /** Shared taxonomy tags. */
+  /** Shared product areas. */
   interest: number;
-  /** What the visitor wrote against the exhibitor's segments, plus whether their sector buys them. */
+  /** What the visitor wrote against the exhibitor's products, plus whether it sells to their sector. */
   intent: number;
-  /** Does the visitor's sector buy this stall's segments, and is the stall in the visitor's region. */
+  /** Does this stall sell to the visitor's sector. */
   buyerFit: number;
   /** Visitor → exhibitor: does the stall sell what the visitor wants. */
   g2e: number;
@@ -55,28 +63,34 @@ export interface ScoreBreakdown {
 }
 
 /** One named reason behind a match, e.g. "Robotics: matches your interest". */
-export interface MatchFactor {
+export interface Insight {
   label: string;
   why: string;
 }
 
+/** The contract's Recommendation. */
 export interface Match {
-  exhibitor: Exhibitor;
   rank: number;
-  /** Normalised 0–100: the geometric mean of both directions. */
+  exhibitor: Exhibitor;
+  /** Integer 0 to 100: the geometric mean of both directions. */
   score: number;
-  breakdown: ScoreBreakdown;
-  factors: MatchFactor[];
+  /** Product areas behind the match, most relevant first. */
+  matchedOn: Interest[];
+  factors: Factors;
+  /** One plain sentence explaining the match. */
+  reason: string;
+  insights: Insight[];
 }
 
+/** The contract's RecommendationsResponse. */
 export interface MatchResponse {
-  matches: Match[];
-  meta: {
-    /** Time the matching run took, in ms. */
-    latencyMs: number;
-    /** How many exhibitors were scored. */
-    scanned: number;
-  };
+  results: Match[];
+  /** Time the matching run took, in ms. */
+  latencyMs: number;
+  /** How many exhibitors were scored. */
+  total: number;
+  /** Set by the client: from the backend, or the in-browser fallback. */
+  source?: 'live' | 'offline';
 }
 
 export type RequestState<T> =

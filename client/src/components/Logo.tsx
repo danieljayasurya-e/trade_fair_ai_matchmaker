@@ -5,7 +5,7 @@ interface LogoMarkProps {
 }
 
 /**
- * Two overlapping ceramic tiles: a visitor and an exhibitor, with the overlap as the match.
+ * Two overlapping squares: a visitor and an exhibitor, with the overlap as the match.
  * Decorative; the brand name next to it carries the accessible text. The same shapes are
  * inlined as the favicon in index.html.
  */
