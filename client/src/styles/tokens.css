@@ -1,0 +1,52 @@
+/*
+  Design tokens, taken from the "MMI Matchmaker UI" design canvas.
+  Slate neutrals, one blue for actions, teal for "matched on" chips, and a green/amber/slate
+  trio for score bands. Text/background pairs below are all >= 4.5:1.
+*/
+:root {
+  /* Neutrals */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --line-strong: #64748b;
+  --soft: #f1f5f9;
+  --skeleton: #eef2f6;
+
+  /* Action blue */
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --primary-tint: #dbeafe;
+  --primary-ink: #1e3a8a;
+  --selected-bg: #f5f8ff;
+  --on-dark-link: #93c5fd;
+
+  /* Matched-on teal */
+  --teal-tint: #ccfbf1;
+  --teal-ink: #0f766e;
+
+  /* Status */
+  --green: #15803d;
+  --green-tint: #dcfce7;
+  --green-ink: #14532d;
+  --amber: #b45309;
+  --danger: #b91c1c;
+  --danger-tint: #fee2e2;
+
+  /* Type */
+  --font: 'Inter Variable', 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shape */
+  --radius-chip: 6px;
+  --radius-field: 8px;
+  --radius-btn: 10px;
+  --radius-card: 12px;
+  --radius-dialog: 16px;
+
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.06);
+  --shadow-hover: 0 4px 12px rgb(15 23 42 / 0.1);
+  --shadow-overlay: 0 12px 32px rgb(15 23 42 / 0.18);
+
+  --content-width: 85rem;
+}
