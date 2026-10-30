@@ -52,14 +52,14 @@ export function HowItWorksPage() {
       <h2>The final score</h2>
       <p>
         The match percentage is the geometric mean of the two directions, so a weak side pulls the whole score down.
-        Stalls with almost no overlap with what you asked for are left out.
+        Every stall is scored, and you see the top 30.
       </p>
 
       <h2>What we don't do</h2>
       <ul className="plain-list">
         <li>No exhibitor can pay to rank higher, and none is hidden or boosted.</li>
-        <li>Ties are broken by company name, so the order is always the same for the same profile.</li>
-        <li>Your profile stays in this browser. Nothing is sent anywhere in this demo.</li>
+        <li>Ties are broken by your fit with the stall, then by company name, so the same profile always gets the same order.</li>
+        <li>Your profile is stored on our server to work out your matches, and isn't sent to any outside AI service.</li>
       </ul>
 
       <p>
