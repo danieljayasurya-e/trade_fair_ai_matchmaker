@@ -34,7 +34,6 @@ export function MatchDetail({
     { label: 'Semantic similarity', value: Math.round(factors.semantic * 100) },
     { label: 'Interest overlap', value: Math.round(factors.interest * 100) },
     { label: 'Intent match', value: Math.round(factors.intent * 100) },
-    { label: 'Buyer fit', value: Math.round(factors.buyerFit * 100) },
   ];
 
   return (
@@ -87,6 +86,12 @@ export function MatchDetail({
                 </div>
               </li>
             ))}
+            <li>
+              <div className="subscores__row">
+                <span>Sells to your sector</span>
+                <strong>{factors.buyerFit === 1 ? 'Yes' : 'No'}</strong>
+              </div>
+            </li>
           </ul>
 
           <p className="detail__direction">

@@ -40,7 +40,7 @@ export function HowItWorksPage() {
       <h2>Stall → you: are you a likely buyer?</h2>
       <ul className="how-list">
         <li>
-          <h3>Buyer fit</h3>
+          <h3>Sells to your sector</h3>
           <p>
             Whether the stall sells to businesses in your sector. The sector lists are inferred, so a gap still keeps {percent(BUYER_FIT_FLOOR)} and a
             strong product match stays visible. Region, seniority and company size are collected but not scored: the
