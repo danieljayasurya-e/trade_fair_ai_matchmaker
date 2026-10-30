@@ -5,7 +5,7 @@ import { Header } from './Header';
 import { Icon } from './Icon';
 import { TabBar } from './TabBar';
 
-const TAB_BAR_ROUTES = ['/matches', '/visit-list'];
+const TAB_BAR_ROUTES = ['/matches', '/map', '/visit-list'];
 
 export function AppShell() {
   const { pathname } = useLocation();

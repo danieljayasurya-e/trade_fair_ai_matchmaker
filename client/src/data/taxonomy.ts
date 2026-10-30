@@ -95,3 +95,30 @@ export const INDUSTRIES_BUYING: Readonly<Record<Interest, readonly Industry[]>> 
   Lubricants: ALL_MAKERS,
   Dryers: [...HEAVY_CLAY, 'Technical ceramics'],
 };
+
+/**
+ * Short display names for the segments. The full names from the company list are long ("Ceramic
+ * Glazing / Decorating / Surface Treatment") and crowd cards, chips and filters; the full name is
+ * still shown where there is room (the match detail) and used in exports.
+ */
+export const SEGMENT_SHORT: Readonly<Record<Interest, string>> = {
+  'Ceramic Glazing / Decorating / Surface Treatment': 'Glazing & decoration',
+  'Heat treatment / Refractories': 'Kilns & refractories',
+  'Raw materials and additives': 'Raw materials',
+  'Materials and aids': 'Materials & aids',
+  'Form/Shaping': 'Forming & shaping',
+  'Technical ceramics, components / services': 'Technical ceramics',
+  'Plant construction engineering': 'Plant engineering',
+  'Digital Inks': 'Digital inks',
+  'Handling / Packaging / Automation': 'Handling & automation',
+  'Gasifiers/alternative fuel solutions': 'Alternative fuels',
+  'Digital Printing & Technology': 'Digital printing',
+  'Ceramic machine Tools / Spares / Replacement Parts': 'Machine tools & spares',
+  'Crushing/Grinding/Milling': 'Grinding & milling',
+  Lubricants: 'Lubricants',
+  Dryers: 'Dryers',
+};
+
+/** Short name for a segment; any other label (e.g. "In your region") comes back unchanged. */
+export const segmentLabel = (label: string): string =>
+  (SEGMENT_SHORT as Readonly<Record<string, string>>)[label] ?? label;

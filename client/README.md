@@ -24,11 +24,12 @@ Fonts are bundled (`@fontsource-variable/inter`), so the app works offline after
 ## Demo flow
 
 1. **Landing** (`/`): the hook, three points and "Find my stalls". With a saved profile it offers "Continue as <name>" and "Not you? Start over".
-1. **Details** (`/details`): "Try a sample profile" (three presets that fill the form), "Upload profile" (JSON/CSV that fills the form), then name, job role, industry, seniority, company size, region, procurement interests and a free-text "what are you looking for?". Same fields and validation messages as the mobile form. With a saved profile it opens as "Edit your details" and keeps the saved stalls.
-1. **Matching in progress** (`/matching`): live timer, progress bar and three steps. "View your top 30" is focused when matching finishes. "Replay" reruns it.
+1. **Details** (`/details`): "Try a sample profile" ("Match with this sample" goes straight to matching; "Edit details first" fills the form), "Upload profile" (JSON/CSV that fills the form), then name, job role, industry, seniority, company size, region, procurement interests and a free-text "what are you looking for?". Same fields and validation messages as the mobile form. With a saved profile it opens as "Edit your details" and keeps the saved stalls.
+1. **Matching in progress** (`/matching`): the venue floor with every stall as a tile, compared as the engine runs, then your matches glaze in their score colour, best first (halls in a 2 × 2 grid on phones). Live timer, progress bar and three steps. "View your top 30" is focused when matching finishes. "Replay" reruns it.
 1. **Top 30** (`/matches`): filters (score, hall, category, industry, saved only), sort, "Show 10 more", detail drawer with the four score bars, both directions and reasons, save with Undo. "Re-run" runs matching again; "Edit profile" opens the details form.
 1. **Visit list** (`/visit-list`): saved stalls grouped by hall, CSV export, print.
 1. **How it works** (`/how-it-works`): how the two-way score is built and the fairness rules.
+1. **Find your way** (`/map`, phase 2): all 200 stalls on a sample plan of Halls 1–4. Your matches are glazed tiles in their score colour, the rest are matte. Pick a tile, a match in the list, or any stall in "Take me to", and the map draws the walk from "I'm at" (main entrance by default, a hall door, or a booth) with numbered steps and a distance. "Take me there" in a match's detail opens it. The stall and start live in the URL (`#/map?stall=ex-056&from=ex-034`).
 
 Responsive behaviour:
 
@@ -63,6 +64,12 @@ client/src/
 - To connect a real backend, implement `MatchingService` with `fetch` and change one line in `services/index.ts`. Nothing in `pages/` or `components/` calls the mock directly.
 - `services/scoring.ts` is the only place scores are computed, as a two-way mutual fit: *you → stall* (40% semantic similarity of the wording, 40% shared segments, 20% intent) and *stall → you* (does your sector buy the stall's segments, is the stall in your region, with a 25% floor). The match % is the geometric mean of the two. Every point maps to a named factor in the detail panel. There are no per-exhibitor adjustments; ties break by name. This follows the fairness rules in `CLAUDE.md`.
 
+## Phase 2: map and directions
+
+- `data/venue.ts` builds a **sample layout**: four 52 × 48 m halls side by side on one concourse, main entrance in the middle, 50 booths per hall in 5 rows of 10 either side of a centre aisle (booth 101 sits nearest the door, numbers run left to right). Units are metres, so route lengths are walking distances. It is generated from the test booth numbers, not an official plan. TODO: swap in the organiser's floor plan.
+- `services/wayfinding.ts` is pure: a start (entrance, hall door or booth) and a stall in; the path, metres, minutes (at 70 m/min) and plain steps out ("Turn right into aisle 1. B-106 is the first stall on your left.").
+- `components/VenueMap.tsx` is plain SVG (works offline): drag to pan, buttons to zoom, auto-frames the route; on a narrow screen with nothing picked it opens on the hall holding most of your matches. Glazed tiles are keyboard focusable; every stall can be reached through the "Take me to" list.
+
 ## Key decisions
 
 - **Design tokens** live in `styles/tokens.css` and mirror the canvas (slate neutrals, `#1D4ED8` action blue, teal chips, green/amber/slate score bands).
@@ -80,6 +87,7 @@ client/src/
 - The "Product category" filter lists the 15 segments from the company list; a stall passes if it is listed under any selected one. The canvas's separate industry filter is not used, because the segments are the industry categories.
 - Upload fills the form instead of skipping it: fields it recognises are filled, the rest stay blank for the visitor to complete. Field names match the mobile `GuestInput`.
 - Stalls whose visitor → stall score is almost zero are left out, as in the mobile engine, so a sparse profile can return fewer than 30 matches.
+- Segment names are shortened for display (`SEGMENT_SHORT` in `data/taxonomy.ts`, e.g. "Glazing & decoration"); the full names from the company list stay in the detail panel's segment chips and the CSV export.
 - The detail panel shows four bars (semantic, interests, intent, buyer fit) as in `docs/final-flow.md`; the canvas drew three.
 - **TODO (organiser):** the company list has no descriptions, product lists or target-buyer criteria, so none were invented. "Buyer fit" uses one rule per segment (`INDUSTRIES_BUYING` in `data/taxonomy.ts`) and the stall's state. The visitor sector list is also an assumption. Seniority and company size are collected but not scored until buyer criteria exist.
 - **Mobile app:** it still uses the earlier fictional trade-fair data. Its vocabularies, exhibitors and sample profiles need the same change to stay in step with this app.

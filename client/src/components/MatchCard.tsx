@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { segmentLabel } from '../data/taxonomy';
 import type { Match } from '../types';
 import { bandFor } from '../utils/score';
 import { Icon } from './Icon';
@@ -40,7 +41,7 @@ export const MatchCard = memo(function MatchCard({ match, isSelected, isSaved, o
             <span className="mcard__chips-label">Matched on</span>
             {factors.slice(0, 3).map((factor) => (
               <span key={factor.label} className="chip chip--teal">
-                {factor.label}
+                {segmentLabel(factor.label)}
               </span>
             ))}
           </span>
@@ -51,7 +52,7 @@ export const MatchCard = memo(function MatchCard({ match, isSelected, isSaved, o
             </span>
             <span className="mcard__category">
               <Icon name="layers" size={16} />
-              {exhibitor.tags[0]}
+              {segmentLabel(exhibitor.tags[0] ?? '')}
               {exhibitor.tags.length > 1 && <span className="muted"> +{exhibitor.tags.length - 1}</span>}
             </span>
           </span>

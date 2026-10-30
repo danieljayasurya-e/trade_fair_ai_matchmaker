@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { segmentLabel } from '../data/taxonomy';
 import { Link } from 'react-router-dom';
 import { Icon } from '../components/Icon';
 import { EmptyState, ErrorState, MatchSkeleton } from '../components/StatePanels';
@@ -143,7 +144,7 @@ function VisitListView({ guestName, matches }: VisitListViewProps) {
                   <p className="visit-row__booth">{m.exhibitor.booth}</p>
                   <div className="visit-row__body">
                     <h3>{m.exhibitor.name}</h3>
-                    <p>{m.factors[0]?.label ?? m.exhibitor.city}</p>
+                    <p>{segmentLabel(m.factors[0]?.label ?? m.exhibitor.city)}</p>
                   </div>
                   <p className="visit-row__score">
                     {m.score}%<span className="visually-hidden"> match</span>

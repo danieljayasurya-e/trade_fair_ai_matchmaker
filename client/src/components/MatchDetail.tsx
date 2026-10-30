@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { segmentLabel } from '../data/taxonomy';
+import { SHOW_MAP } from '../features';
 import type { Match } from '../types';
 import { bandFor, initialsOf } from '../utils/score';
 import { Icon } from './Icon';
@@ -46,6 +48,12 @@ export function MatchDetail({
           <p>
             Hall {exhibitor.hall} · Booth {exhibitor.booth} · {exhibitor.city}, {exhibitor.state}
           </p>
+          {SHOW_MAP && (
+            <Link to={`/map?stall=${exhibitor.id}`} className="detail__route">
+              <Icon name="pin" size={16} />
+              Take me there
+            </Link>
+          )}
         </div>
         <button type="button" className="icon-btn" aria-label="Close details" onClick={onClose}>
           <Icon name="close" />
@@ -92,7 +100,7 @@ export function MatchDetail({
                   <Icon name="check" size={13} strokeWidth={3} />
                 </span>
                 <span>
-                  <strong>{factor.label}</strong>
+                  <strong>{segmentLabel(factor.label)}</strong>
                   <br />
                   <span className="muted">{factor.why}</span>
                 </span>

@@ -1,12 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '../components/Icon';
-import { EmptyState, ErrorState, MatchSkeleton } from '../components/StatePanels';
+import { MatchingFloor } from '../components/MatchingFloor';
+import { EmptyState, ErrorState } from '../components/StatePanels';
 import { useSession } from '../context/SessionContext';
 import { EXHIBITORS } from '../data/exhibitors';
+import { HALLS } from '../data/taxonomy';
+import { SHOW_MAP } from '../features';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { useMatches } from '../hooks/useMatches';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 import { TOP_N } from '../services';
+import type { Match } from '../types';
 import { formatSeconds } from '../utils/score';
 
 // Rough time boundaries for the first two steps. The service gives no progress events,
@@ -14,6 +19,14 @@ import { formatSeconds } from '../utils/score';
 const STEP_ONE_MS = 200;
 const STEP_TWO_MS = 650;
 const EXPECTED_MS = 1000;
+
+/** "26 in Hall 1 and 4 in Hall 2", leaving out halls with no matches. */
+function hallSummary(matches: readonly Match[]): string {
+  const parts = HALLS.map((hall) => [hall, matches.filter((m) => m.exhibitor.hall === hall).length] as const)
+    .filter(([, count]) => count > 0)
+    .map(([hall, count]) => `${count} in Hall ${hall}`);
+  return parts.length > 1 ? `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : (parts[0] ?? 'none yet');
+}
 
 export function LoadingPage() {
   useDocumentTitle('Matching in progress');
@@ -23,6 +36,14 @@ export function LoadingPage() {
   const isLoading = state.status === 'loading' || state.status === 'idle';
   const isDone = state.status === 'success';
   const viewLinkRef = useRef<HTMLAnchorElement>(null);
+  const isPhone = useMediaQuery('(max-width: 47.99rem)');
+  const matchMap = useMemo(
+    () =>
+      state.status === 'success'
+        ? new Map(state.data.matches.map((m): [string, Match] => [m.exhibitor.id, m]))
+        : null,
+    [state],
+  );
 
   // When matching finishes, put focus on the next step so Enter continues the demo.
   useEffect(() => {
@@ -69,14 +90,24 @@ export function LoadingPage() {
 
   return (
     <div className="container loading-page" aria-busy={isLoading}>
-      <div className="loading-page__skeleton" aria-hidden="true">
-        <div className="loading-page__filters">
-          <span style={{ height: 20, width: '60%' }} />
-          <span style={{ height: 120 }} />
-          <span style={{ height: 180 }} />
-        </div>
-        <MatchSkeleton />
-      </div>
+      <figure className="loading-page__floor">
+        <MatchingFloor scanned={Math.round((percent / 100) * EXHIBITORS.length)} matches={matchMap} compact={isPhone} />
+        <figcaption>
+          {isDone ? (
+            <>
+              Your matches are glazed: {hallSummary(state.data.matches)}.
+              {SHOW_MAP && (
+                <>
+                  {' '}
+                  <Link to="/map">See them on the map</Link>
+                </>
+              )}
+            </>
+          ) : (
+            `Compared ${Math.round((percent / 100) * EXHIBITORS.length)} of ${EXHIBITORS.length} stalls`
+          )}
+        </figcaption>
+      </figure>
 
       <section className="progress-card" role="status" aria-live="polite" aria-labelledby="progress-title">
         <div className="progress-card__head">

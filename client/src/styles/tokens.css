@@ -49,4 +49,6 @@
   --shadow-overlay: 0 12px 32px rgb(15 23 42 / 0.18);
 
   --content-width: 85rem;
+  /* Height of the sticky site header; sticky panels sit just below it. */
+  --header-h: 4.25rem;
 }

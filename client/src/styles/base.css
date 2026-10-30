@@ -5,6 +5,7 @@
 }
 
 html {
+  scroll-padding-top: var(--header-h);
   -webkit-text-size-adjust: 100%;
 }
 
